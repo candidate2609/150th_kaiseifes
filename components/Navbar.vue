@@ -1,6 +1,11 @@
 <template>
   <div>
-    <v-app-bar color="accent-1" light flat>
+    <v-app-bar
+      color="accent-1"
+      light
+      flat
+      style="background-color: rgba(246, 246, 246, 0.5)"
+    >
       <v-img
         class="mr-3"
         src="icon.svg"
@@ -12,11 +17,11 @@
 
       <v-spacer></v-spacer>
       <div v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)">
-        <v-btn text>アクセス</v-btn>
-        <v-btn text>現地企画</v-btn>
-        <v-btn text>お食事処</v-btn>
-        <v-btn text>オンライン企画</v-btn>
-        <v-btn text>お知らせ</v-btn>
+        <v-btn text style="font-size: 15px">アクセス</v-btn>
+        <v-btn text style="font-size: 15px">現地企画</v-btn>
+        <v-btn text style="font-size: 15px">お食事処</v-btn>
+        <v-btn text style="font-size: 15px">オンライン企画</v-btn>
+        <v-btn text style="font-size: 15px">お知らせ</v-btn>
       </div>
       <v-spacer></v-spacer>
 
@@ -37,30 +42,21 @@
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
       ></v-app-bar-nav-icon>
     </v-app-bar>
-    <v-app>
-      <v-navigation-drawer v-model="drawer" fixed temporary>
-        <v-list v-for="(item, i) in Items" :key="i" nav dense>
-          <v-list-item-group>
-            <v-list-item>
-              <v-list-item-title v-text="item" />
-            </v-list-item>
-          </v-list-item-group>
-        </v-list>
-      </v-navigation-drawer>
-    </v-app>
   </div>
 </template>
 
 <script>
-import constants from 'assets/js/constants'
-
 export default {
   data() {
     return {
       drawer: false,
-      menuItems: constants.menuItems,
       Items: ['アクセス', '現地企画', 'お食事処', 'オンライン企画', 'お知らせ'],
     }
+  },
+  watch: {
+    group() {
+      this.drawer = false
+    },
   },
 }
 </script>
