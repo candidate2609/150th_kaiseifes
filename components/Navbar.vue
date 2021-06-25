@@ -13,7 +13,10 @@
         max-width="40"
         contain
       ></v-img>
-      <v-toolbar-title>開成祭</v-toolbar-title>
+      <v-toolbar-title
+        style="font-family: 'SourceHanSerif-Medium'; letter-spacing: 2px"
+        >開成祭</v-toolbar-title
+      >
 
       <v-spacer></v-spacer>
       <div v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)">

@@ -21,16 +21,18 @@ export default {
 <style>
 .title {
   background-color: var(--background-color);
-  padding: 4rem 1rem 6rem 1rem;
+  padding: 2rem 1rem 4rem 1rem;
   margin: 1rem;
+  margin-left: 5rem;
 }
 .title h1 {
-  font-size: 4rem;
-  letter-spacing: 5px;
+  font-size: 60px;
+  letter-spacing: 12px;
+  white-space: nowrap;
 }
 .title p {
   font-size: 1.3rem;
-  margin-top: 10px;
+  margin-top: 5px;
   letter-spacing: 2px;
 }
 </style>
