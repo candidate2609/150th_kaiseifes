@@ -12,7 +12,7 @@
       </p>
     </div>
     <v-spacer />
-    <div style="white-space: nowrap">
+    <div style="white-space: nowrap; align-items: start">
       <p><a href="" style="color: black">お知らせ</a></p>
       <p><a href="" style="color: black">開成祭</a></p>
       <p><a href="" style="color: black">オンライン開成祭</a></p>
@@ -22,9 +22,7 @@
       <p><a href="" style="color: black">ご注意</a></p>
     </div>
     <v-spacer />
-    <div style="white-space: nowrap">
-      <p><a href="" style="color: black">サンプル</a></p>
-      <p><a href="" style="color: black">サンプル</a></p>
+    <div style="white-space: nowrap; align-items: start">
       <p><a href="" style="color: black">サンプル</a></p>
       <p><a href="" style="color: black">サンプル</a></p>
       <p><a href="" style="color: black">サンプル</a></p>
@@ -33,8 +31,6 @@
     </div>
     <v-spacer />
     <div style="padding: 2%; white-space: nowrap">
-      <p><a href="" style="color: black">サンプル</a></p>
-      <p><a href="" style="color: black">サンプル</a></p>
       <p><a href="" style="color: black">サンプル</a></p>
       <p><a href="" style="color: black">サンプル</a></p>
       <p><a href="" style="color: black">サンプル</a></p>
