@@ -22,8 +22,6 @@ export default {
 .title {
   background-color: var(--background-color);
   padding: 2rem 1rem 4rem 1rem;
-  margin: 1rem;
-  margin-left: 5rem;
 }
 .title h1 {
   font-size: 60px;
@@ -31,7 +29,7 @@ export default {
   white-space: nowrap;
 }
 .title p {
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-top: 5px;
   letter-spacing: 2px;
 }
