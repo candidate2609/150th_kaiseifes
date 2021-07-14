@@ -1,5 +1,9 @@
 <template>
-  <div style="writing-mode: vertical-lr" class="title" :style="BackgroundColor">
+  <div
+    style="writing-mode: vertical-lr; position: absolute"
+    class="title"
+    :style="BackgroundColor"
+  >
     <h1>{{ title_ja }}</h1>
     <p>{{ title_en }}</p>
   </div>
@@ -22,10 +26,11 @@ export default {
 .title {
   background-color: var(--background-color);
   padding: 2rem 1rem 4rem 1rem;
+  margin: 2rem 2rem 2rem 2rem;
 }
 .title h1 {
-  font-size: 60px;
-  letter-spacing: 12px;
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
   white-space: nowrap;
 }
 .title p {
