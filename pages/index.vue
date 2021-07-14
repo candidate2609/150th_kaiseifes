@@ -19,7 +19,6 @@
         background_color="#ffffff"
         id="開成祭"
       />
-      <p><img src="landing/online.png" alt="" style="width: 100vw" /></p>
       <!-- 開成祭の実装は -->
 
       <!-- この間 -->
@@ -53,7 +52,6 @@
   /*全体の高さ*/
   height: 50px;
 }
-
 </style>
 
 <script>
