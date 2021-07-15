@@ -28,43 +28,27 @@
       </div>
       <v-spacer></v-spacer>
 
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-menu bottom>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn icon v-bind="attrs" v-on="on">
-            <v-icon>mdi-dots-vertical</v-icon>
-          </v-btn>
-        </template>
-      </v-menu>
-
       <v-app-bar-nav-icon
         @click="drawer = true"
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
       ></v-app-bar-nav-icon>
     </v-app-bar>
-    <v-navigation-drawer v-model="drawer" absolute temporary>
+    <v-navigation-drawer v-model="drawer" temporary fixed style="z-index: 1000">
       <v-list nav dense>
         <v-list-item-group
           v-model="group"
           active-class="deep-purple--text text--accent-4"
         >
-          <v-list-item>
-            <v-list-item-title>Foo</v-list-item-title>
+          <v-list-item href="#お知らせ" @click="drawer = false">
+            <v-list-item-title>お知らせ</v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
-            <v-list-item-title>Bar</v-list-item-title>
+          <v-list-item href="#開成祭" @click="drawer = false">
+            <v-list-item-title>開成祭について</v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
-            <v-list-item-title>Fizz</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Buzz</v-list-item-title>
+          <v-list-item href="#オンライン開成祭" @click="drawer = false">
+            <v-list-item-title>オンライン開成祭について</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
