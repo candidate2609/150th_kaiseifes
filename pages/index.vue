@@ -1,7 +1,7 @@
 <template>
   <div>
     <carousel style="border-bottom: 1px solid #a28756" />
-    <section class="animated-section d-flex" style="background-color: #ffffff">
+    <section class="animated-section" style="background-color: #ffffff">
       <landing-title
         title_ja="お知らせ"
         title_en="News"
@@ -12,7 +12,7 @@
 
       <!-- この間 -->
     </section>
-    <section class="animated-section d-flex" style="background-color: #f6f6f6">
+    <section class="animated-section" style="background-color: #f6f6f6">
       <landing-title
         title_ja="開成祭"
         title_en="Kaisei Festival"
@@ -23,7 +23,7 @@
 
       <!-- この間 -->
     </section>
-    <section class="animated-section d-flex" style="background-color: #ffffff">
+    <section class="animated-section" style="background-color: #ffffff">
       <landing-title
         title_ja="オンライン開成祭"
         title_en="Kaisei Festival Online"
@@ -34,6 +34,7 @@
 
       <!-- この間 -->
     </section>
+    <div class="scrollup" fixed><a href="#お知らせ">トップへ</a></div>
   </div>
 </template>
 
@@ -43,14 +44,10 @@
   position: relative;
   min-height: 500px;
 }
-
-.scrolldown1 {
-  /*描画位置※位置は適宜調整してください*/
+.scrollup {
   position: absolute;
-  left: 50%;
-  bottom: 10px;
-  /*全体の高さ*/
-  height: 50px;
+  left: 2%;
+  bottom: 0px;
 }
 </style>
 

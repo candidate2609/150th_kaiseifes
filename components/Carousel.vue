@@ -10,7 +10,6 @@
       :src="item.src"
     ></v-carousel-item>
     <div class="scrolldown1"><span>もっと見る</span></div>
-    <ButtonCircle />
   </v-carousel>
 </template>
 
@@ -18,7 +17,8 @@
 .scrolldown1 {
   /*描画位置※位置は適宜調整してください*/
   position: absolute;
-  left: 95%;
+  left: 2%;
+  bottom: 0px;
   /*全体の高さ*/
   height: 100px;
 }
