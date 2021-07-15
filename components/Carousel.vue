@@ -9,7 +9,7 @@
       :key="i"
       :src="item.src"
     ></v-carousel-item>
-    <div class="scrolldown1"><span>もっと見る</span></div>
+    <div class="scrolldown1"><a href="#お知らせ">もっと見る</a></div>
   </v-carousel>
 </template>
 
@@ -23,7 +23,7 @@
   height: 100px;
 }
 /*Scrollテキストの描写*/
-.scrolldown1 span {
+.scrolldown1 a {
   /*描画位置*/
   position: absolute;
   left: 10px;

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="relative">
     <carousel style="border-bottom: 1px solid #a28756" />
     <section class="animated-section" style="background-color: #ffffff">
       <landing-title
@@ -34,7 +34,7 @@
 
       <!-- この間 -->
     </section>
-    <div class="scrollup" fixed><a href="#お知らせ">トップへ</a></div>
+    <div class="scrollup" fixed><a href="#navbar">先頭へ戻る</a></div>
   </div>
 </template>
 
@@ -45,9 +45,48 @@
   min-height: 500px;
 }
 .scrollup {
+  position: fixed;
+  left: 98%;
+  bottom: 130px;
+  z-index: 100;
+}
+.scrollup a {
+  /*描画位置*/
   position: absolute;
-  left: 2%;
-  bottom: 0px;
+  right: 10px;
+  top: 40px;
+  /*テキストの形状*/
+  color: #000;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+.scrollup::after {
+  content: '';
+  /*描画位置*/
+  position: absolute;
+  top: 0;
+  /*線の形状*/
+  width: 1px;
+  height: 100px;
+  background: #000;
+  animation: pathup 2s ease-in-out infinite;
+  opacity: 0;
+}
+@keyframes pathup {
+  0% {
+    height: 0;
+    top: 100px;
+    opacity: 0;
+  }
+  30% {
+    height: 50px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
 }
 </style>
 
