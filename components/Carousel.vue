@@ -2,7 +2,7 @@
   <v-carousel
     :show-arrows="false"
     hide-delimiter-background
-    style="position: relative"
+    style="position: relative; margin-bottom: 1rem"
   >
     <v-carousel-item
       v-for="(item, i) in items"
