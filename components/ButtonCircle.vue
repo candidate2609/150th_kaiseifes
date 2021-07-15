@@ -1,30 +1,43 @@
 <template>
-  <div class="button30">
-    <a href="">
-      <p><i class="fab fa-twitter"></i></p>
-    </a>
-  </div>
+  <a
+    target="_blank"
+    href="https://twitter.com/kaisei_festival?s=20"
+    class="btn-circle-border-simple"
+  >
+    <img
+      src="landing/twitter_white.svg"
+      alt=""
+      style="width: 50%; vertical-align: middle"
+    />
+  </a>
 </template>
 
 <style>
-.button30 {
+.btn-circle-border-simple {
   position: absolute;
-  top: 5%;
-  right: 3%;
-}
-.button30 a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+  bottom: 3%;
+  right: 2%;
+  text-decoration: none;
+  color: #a28756;
   width: 40px;
   height: 40px;
-  border: 2px solid #a28756;
-  border-radius: 50vh;
-  transition: 0.3s;
+  border-radius: 50%;
+  border: solid 2px #a28756;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.4s;
+  font-size: 1.2rem;
+  background: #a28756;
+}
+.btn-circle-border-simple img {
+  fill: white;
 }
 
-.button30 a:hover {
-  background-color: #a28756;
+.btn-circle-border-simple:hover {
+  background: #a28756;
+  color: white;
+}
+.btn-circle-border-simple img:hover {
+  fill: darkblue;
 }
 </style>
