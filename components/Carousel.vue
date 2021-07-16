@@ -2,7 +2,7 @@
   <v-carousel
     :show-arrows="false"
     :cycle="true"
-    :interval="6000"
+    :interval="10000"
     light
     hide-delimiter-background
     style="margin-bottom: 1rem"
