@@ -11,7 +11,7 @@
         src="icon.svg"
         max-height="40"
         max-width="40"
-        contain
+        contain type=”image/svg+xml”
       ></v-img>
       <v-toolbar-title
         style="font-family: 'SourceHanSerif-Medium'; letter-spacing: 2px"

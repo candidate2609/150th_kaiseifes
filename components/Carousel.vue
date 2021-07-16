@@ -14,7 +14,7 @@
       >
         <v-spacer></v-spacer>
         <p style="margin: auto">
-          <img src="icon.svg" alt="" style="width: 20vw" />
+          <img src="icon.svg" alt="" style="width: 20vw" type=”image/svg+xml” />
         </p>
         <v-spacer></v-spacer>
         <div
@@ -56,7 +56,8 @@
           "
         >
           <p>
-            <img src="icon.svg" alt="" style="width: 25vw" />
+            <img src="icon.svg" alt="" style="width: 25vw"
+            type=”image/svg+xml”/>
           </p>
           <h3 style="margin-left: 17vw; font-size: 3.5vw; letter-spacing: 1vw">
             夢、刻む
