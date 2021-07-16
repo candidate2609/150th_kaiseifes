@@ -66,7 +66,7 @@
       </v-card-text>
       <v-card-text>
         <div style="text-align: center">
-          <img src="icon.svg" alt="" style="width: 70px" />
+          <img src="icon.svg" alt="" style="width: 70px" type=”image/svg+xml”/>
         </div>
       </v-card-text>
       <v-card-text class="py-2 white--text text-center">
