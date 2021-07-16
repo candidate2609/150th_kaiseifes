@@ -1,5 +1,6 @@
 <template>
   <div style="relative">
+    <title>開成祭 開成学園 文化祭 2021</title>
     <carousel style="border-bottom: 1px solid #a28756" />
     <section
       class="animated-section"
