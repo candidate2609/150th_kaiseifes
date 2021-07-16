@@ -8,7 +8,7 @@
     >
       <v-img
         class="mr-3"
-        src="icon.svg"
+        src="icon.png"
         max-height="40"
         max-width="40"
         contain type=”image/svg+xml”
