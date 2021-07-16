@@ -1,10 +1,10 @@
 <template>
-  <v-footer padless dark>
+  <v-footer padless dark style="margin-top: 10rem">
     <v-card class="flex" flat tile>
       <v-card-title class="teal">
         <span class="subheading" style="letter-spacing: 3px"
           >創立150周年開成祭<br /><span style="font-size: 1rem"
-            >夢、刻む。</span
+            >夢、刻む</span
           ></span
         >
 

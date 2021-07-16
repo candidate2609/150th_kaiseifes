@@ -1,40 +1,49 @@
 <template>
   <div style="relative">
     <carousel style="border-bottom: 1px solid #a28756" />
-    <section class="animated-section" style="background-color: #ffffff">
+    <section
+      class="animated-section"
+      id="お知らせ"
+      style="background-color: #ffffff"
+    >
       <landing-title
         title_ja="お知らせ"
         title_en="News"
         background_color="#f6f6f6"
-        id="お知らせ"
       />
       <!-- お知らせの実装は -->
 
       <!-- この間 -->
     </section>
-    <section class="animated-section" style="background-color: #f6f6f6">
+    <section
+      class="animated-section"
+      id="開成祭"
+      style="background-color: #f6f6f6"
+    >
       <landing-title
         title_ja="開成祭"
         title_en="Kaisei Festival"
         background_color="#ffffff"
-        id="開成祭"
       />
       <!-- 開成祭の実装は -->
 
       <!-- この間 -->
     </section>
-    <section class="animated-section" style="background-color: #ffffff">
+    <section
+      class="animated-section"
+      id="オンライン開成祭"
+      style="background-color: #ffffff"
+    >
       <landing-title
         title_ja="オンライン開成祭"
         title_en="Kaisei Festival Online"
-        id="オンライン開成祭"
         background_color="#f6f6f6"
       />
       <!-- オンライン開成祭の実装は -->
 
       <!-- この間 -->
     </section>
-    <div class="scrollup" fixed><a href="#navbar">先頭へ戻る</a></div>
+    <div class="scrollup" fixed></div>
   </div>
 </template>
 
@@ -47,7 +56,7 @@
 .scrollup {
   position: fixed;
   left: 98%;
-  bottom: 130px;
+  bottom: 100px;
   z-index: 100;
 }
 .scrollup a {
@@ -69,13 +78,13 @@
   width: 1px;
   height: 100px;
   background: #000;
-  animation: pathup 2s ease-in-out infinite;
+  animation: pathup 3s ease-in-out infinite;
   opacity: 0;
 }
 @keyframes pathup {
   0% {
     height: 0;
-    top: 100px;
+    top: 0;
     opacity: 0;
   }
   30% {
@@ -84,7 +93,7 @@
   }
   100% {
     height: 0;
-    top: 0;
+    top: 100px;
     opacity: 0;
   }
 }

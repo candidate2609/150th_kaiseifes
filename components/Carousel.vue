@@ -1,13 +1,74 @@
 <template>
   <v-carousel
     :show-arrows="false"
+    :cycle="true"
+    :interval="6000"
+    light
     hide-delimiter-background
-    style="position: relative; margin-bottom: 1rem"
+    style="margin-bottom: 1rem"
   >
+    <v-carousel-item style="position: relative">
+      <div
+        v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
+        style="display: flex; flex-direction: row; height: 100%; width: 100%"
+      >
+        <v-spacer></v-spacer>
+        <p style="margin: auto">
+          <img src="icon.svg" alt="" style="width: 20vw" />
+        </p>
+        <v-spacer></v-spacer>
+        <div
+          style="
+            margin: auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+          "
+        >
+          <h2 style="letter-spacing: 1vw; font-size: 3.5vw">
+            創立150周年記念開成祭
+          </h2>
+          <h3 style="margin-top: 4rem; font-size: 2.5vw; letter-spacing: 0.5vw">
+            夢、刻む
+          </h3>
+        </div>
+        <v-spacer></v-spacer>
+      </div>
+      <div
+        v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
+        style="position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);"
+      >
+        <h2 style="letter-spacing: 1.5vw; font-size: 5vw; white-space: nowrap">
+          創立150周年記念開成祭
+        </h2>
+        <div
+          style="
+            margin: 0 auto;
+            margin-top: 6vw;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+          "
+        >
+          <p>
+            <img src="icon.svg" alt="" style="width: 25vw" />
+          </p>
+          <h3 style="margin-left: 17vw; font-size: 3.5vw; letter-spacing: 1vw">
+            夢、刻む
+          </h3>
+        </div>
+      </div>
+    </v-carousel-item>
     <v-carousel-item
       v-for="(item, i) in items"
       :key="i"
       :src="item.src"
+      style="width: 100%"
     ></v-carousel-item>
     <div class="scrolldown1"><a href="#お知らせ">もっと見る</a></div>
   </v-carousel>
@@ -71,9 +132,6 @@ export default {
   data() {
     return {
       items: [
-        {
-          src: '/landing/logo_ver1.png',
-        },
         {
           src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
         },
