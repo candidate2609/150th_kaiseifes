@@ -23,7 +23,9 @@
     "@nuxtjs/pwa": "^3.3.5",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.9.1",
-    "nuxt": "^2.15.3"
+    "hooper": "^0.3.4",
+    "nuxt": "^2.15.3",
+    "vue-carousel": "^0.18.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",
