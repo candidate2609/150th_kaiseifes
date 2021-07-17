@@ -4,14 +4,14 @@
       color="accent-1"
       light
       flat
-      style="background-color: rgba(246, 246, 246, 0.5)"
+      style="background-color: rgba(246, 246, 246, 1); z-index: 1500"
     >
       <v-img
         class="mr-3"
         src="icon.svg"
         max-height="40"
         max-width="40"
-        contain
+        contain type=”image/svg+xml”
       ></v-img>
       <v-toolbar-title
         style="font-family: 'SourceHanSerif-Medium'; letter-spacing: 2px"
@@ -20,31 +20,47 @@
 
       <v-spacer></v-spacer>
       <div v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)">
-        <v-btn text style="font-size: 15px">アクセス</v-btn>
-        <v-btn text style="font-size: 15px">現地企画</v-btn>
-        <v-btn text style="font-size: 15px">お食事処</v-btn>
-        <v-btn text style="font-size: 15px">オンライン企画</v-btn>
-        <v-btn text style="font-size: 15px">お知らせ</v-btn>
+        <v-btn text style="font-size: 15px" href="#お知らせ">お知らせ</v-btn>
+        <v-btn text style="font-size: 15px" href="#開成祭">開成祭とは</v-btn>
+        <v-btn text style="font-size: 15px" href="#オンライン開成祭"
+          >オンライン開成祭とは</v-btn
+        >
       </div>
       <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-menu bottom>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn icon v-bind="attrs" v-on="on">
-            <v-icon>mdi-dots-vertical</v-icon>
-          </v-btn>
-        </template>
-      </v-menu>
 
       <v-app-bar-nav-icon
         @click="drawer = true"
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
       ></v-app-bar-nav-icon>
     </v-app-bar>
+    <v-navigation-drawer v-model="drawer" temporary fixed style="z-index: 1000">
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="text-h6"> Application </v-list-item-title>
+          <v-list-item-subtitle> subtext </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider></v-divider>
+      <v-list nav dense>
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
+          <v-list-item href="#お知らせ" @click="drawer = false">
+            <v-list-item-title>お知らせ</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item href="#開成祭" @click="drawer = false">
+            <v-list-item-title>開成祭について</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item href="#オンライン開成祭" @click="drawer = false">
+            <v-list-item-title>オンライン開成祭について</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
   </div>
 </template>
 
