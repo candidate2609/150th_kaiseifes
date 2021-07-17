@@ -101,5 +101,17 @@
 </style>
 
 <script>
-export default {}
+export default {
+  methods: {
+    submit() {
+      this.toggleLoading(true)
+      setTimeout(() => {
+        this.toggleLoading(false)
+      }, 3000)
+    },
+    toggleLoading(loading) {
+      this.$nuxt.$emit('toggleLoading', loading)
+    },
+  },
+}
 </script>
