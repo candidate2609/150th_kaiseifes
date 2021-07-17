@@ -56,8 +56,7 @@
           "
         >
           <p>
-            <img src="icon.svg" alt="" style="width: 25vw"
-            type=”image/svg+xml”/>
+            <img src="icon.png" alt="" style="width: 25vw" />
           </p>
           <h3 style="margin-left: 17vw; font-size: 3.5vw; letter-spacing: 1vw">
             夢、刻む

@@ -6,15 +6,8 @@
       flat
       style="background-color: rgba(246, 246, 246, 1); z-index: 1500"
     >
-      <v-img
-        class="mr-3"
-        src="icon.svg"
-        max-height="40"
-        max-width="40"
-        contain type=”image/svg+xml”
-      ></v-img>
-      <v-toolbar-title
-        style="font-family: 'SourceHanSerif-Medium'; letter-spacing: 2px"
+      <v-img class="mr-3" src="icon.svg" max-height="40" max-width="40"></v-img>
+      <v-toolbar-title style="font-weight: 400; letter-spacing: 2px"
         >開成祭</v-toolbar-title
       >
 
@@ -79,11 +72,3 @@ export default {
   },
 }
 </script>
-
-
-<style>
-body,
-.v-application {
-  font-family: 'SourceHanSerif-Regular' !important;
-}
-</style>

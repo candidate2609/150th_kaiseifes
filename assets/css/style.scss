@@ -2,12 +2,6 @@
  
 html { scroll-behavior: smooth;}
 
-@font-face{
-    font-family: 'SourceHanSerif-Regular';
-    src: url('../fonts/SourceHanSerif-Regular.otf') format("opentype");
-}
-
-@font-face{
-    font-family: 'SourceHanSerif-Medium';
-    src: url('../fonts/SourceHanSerif-Medium.otf') format("opentype");
+body{
+    font-family: "Shippori Mincho";
 }
