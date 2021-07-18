@@ -13,7 +13,7 @@
         background_color="#f6f6f6"
       />
       <!-- お知らせの実装は -->
-
+      <notify :data="notify" />
       <!-- この間 -->
     </section>
     <section
@@ -125,8 +125,18 @@
     opacity: 0;
   }
 }
+
 </style>
 
 <script>
-export default {}
+// fetching informations with axios
+export default {
+  async asyncData({ $axios }) {
+    const url = "https://kaiseifes-150th-backend.herokuapp.com/api/news/";
+    const res = await $axios.$get(url);
+    return {
+      notify: res
+    };
+  },
+}
 </script>
