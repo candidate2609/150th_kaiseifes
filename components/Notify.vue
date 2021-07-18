@@ -1,13 +1,21 @@
 <template>
   <div id="content">
-    <p v-for="(item, index) in data" :key="index">{{ item.title }}</p>
+    <p v-for="(item, index) in data.news" :key="index">
+      {{ item.title }}
+      このコンテンツのタグは
+      <ul>
+        <li v-for="(tag, index2) in item.tag" :key="index2">{{ data.tags[tag] }}</li>
+      </ul>
+      追加された日時は
+      {{ item.datetime }}
+    </p>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    data: Array
+    data: Object
   },
 }
 </script>
