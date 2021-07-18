@@ -26,33 +26,33 @@
         title_en="Kaisei Festival"
         background_color="#ffffff"
       />
+      <p><img src="landing/Kaisei.png" alt="" style="width: 100%" /></p>
       <!-- 開成祭の実装は -->
-      <div>
-        <shortIntroduction
-          title="夢、刻む。"
-          text="150年の歴史を積み重ねし開成。その流れゆく時の中で、一人一人の生徒が、胸に描く想いを表現する。そんな僕らの夢の詰まった舞台。"
-          picture_name="landing/150page.jpg"
-          picture_alt="150th記念ページ"
-          link_to="150celebrate"
-          imgLocation="order-md-0"
-        />
-        <shortIntroduction
-          title="YouTube"
-          text="総勢約2100人の開成生が作り上げた開成祭の見所を余すことなく詰め込んだ動画をぜひご覧ください。"
-          picture_name="landing/youtube.jpg"
-          picture_alt="開成祭公式YouTubeチャンネル"
-          link_to="https://www.youtube.com/channel/UCd4nufEmpABSr1hdLWqWj6g"
-          imgLocation="order-md-2"
-        />
-        <shortIntroduction
-          title="Twitter"
-          text="皆さんと創りあげていく150th開成祭。いざ羽ばたこう！お知らせ等はこちらからも。フォロー・拡散の程、よろしくお願いします。"
-          picture_name="landing/twitter.jpg"
-          picture_alt="開成祭公式Twitterアカウント"
-          link_to="https://twitter.com/kaisei_festival"
-          imgLocation="order-md-0"
-        />
-      </div>
+      <shortIntroduction
+        title="夢、刻む。"
+        text="150年の歴史を積み重ねし開成。その流れゆく時の中で、一人一人の生徒が、胸に描く想いを表現する。そんな僕らの夢の詰まった舞台。"
+        picture_name="landing/150page.jpg"
+        picture_alt="150th記念ページ"
+        link_to="150celebrate"
+        imgLocation="order-md-0"
+      />
+      <shortIntroduction
+        title="YouTube"
+        text="総勢約2100人の開成生が作り上げた開成祭の見所を余すことなく詰め込んだ動画をぜひご覧ください。"
+        picture_name="landing/youtube.jpg"
+        picture_alt="開成祭公式YouTubeチャンネル"
+        link_to="https://www.youtube.com/channel/UCd4nufEmpABSr1hdLWqWj6g"
+        imgLocation="order-md-2"
+      />
+      <shortIntroduction
+        title="Twitter"
+        text="皆さんと創りあげていく150th開成祭。いざ羽ばたこう！お知らせ等はこちらからも。フォロー・拡散の程、よろしくお願いします。"
+        picture_name="landing/twitter.jpg"
+        picture_alt="開成祭公式Twitterアカウント"
+        link_to="https://twitter.com/kaisei_festival"
+        imgLocation="order-md-0"
+      />
+
       <!-- この間 -->
     </section>
     <section
@@ -65,6 +65,7 @@
         title_en="Kaisei Festival Online"
         background_color="#f6f6f6"
       />
+      <p><img src="landing/online.png" alt="" style="width: 100%" /></p>
       <!-- オンライン開成祭の実装は -->
 
       <!-- この間 -->
@@ -78,6 +79,7 @@
   background-size: cover;
   position: relative;
   min-height: 500px;
+  padding-bottom: 15rem;
 }
 .scrollup {
   position: fixed;

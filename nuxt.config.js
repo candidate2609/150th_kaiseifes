@@ -29,7 +29,8 @@ export default {
     ['@nuxtjs/google-fonts',
       {
         families: {
-          'Shippori+Mincho': true
+          'Shippori+Mincho': true,
+          'Noto+Serif+JP': true
         },
         display: "swap"
       }

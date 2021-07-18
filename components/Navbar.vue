@@ -11,7 +11,6 @@
         >開成祭</v-toolbar-title
       >
 
-      <v-spacer></v-spacer>
       <div v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)">
         <v-btn text style="font-size: 15px" href="#お知らせ">お知らせ</v-btn>
         <v-btn text style="font-size: 15px" href="#開成祭">開成祭とは</v-btn>
@@ -19,7 +18,9 @@
           >オンライン開成祭とは</v-btn
         >
       </div>
-      <v-spacer></v-spacer>
+      <v-spacer
+        v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
+      ></v-spacer>
       <v-app-bar-nav-icon
         @click="drawer = true"
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
@@ -43,17 +44,14 @@
     >
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="text-h6"> Application </v-list-item-title>
-          <v-list-item-subtitle> subtext </v-list-item-subtitle>
+          <v-list-item-title class="text-h6"> </v-list-item-title>
+          <v-list-item-subtitle> </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
       <v-divider></v-divider>
       <v-list nav dense>
-        <v-list-item-group
-          v-model="group"
-          active-class="deep-purple--text text--accent-4"
-        >
+        <v-list-item-group active-class="deep-purple--text text--accent-4">
           <v-list-item href="#お知らせ" @click="drawer = false">
             <v-list-item-title>お知らせ</v-list-item-title>
           </v-list-item>

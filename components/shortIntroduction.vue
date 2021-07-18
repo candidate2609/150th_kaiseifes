@@ -17,7 +17,7 @@
         </div>
         <div class="col-md-6 landflame d-flex align-items-center order-md-1">
           <div style="padding: 5vw">
-            <h1 style="font-size: 40px">{{ title }}</h1>
+            <h1 style="font-size: 30px">{{ title }}</h1>
             <br />
             <p>{{ text }}</p>
           </div>

@@ -21,14 +21,17 @@ export default {
 </script>
 
 <style>
+.title {
+  font-family: 'Shippori Mincho';
+}
 @media screen and (min-width: 960px) {
   .title {
     background-color: var(--background-color);
     padding: 2rem 1rem 4rem 1rem;
     margin: 2rem 0rem 0rem 2rem;
     position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+    position: absolute;
+    top: 10px;
     z-index: 100;
   }
   .title h1 {
@@ -46,9 +49,10 @@ export default {
   .title {
     background-color: var(--background-color);
     padding: 1rem 0.5rem 2rem 0.5rem;
+    margin-left: 1rem;
     position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+    position: absolute;
+    top: 10px;
     z-index: 100;
   }
   .title h1 {
