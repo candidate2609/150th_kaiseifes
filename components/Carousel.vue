@@ -31,6 +31,9 @@
           <h3 style="margin-top: 4rem; font-size: 2.5vw; letter-spacing: 0.5vw">
             夢、刻む
           </h3>
+          <p style="font-size: 2vw; letter-spacing: 0.3vw; margin-top: 3rem">
+            9月18日・19日開催
+          </p>
         </div>
         <v-spacer></v-spacer>
       </div>
@@ -62,6 +65,19 @@
             夢、刻む
           </h3>
         </div>
+        <p
+          style="
+            font-size: 2vw;
+            letter-spacing: 0.3vw;
+            margin-top: 3rem;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+          "
+        >
+          9月18日・19日開催
+        </p>
       </div>
     </v-carousel-item>
     <v-carousel-item
@@ -145,13 +161,13 @@ export default {
     return {
       items: [
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+          src: 'landing/carousel/1.JPG',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+          src: 'landing/carousel/2.JPG',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          src: 'landing/carousel/3.JPG',
         },
       ],
     }

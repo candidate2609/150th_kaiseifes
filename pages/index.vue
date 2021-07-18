@@ -13,7 +13,7 @@
         background_color="#f6f6f6"
       />
       <!-- お知らせの実装は -->
-      <notify :data="notify" />
+      <notify :data="data" style="padding-top: 10vh" />
       <!-- この間 -->
     </section>
     <section
@@ -26,15 +26,26 @@
         title_en="Kaisei Festival"
         background_color="#ffffff"
       />
-      <p><img src="landing/Kaisei.png" alt="" style="width: 100%" /></p>
+      <div style="position: relative; margin-bottom: 6rem">
+        <img src="landing/Kaisei.png" alt="" style="width: 100%" />
+        <div
+          class="hero-description"
+          style="background-color: #f6f6f6"
+          v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
+        >
+          <h3>夢、刻む。</h3>
+          <p>
+            150年の歴史を積み重ねし開成。その流れゆく時の中で、一人一人の生徒が、胸に描く想いを表現する。そんな僕らの夢の詰まった舞台。
+          </p>
+        </div>
+      </div>
       <!-- 開成祭の実装は -->
       <shortIntroduction
+        v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
         title="夢、刻む。"
         text="150年の歴史を積み重ねし開成。その流れゆく時の中で、一人一人の生徒が、胸に描く想いを表現する。そんな僕らの夢の詰まった舞台。"
         picture_name="landing/150page.jpg"
-        picture_alt="150th記念ページ"
-        link_to="150celebrate"
-        imgLocation="order-md-0"
+        imgLocation="order-md-2"
       />
       <shortIntroduction
         title="YouTube"
@@ -42,7 +53,7 @@
         picture_name="landing/youtube.jpg"
         picture_alt="開成祭公式YouTubeチャンネル"
         link_to="https://www.youtube.com/channel/UCd4nufEmpABSr1hdLWqWj6g"
-        imgLocation="order-md-2"
+        imgLocation="order-md-0"
       />
       <shortIntroduction
         title="Twitter"
@@ -50,23 +61,58 @@
         picture_name="landing/twitter.jpg"
         picture_alt="開成祭公式Twitterアカウント"
         link_to="https://twitter.com/kaisei_festival"
-        imgLocation="order-md-0"
+        imgLocation="order-md-2"
       />
 
       <!-- この間 -->
     </section>
     <section
       class="animated-section"
-      id="オンライン開成祭"
+      id="オンライン祭"
       style="background-color: #ffffff"
     >
       <landing-title
-        title_ja="オンライン開成祭"
+        title_ja="オンライン祭"
         title_en="Kaisei Festival Online"
         background_color="#f6f6f6"
       />
-      <p><img src="landing/online.png" alt="" style="width: 100%" /></p>
-      <!-- オンライン開成祭の実装は -->
+      <div style="position: relative; margin-bottom: 6rem">
+        <img
+          src="landing/online.png"
+          alt=""
+          style="width: 100%; min-height: 300px"
+        />
+        <div
+          class="hero-description"
+          style="background-color: white"
+          v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
+        >
+          <h3>どこでも開成祭。</h3>
+          <p>
+            さまざまな制約が課される中、文化祭のあり方を模索続けた結果です。ぜひご自宅からも開成祭をお楽しみください。
+          </p>
+        </div>
+      </div>
+      <!-- オンライン祭の実装は -->
+      <shortIntroduction
+        v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
+        title="夢、刻む。"
+        text="150年の歴史を積み重ねし開成。その流れゆく時の中で、一人一人の生徒が、胸に描く想いを表現する。そんな僕らの夢の詰まった舞台。"
+        picture_name="landing/150page.jpg"
+        imgLocation="order-md-2"
+      />
+      <shortIntroduction
+        title="夢、刻む。"
+        text="150年の歴史を積み重ねし開成。その流れゆく時の中で、一人一人の生徒が、胸に描く想いを表現する。そんな僕らの夢の詰まった舞台。"
+        picture_name="landing/online/2.png"
+        imgLocation="order-md-0"
+      />
+      <shortIntroduction
+        title="夢、刻む。"
+        text="150年の歴史を積み重ねし開成。その流れゆく時の中で、一人一人の生徒が、胸に描く想いを表現する。そんな僕らの夢の詰まった舞台。"
+        picture_name="landing/online/3.png"
+        imgLocation="order-md-2"
+      />
 
       <!-- この間 -->
     </section>
@@ -75,11 +121,25 @@
 </template>
 
 <style>
+.hero-description {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50vw;
+  height: 20vh;
+  padding: 1rem;
+}
+.hero-description h3 {
+  letter-spacing: 3px;
+}
+.hero-description p {
+  letter-spacing: 1px;
+}
 .animated-section {
   background-size: cover;
   position: relative;
-  min-height: 500px;
-  padding-bottom: 15rem;
+  min-height: 300px;
+  padding-bottom: 10vw;
 }
 .scrollup {
   position: fixed;
@@ -125,18 +185,30 @@
     opacity: 0;
   }
 }
-
 </style>
 
 <script>
 // fetching informations with axios
 export default {
   async asyncData({ $axios }) {
-    const url = "https://kaiseifes-150th-backend.herokuapp.com/api/news/";
-    const res = await $axios.$get(url);
+    const newsUrl = 'https://kaiseifes-150th-backend.herokuapp.com/api/news/'
+    const tagsUrl =
+      'https://kaiseifes-150th-backend.herokuapp.com/api/news/tags'
+    const news = await $axios.$get(newsUrl)
+    const tagsFetched = await $axios.$get(tagsUrl)
+
+    // tags
+    const tags = {}
+    for (let i = 0; i < tagsFetched.length; i++) {
+      tags[tagsFetched[i].id] = tagsFetched[i].name
+    }
+
     return {
-      notify: res
-    };
+      data: {
+        news,
+        tags,
+      },
+    }
   },
 }
 </script>

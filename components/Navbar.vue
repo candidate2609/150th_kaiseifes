@@ -14,8 +14,8 @@
       <div v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)">
         <v-btn text style="font-size: 15px" href="#お知らせ">お知らせ</v-btn>
         <v-btn text style="font-size: 15px" href="#開成祭">開成祭とは</v-btn>
-        <v-btn text style="font-size: 15px" href="#オンライン開成祭"
-          >オンライン開成祭とは</v-btn
+        <v-btn text style="font-size: 15px" href="#オンライン祭"
+          >オンライン祭とは</v-btn
         >
       </div>
       <v-spacer
@@ -60,8 +60,8 @@
             <v-list-item-title>開成祭について</v-list-item-title>
           </v-list-item>
 
-          <v-list-item href="#オンライン開成祭" @click="drawer = false">
-            <v-list-item-title>オンライン開成祭について</v-list-item-title>
+          <v-list-item href="#オンライン祭" @click="drawer = false">
+            <v-list-item-title>オンライン祭について</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>

@@ -1,22 +1,36 @@
 <template>
   <div id="content">
-    <p v-for="(item, index) in data" :key="index">{{ item.title }}</p>
+    <p v-for="(item, index) in data.news" :key="index">
+      <span id="time">{{ item.datetime.slice(0, 10) }}</span>
+      <span id="tag">{{ data.tags[item.tag] }}</span>
+      <br v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm" />
+      <span id="title">{{ item.title }}</span>
+    </p>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    data: Array,
+    data: Object,
   },
 }
 </script>
 
 <style>
 #content {
-  margin-left: 387px;
-  position: absolute;
-  left: 0;
-  top: 0;
+  margin-left: 30vw;
+  border-bottom: 1px solid #f6f6f6;
+}
+#content p {
+  margin-left: auto;
+  margin-right: auto;
+}
+#tag {
+  background-color: #bf9547;
+  color: white;
+  padding: 4px;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 </style>
