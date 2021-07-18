@@ -13,7 +13,7 @@
         background_color="#f6f6f6"
       />
       <!-- お知らせの実装は -->
-      <notify :data="notify" />
+      <notify :data="data" />
       <!-- この間 -->
     </section>
     <section
@@ -130,10 +130,22 @@
 // fetching informations with axios
 export default {
   async asyncData({ $axios }) {
-    const url = "https://kaiseifes-150th-backend.herokuapp.com/api/news/";
-    const res = await $axios.$get(url);
+    const newsUrl = "https://kaiseifes-150th-backend.herokuapp.com/api/news/";
+    const tagsUrl = "https://kaiseifes-150th-backend.herokuapp.com/api/news/tags";
+    const news = await $axios.$get(newsUrl);
+    const tagsFetched = await $axios.$get(tagsUrl);
+
+    // tags
+    const tags = {};
+    for(let i = 0;i < tagsFetched.length;i++){
+      tags[tagsFetched[i].id] = tagsFetched[i].name;
+    }
+
     return {
-      notify: res
+      data: {
+        news,
+        tags
+      }
     };
   },
 }
