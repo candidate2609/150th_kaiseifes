@@ -4,8 +4,11 @@
     href="https://twitter.com/kaisei_festival?s=20"
     class="btn-circle-border-simple"
   >
-    <img src="landing/twitter_white.svg" alt="" style="width: 50%;
-    vertical-align: middle" type=”image/svg+xml” />
+    <img
+      src="landing/twitter_white.svg"
+      alt=""
+      style="width: 50%; vertical-align: middle"
+    />
   </a>
 </template>
 

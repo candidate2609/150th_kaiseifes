@@ -6,7 +6,7 @@
       flat
       style="background-color: rgba(246, 246, 246, 1); z-index: 1500"
     >
-      <v-img class="mr-3" src="icon.svg" max-height="40" max-width="40"></v-img>
+      <v-img class="mr-3" src="icon.png" max-height="40" max-width="40"></v-img>
       <v-toolbar-title style="font-weight: 400; letter-spacing: 2px"
         >開成祭</v-toolbar-title
       >
@@ -20,13 +20,27 @@
         >
       </div>
       <v-spacer></v-spacer>
-
       <v-app-bar-nav-icon
         @click="drawer = true"
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
-      ></v-app-bar-nav-icon>
+      />
+      <!---
+      <v-btn
+        icon
+        @click="drawer = true"
+        v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
+      >
+        <v-icon>mdi-chevron-left</v-icon>
+      </v-btn>
+      <-->
     </v-app-bar>
-    <v-navigation-drawer v-model="drawer" temporary fixed style="z-index: 1000">
+    <v-navigation-drawer
+      v-model="drawer"
+      temporary
+      right
+      absolute
+      style="z-index: 1000"
+    >
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="text-h6"> Application </v-list-item-title>
