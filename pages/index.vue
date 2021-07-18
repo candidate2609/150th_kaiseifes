@@ -13,7 +13,7 @@
         background_color="#f6f6f6"
       />
       <!-- お知らせの実装は -->
-      <notify :data="data" style="padding-top: 10vh" />
+      <notify :data="data" style="padding-top: 5em" />
       <!-- この間 -->
     </section>
     <section
@@ -96,20 +96,20 @@
       <!-- オンライン祭の実装は -->
       <shortIntroduction
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
-        title="夢、刻む。"
-        text="150年の歴史を積み重ねし開成。その流れゆく時の中で、一人一人の生徒が、胸に描く想いを表現する。そんな僕らの夢の詰まった舞台。"
+        title="どこでも開成祭。"
+        text="さまざまな制約が課される中、文化祭のあり方を模索続けた結果です。ぜひご自宅からも開成祭をお楽しみください。"
         picture_name="landing/150page.jpg"
         imgLocation="order-md-2"
       />
       <shortIntroduction
-        title="夢、刻む。"
-        text="150年の歴史を積み重ねし開成。その流れゆく時の中で、一人一人の生徒が、胸に描く想いを表現する。そんな僕らの夢の詰まった舞台。"
+        title="ペンと剣の150年"
+        text="伝統深き開成。その150年の営みをオンラインで表現する。そんな僕たちの情熱あふれた舞台。"
         picture_name="landing/online/2.png"
         imgLocation="order-md-0"
       />
       <shortIntroduction
-        title="夢、刻む。"
-        text="150年の歴史を積み重ねし開成。その流れゆく時の中で、一人一人の生徒が、胸に描く想いを表現する。そんな僕らの夢の詰まった舞台。"
+        title="新たなる開成。"
+        text="今年7月に完成した新校舎。今明かされる全貌。バーチャルでご案内。"
         picture_name="landing/online/3.png"
         imgLocation="order-md-2"
       />
@@ -138,8 +138,8 @@
 .animated-section {
   background-size: cover;
   position: relative;
-  min-height: 300px;
-  padding-bottom: 10vw;
+  min-height: 45vw;
+  padding-bottom: 10rem;
 }
 .scrollup {
   position: fixed;

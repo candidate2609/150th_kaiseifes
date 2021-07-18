@@ -22,10 +22,6 @@ export default {
   margin-left: 30vw;
   border-bottom: 1px solid #f6f6f6;
 }
-#content p {
-  margin-left: auto;
-  margin-right: auto;
-}
 #tag {
   background-color: #bf9547;
   color: white;
