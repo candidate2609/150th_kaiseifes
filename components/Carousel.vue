@@ -14,7 +14,7 @@
       >
         <v-spacer></v-spacer>
         <p style="margin: auto">
-          <img src="icon.svg" alt="" style="width: 20vw" type=”image/svg+xml” />
+          <img src="icon.png" alt="" style="width: 20vw" />
         </p>
         <v-spacer></v-spacer>
         <div
@@ -56,8 +56,7 @@
           "
         >
           <p>
-            <img src="icon.svg" alt="" style="width: 25vw"
-            type=”image/svg+xml”/>
+            <img src="icon.png" alt="" style="width: 25vw" />
           </p>
           <h3 style="margin-left: 17vw; font-size: 3.5vw; letter-spacing: 1vw">
             夢、刻む
@@ -71,11 +70,21 @@
       :src="item.src"
       style="width: 100%"
     ></v-carousel-item>
-    <div class="scrolldown1"><a href="#お知らせ">もっと見る</a></div>
+    <div class="box">
+      <div class="scrolldown1">
+        <a href="#お知らせ">もっと見る</a>
+      </div>
+    </div>
   </v-carousel>
 </template>
 
 <style>
+.box {
+  margin: auto;
+  width: 150px;
+  height: 100px;
+  background: #ffffff;
+}
 .scrolldown1 {
   /*描画位置※位置は適宜調整してください*/
   position: absolute;
@@ -83,6 +92,7 @@
   bottom: 0px;
   /*全体の高さ*/
   height: 100px;
+  background-color: white;
 }
 /*Scrollテキストの描写*/
 .scrolldown1 a {
@@ -94,6 +104,7 @@
   color: #000;
   font-size: 0.7rem;
   letter-spacing: 0.05em;
+  text-decoration: none;
 }
 /* 線の描写 */
 .scrolldown1::after {
