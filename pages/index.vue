@@ -127,9 +127,9 @@
 </style>
 
 <script>
+// fetching informations with axios
 export default {
   async asyncData({ $axios }) {
-    // const url = "https://kaiseifes-150th-backend.herokuapp.com/api/news/";
     const url = "https://kaiseifes-150th-backend.herokuapp.com/api/news/";
     const res = await $axios.$get(url);
     return {
