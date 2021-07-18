@@ -7,13 +7,13 @@
 <script>
 export default {
   props: {
-    data: Array
+    data: Array,
   },
 }
 </script>
 
 <style>
-#content{
+#content {
   margin-left: 387px;
   position: absolute;
   left: 0;
