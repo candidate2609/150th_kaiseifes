@@ -79,7 +79,7 @@
 <script>
 export default {
   data: () => ({
-    icons: ['mdi-facebook', 'mdi-twitter', 'mdi-instagram'],
+    icons: ['mdi-youtube', 'mdi-twitter'],
   }),
 }
 </script>

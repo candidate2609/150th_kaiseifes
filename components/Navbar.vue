@@ -38,7 +38,7 @@
     <v-navigation-drawer
       v-model="drawer"
       temporary
-      right
+      left
       absolute
       style="z-index: 1000"
     >
