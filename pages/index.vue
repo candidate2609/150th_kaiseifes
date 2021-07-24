@@ -40,14 +40,14 @@
         </div>
       </div>
       <!-- 開成祭の実装は -->
-      <shortIntroduction
+      <short-introduction
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
         title="夢、刻む。"
         text="150年の歴史を積み重ねし開成。その流れゆく時の中で、一人一人の生徒が、胸に描く想いを表現する。そんな僕らの夢の詰まった舞台。"
         picture_name="landing/150page.jpg"
         imgLocation="order-md-2"
       />
-      <shortIntroduction
+      <short-introduction
         title="YouTube"
         text="総勢約2100人の開成生が作り上げた開成祭の見所を余すことなく詰め込んだ動画をぜひご覧ください。"
         picture_name="landing/youtube.jpg"
@@ -55,7 +55,7 @@
         link_to="https://www.youtube.com/channel/UCd4nufEmpABSr1hdLWqWj6g"
         imgLocation="order-md-0"
       />
-      <shortIntroduction
+      <short-introduction
         title="Twitter"
         text="皆さんと創りあげていく150th開成祭。いざ羽ばたこう！お知らせ等はこちらからも。フォロー・拡散の程、よろしくお願いします。"
         picture_name="landing/twitter.jpg"
@@ -94,23 +94,24 @@
         </div>
       </div>
       <!-- オンライン祭の実装は -->
-      <shortIntroduction
+      <short-introduction
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
         title="どこでも開成祭。"
         text="さまざまな制約が課される中、文化祭のあり方を模索続けた結果です。ぜひご自宅からも開成祭をお楽しみください。"
         picture_name="landing/150page.jpg"
         imgLocation="order-md-2"
       />
-      <shortIntroduction
+      <short-introduction
         title="ペンと剣の150年"
         text="伝統深き開成。その150年の営みをオンラインで表現する。そんな僕たちの情熱あふれた舞台。"
         picture_name="landing/online/2.png"
         imgLocation="order-md-0"
       />
-      <shortIntroduction
+      <short-introduction
         title="新たなる開成。"
         text="今年7月に完成した新校舎。今明かされる全貌。バーチャルでご案内。"
         picture_name="landing/online/3.png"
+        picture_alt="clusterで新校舎を再現！(後日公開予定)"
         imgLocation="order-md-2"
       />
 
