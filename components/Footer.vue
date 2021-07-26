@@ -20,16 +20,29 @@
 
         <div v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)">
           <v-btn
-            v-for="icon in icons"
-            :key="icon"
+            v-for="icon1 in icons1"
+            :key="icon1"
             class="mx-4"
             dark
             icon
-            href="https://twitter.com/kaisei_festival?s=20"
+            href="https://www.youtube.com/channel/UCd4nufEmpABSr1hdLWqWj6g"
             target="_blank"
           >
             <v-icon size="24px">
-              {{ icon }}
+              {{ icon1 }}
+            </v-icon>
+          </v-btn>
+          <v-btn
+            v-for="icon2 in icons2"
+            :key="icon2"
+            class="mx-4"
+            dark
+            icon
+            href="https://twitter.com/kaisei_festival"
+            target="_blank"
+          >
+            <v-icon size="24px">
+              {{ icon2 }}
             </v-icon>
           </v-btn>
         </div>
@@ -50,16 +63,29 @@
           style="text-align: center"
         >
           <v-btn
-            v-for="icon in icons"
-            :key="icon"
+            v-for="icon1 in icons1"
+            :key="icon1"
             class="mx-4"
             dark
             icon
-            href="https://twitter.com/kaisei_festival?s=20"
+            href="https://www.youtube.com/channel/UCd4nufEmpABSr1hdLWqWj6g"
             target="_blank"
           >
             <v-icon size="24px">
-              {{ icon }}
+              {{ icon1 }}
+            </v-icon>
+          </v-btn>
+          <v-btn
+            v-for="icon2 in icons2"
+            :key="icon2"
+            class="mx-4"
+            dark
+            icon
+            href="https://twitter.com/kaisei_festival"
+            target="_blank"
+          >
+            <v-icon size="24px">
+              {{ icon2 }}
             </v-icon>
           </v-btn>
         </div>
@@ -79,7 +105,8 @@
 <script>
 export default {
   data: () => ({
-    icons: ['mdi-youtube', 'mdi-twitter'],
+    icons1: ['mdi-youtube'],
+    icons2: ['mdi-twitter'],
   }),
 }
 </script>
