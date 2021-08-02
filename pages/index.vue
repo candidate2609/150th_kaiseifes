@@ -33,7 +33,7 @@
           style="background-color: #f6f6f6"
           v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
         >
-          <h3>夢、刻む。</h3>
+          <h3>夢、刻む</h3>
           <p>
             150年の歴史を積み重ねし開成。その流れゆく時の中で、一人一人の生徒が、胸に描く想いを表現する。そんな僕らの夢の詰まった舞台。
           </p>
@@ -42,7 +42,7 @@
       <!-- 開成祭の実装は -->
       <shortIntroduction
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
-        title="夢、刻む。"
+        title="夢、刻む"
         text="150年の歴史を積み重ねし開成。その流れゆく時の中で、一人一人の生徒が、胸に描く想いを表現する。そんな僕らの夢の詰まった舞台。"
         picture_name="landing/150page.jpg"
         imgLocation="order-md-2"
