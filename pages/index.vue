@@ -14,6 +14,11 @@
       />
       <!-- お知らせの実装は -->
       <notify :data="data" style="padding-top: 5em" />
+      <arrow-button
+        text="メルマガ登録・解除はこちら"
+        description="「お知らせ」の更新をメールで受け取ることができます。"
+        style="text-align: right; margin-top: 30px; margin-right: 30px"
+      />
       <!-- この間 -->
     </section>
     <section
@@ -116,7 +121,6 @@
 
       <!-- この間 -->
     </section>
-    <div class="scrollup" fixed></div>
   </div>
 </template>
 
@@ -140,34 +144,6 @@
   position: relative;
   min-height: 45vw;
   padding-bottom: 10rem;
-}
-.scrollup {
-  position: fixed;
-  left: 98%;
-  bottom: 100px;
-  z-index: 100;
-}
-.scrollup a {
-  /*描画位置*/
-  position: absolute;
-  right: 10px;
-  top: 40px;
-  /*テキストの形状*/
-  color: #000;
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
-}
-.scrollup::after {
-  content: '';
-  /*描画位置*/
-  position: absolute;
-  top: 0;
-  /*線の形状*/
-  width: 1px;
-  height: 100px;
-  background: #000;
-  animation: pathup 3s ease-in-out infinite;
-  opacity: 0;
 }
 @keyframes pathup {
   0% {

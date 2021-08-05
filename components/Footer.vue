@@ -51,9 +51,9 @@
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
         style="display: flex; flex-direction: column"
       >
-        <v-btn text style="font-size: 15px" href="#お知らせ">お知らせ</v-btn>
-        <v-btn text style="font-size: 15px" href="#開成祭">開成祭とは</v-btn>
-        <v-btn text style="font-size: 15px" href="#オンライン祭"
+        <v-btn text style="font-size: 15px" href="/#お知らせ">お知らせ</v-btn>
+        <v-btn text style="font-size: 15px" href="/#開成祭">開成祭とは</v-btn>
+        <v-btn text style="font-size: 15px" href="/#オンライン祭"
           >オンライン祭とは</v-btn
         ></v-card-text
       >
@@ -92,7 +92,7 @@
       </v-card-text>
       <v-card-text>
         <div style="text-align: center">
-          <img src="icon.png" alt="" style="width: 70px" />
+          <img src="/icon.svg" alt="" style="width: 70px" />
         </div>
       </v-card-text>
       <v-card-text class="py-2 white--text text-center">

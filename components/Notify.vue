@@ -18,8 +18,10 @@ export default {
 </script>
 
 <style>
-#content {
+#content p {
   margin-left: 30vw;
+  margin-top: 2vh;
+  padding-bottom: 2vh;
   border-bottom: 1px solid #f6f6f6;
 }
 #tag {
