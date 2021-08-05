@@ -7,7 +7,11 @@
       style="margin-top: 5em; border-top: 1vw solid #2a4073"
     />
     <div style="position: relative">
-      <img src="paper.png" alt="" style="min-width: 100%; min-height: 250px" />
+      <img
+        src="/subscribe/paper.png"
+        alt=""
+        style="min-width: 100%; min-height: 250px"
+      />
       <div
         class="hero-description"
         style="background-color: #ffffff"
