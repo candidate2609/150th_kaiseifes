@@ -8,9 +8,17 @@
       style="background-color: #ffffff"
     >
       <landing-title
+        v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
         title_ja="お知らせ"
         title_en="News"
         background_color="#f6f6f6"
+      />
+      <landing-title
+        v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
+        title_ja="お知らせ"
+        title_en="News"
+        background_color="#f6f6f6"
+        style="writing-mode: horizontal-lr; padding: 0.5vh"
       />
       <!-- お知らせの実装は -->
       <notify :data="data" style="padding-top: 5em" />
