@@ -2,21 +2,34 @@
   <div style="relative">
     <title>開成祭 開成学園 文化祭 2021</title>
     <carousel style="border-bottom: 1px solid #a28756" />
+    <arrow-button
+      text="当日のタイムテーブルはこちら"
+      href="timetable"
+      style="text-align: right; margin: 30px; margin-right: 30px"
+    />
     <section
       class="animated-section"
       id="お知らせ"
       style="background-color: #ffffff"
     >
       <landing-title
+        v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
         title_ja="お知らせ"
         title_en="News"
         background_color="#f6f6f6"
+      />
+      <landing-title
+        v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
+        title_ja="お知らせ"
+        title_en="News"
+        background_color="#f6f6f6"
+        style="writing-mode: horizontal-lr; padding: 0.5vh"
       />
       <!-- お知らせの実装は -->
       <notify :data="data" style="padding-top: 5em" />
       <arrow-button
         text="メルマガ登録・解除はこちら"
-        description="「お知らせ」の更新をメールで受け取ることができます。"
+        href="subscribe"
         style="text-align: right; margin-top: 30px; margin-right: 30px"
       />
       <!-- この間 -->

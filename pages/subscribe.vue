@@ -136,6 +136,8 @@ export default {
         .catch((err) => {
           if (err.response.status === 400) {
             alert('すでに同じメールアドレスが登録されています。')
+          } else if (err.response.status === 500) {
+            alert('申し訳ございません。しばらくしてからやり直してください。')
           }
         })
     },
