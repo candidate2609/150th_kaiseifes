@@ -13,9 +13,9 @@
         style="min-width: 100%; min-height: 250px"
       />
       <div
+        v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
         class="hero-description"
         style="background-color: #ffffff"
-        v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
       >
         <h3>メールでいち早くお届け。</h3>
         <p>
