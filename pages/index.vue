@@ -8,8 +8,8 @@
       style="text-align: right; margin: 30px; margin-right: 30px"
     />
     <section
-      class="animated-section"
       id="お知らせ"
+      class="animated-section"
       style="background-color: #ffffff"
     >
       <landing-title
@@ -35,8 +35,8 @@
       <!-- この間 -->
     </section>
     <section
-      class="animated-section"
       id="開成祭"
+      class="animated-section"
       style="background-color: #f6f6f6"
     >
       <landing-title
@@ -47,9 +47,9 @@
       <div style="position: relative; margin-bottom: 6rem">
         <img src="landing/Kaisei.png" alt="" style="width: 100%" />
         <div
+          v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
           class="hero-description"
           style="background-color: #f6f6f6"
-          v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
         >
           <h3>夢、刻む</h3>
           <p>
@@ -63,7 +63,7 @@
         title="夢、刻む"
         text="150年の歴史を積み重ねし開成。その流れゆく時の中で、一人一人の生徒が、胸に描く想いを表現する。そんな僕らの夢の詰まった舞台。"
         picture_name="landing/150page.jpg"
-        imgLocation="order-md-2"
+        img-location="order-md-2"
       />
       <shortIntroduction
         title="YouTube"
@@ -71,7 +71,7 @@
         picture_name="landing/youtube.jpg"
         picture_alt="開成祭公式YouTubeチャンネル"
         link_to="https://www.youtube.com/channel/UCd4nufEmpABSr1hdLWqWj6g"
-        imgLocation="order-md-0"
+        img-location="order-md-0"
       />
       <shortIntroduction
         title="Twitter"
@@ -79,14 +79,14 @@
         picture_name="landing/twitter.jpg"
         picture_alt="開成祭公式Twitterアカウント"
         link_to="https://twitter.com/kaisei_festival"
-        imgLocation="order-md-2"
+        img-location="order-md-2"
       />
 
       <!-- この間 -->
     </section>
     <section
-      class="animated-section"
       id="オンライン祭"
+      class="animated-section"
       style="background-color: #ffffff"
     >
       <landing-title
@@ -101,9 +101,9 @@
           style="width: 100%; min-height: 300px"
         />
         <div
+          v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
           class="hero-description"
           style="background-color: white"
-          v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
         >
           <h3>どこでも開成祭。</h3>
           <p>
@@ -117,19 +117,19 @@
         title="どこでも開成祭。"
         text="さまざまな制約が課される中、文化祭のあり方を模索続けた結果です。ぜひご自宅からも開成祭をお楽しみください。"
         picture_name="landing/150page.jpg"
-        imgLocation="order-md-2"
+        img-location="order-md-2"
       />
       <shortIntroduction
         title="ペンと剣の150年"
         text="伝統深き開成。その150年の営みをオンラインで表現する。そんな僕たちの情熱あふれた舞台。"
         picture_name="landing/online/2.png"
-        imgLocation="order-md-0"
+        img-location="order-md-0"
       />
       <shortIntroduction
         title="新たなる開成。"
         text="今年7月に完成した新校舎。今明かされる全貌。バーチャルでご案内。"
         picture_name="landing/online/3.png"
-        imgLocation="order-md-2"
+        img-location="order-md-2"
       />
 
       <!-- この間 -->
