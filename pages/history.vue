@@ -4,7 +4,7 @@
       <p>開成の150年</p>
     </div>
     <section>
-      <era-title>設立</era-title>
+      <era-title id="establish">設立</era-title>
       <dl>
         <dt>1871</dt>
         <dd>
@@ -17,13 +17,86 @@
           明治初期の東京は、教育制度の整備が不十分であったこともあり、私立学校が乱立していた。
           そんな中、佐野はコレラに罹患する。共立学校は廃校状態になったが、後に
         </dd>
+        <dt>1877</dt>
+        <dd>
+          明治初期の東京は、教育制度の整備が不十分であったこともあり、私立学校が乱立していた。
+          そんな中、佐野はコレラに罹患する。共立学校は廃校状態になったが、後に
+        </dd>
+        <dt>1877</dt>
+        <dd>
+          明治初期の東京は、教育制度の整備が不十分であったこともあり、私立学校が乱立していた。
+          そんな中、佐野はコレラに罹患する。共立学校は廃校状態になったが、後に
+        </dd>
+        <dt>1877</dt>
+        <dd>
+          明治初期の東京は、教育制度の整備が不十分であったこともあり、私立学校が乱立していた。
+          そんな中、佐野はコレラに罹患する。共立学校は廃校状態になったが、後に
+        </dd>
+      </dl>
+    </section>
+    <section>
+      <era-title id="establish">設立</era-title>
+      <dl>
+        <dt>1871</dt>
+        <dd>
+          3月、旧加賀藩の砲術師範であった佐野鼎によって開成の前身となる共立学校の「学範」と
+          「共立学校規則」が制定された。当時としては珍しく外国人にも通用する正則英語を用いた
+          授業を行っていた。
+        </dd>
+        <dt>1877</dt>
+        <dd>
+          明治初期の東京は、教育制度の整備が不十分であったこともあり、私立学校が乱立していた。
+          そんな中、佐野はコレラに罹患する。共立学校は廃校状態になったが、後に
+        </dd>
+        <dt>1877</dt>
+        <dd>
+          明治初期の東京は、教育制度の整備が不十分であったこともあり、私立学校が乱立していた。
+          そんな中、佐野はコレラに罹患する。共立学校は廃校状態になったが、後に
+        </dd>
+        <dt>1877</dt>
+        <dd>
+          明治初期の東京は、教育制度の整備が不十分であったこともあり、私立学校が乱立していた。
+          そんな中、佐野はコレラに罹患する。共立学校は廃校状態になったが、後に
+        </dd>
+        <dt>1877</dt>
+        <dd>
+          明治初期の東京は、教育制度の整備が不十分であったこともあり、私立学校が乱立していた。
+          そんな中、佐野はコレラに罹患する。共立学校は廃校状態になったが、後に
+        </dd>
       </dl>
     </section>
   </main>
 </template>
 
-<style scope>
+<script>
+// /* eslint-disable */
+export default {
+  mounted: () => {
+    const animation = (entries) => {
+      // border に era-title-border-animation クラスを追加
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > 0) {
+          entry.target.classList.add('era-title-border-animation')
+          observer.unobserve(entry.target)
+        } else {
+          entry.target.classList.remove('era-title-border-animation')
+        }
+      })
+    }
+    const intersectionOptions = {
+      rootMargin: '-10px',
+      threshold: 1.0,
+    }
+    const observer = new IntersectionObserver(animation, intersectionOptions)
+    const titleBorders = document.getElementsByClassName('era-title-border')
+    titleBorders.forEach((element) => {
+      observer.observe(element)
+    })
+  },
+}
+</script>
 
+<style scope>
 main {
   background-color: black;
   color: white;
@@ -32,7 +105,7 @@ main {
 
 section,
 #title {
-  padding: 16px;
+  padding: 0 16px;
   font-family: 'Shippori Mincho';
   margin: 0 auto;
   max-width: 1100px;
@@ -78,8 +151,24 @@ dl dt {
     background-clip: content-box;
   }
 }
+
+/* ANIMATIONS */
+
+/* この部分は JS で呼び出す */
+
+.era-title-border-animation {
+  animation-name: era-title-border;
+  animation-fill-mode: forwards;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes era-title-border {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100px;
+  }
+}
 </style>
-
-<script>
-
-</script>

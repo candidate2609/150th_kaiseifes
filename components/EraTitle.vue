@@ -1,11 +1,17 @@
 <template>
   <div class="era-title">
-    <div class="era-title-border"></div>
+    <div :id="id" class="era-title-border"></div>
     <h2>{{ $slots.default[0].text }}</h2>
   </div>
 </template>
 
-<style scoped>
+<script>
+export default {
+  props: ['id']
+}
+</script>
+
+<style>
 h2 {
   font-size: 22px;
   font-weight: 800;
@@ -14,7 +20,7 @@ h2 {
 .era-title-border {
   margin-bottom: 9px;
   border-bottom: solid 2px #FAD576;
-  width: 5em;
+  width: 0px;
 }
 
 .era-title {
@@ -22,9 +28,3 @@ h2 {
   margin-bottom: 28px;
 }
 </style>
-
-<script>
-export default {
-
-}
-</script>
