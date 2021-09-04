@@ -4,7 +4,7 @@
       <p>開成の150年</p>
     </div>
     <section>
-      <era-title id="establish">設立</era-title>
+      <era-title>設立</era-title>
       <dl>
         <dt>1871</dt>
         <dd>
@@ -35,7 +35,7 @@
       </dl>
     </section>
     <section>
-      <era-title id="establish">設立</era-title>
+      <era-title>設立</era-title>
       <dl>
         <dt>1871</dt>
         <dd>
@@ -69,28 +69,50 @@
 </template>
 
 <script>
-// /* eslint-disable */
+const animateOnDisplay = (entries, observer, className) => {
+  entries.forEach((entry) => {
+    if (entry.intersectionRatio > 0) {
+      entry.target.classList.add(className)
+      observer.unobserve(entry.target)
+    } else {
+      entry.target.classList.remove(className)
+    }
+  })
+}
 export default {
   mounted: () => {
-    const animation = (entries) => {
-      // border に era-title-border-animation クラスを追加
-      entries.forEach((entry) => {
-        if (entry.intersectionRatio > 0) {
-          entry.target.classList.add('era-title-border-animation')
-          observer.unobserve(entry.target)
-        } else {
-          entry.target.classList.remove('era-title-border-animation')
-        }
-      })
-    }
     const intersectionOptions = {
-      rootMargin: '-10px',
+      rootMargin: '100px',
       threshold: 1.0,
     }
-    const observer = new IntersectionObserver(animation, intersectionOptions)
+    // border animation
+    const borderAnimation = (entries) => {
+      animateOnDisplay(entries, borderObserver, 'era-title-border-animation')
+    }
+    const borderObserver = new IntersectionObserver(
+      borderAnimation,
+      intersectionOptions
+    )
     const titleBorders = document.getElementsByClassName('era-title-border')
     titleBorders.forEach((element) => {
-      observer.observe(element)
+      borderObserver.observe(element)
+    })
+    // fade-in animation
+    const fadeinAnimation = (entries) => {
+      animateOnDisplay(entries, fadeinObserver, 'fadein-animation')
+    }
+    const fadeinObserver = new IntersectionObserver(
+      fadeinAnimation,
+      intersectionOptions
+    )
+    const fadeinAnimateTags = ['h2', 'dd', 'dt']
+    const fadeinAnimateElements = fadeinAnimateTags.map(tagName => {
+      return document.querySelectorAll(tagName)
+    })
+    fadeinAnimateElements.forEach(elements => {
+      elements.forEach(element => {
+        fadeinObserver.observe(element)
+      })
     })
   },
 }
@@ -98,6 +120,7 @@ export default {
 
 <style scope>
 main {
+  padding-bottom: 40px;
   background-color: black;
   color: white;
   font-weight: 600;
@@ -140,6 +163,7 @@ dl dt {
   dl {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    row-gap: 1em;
   }
 
   dl dt {
@@ -169,6 +193,24 @@ dl dt {
   }
   100% {
     width: 100px;
+  }
+}
+
+.fadein-animation {
+  animation-name: fadein;
+  animation-fill-mode: forwards;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes fadein {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 </style>
