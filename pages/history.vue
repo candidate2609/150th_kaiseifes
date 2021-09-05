@@ -69,50 +69,67 @@
 </template>
 
 <script>
-const animateOnDisplay = (entries, observer, className) => {
-  entries.forEach((entry) => {
-    if (entry.intersectionRatio > 0) {
-      entry.target.classList.add(className)
-      observer.unobserve(entry.target)
-    } else {
-      entry.target.classList.remove(className)
-    }
+/* eslint-disable */
+/**
+ * observer で監視する要素と observer の option、intersectionRatio ごとに動かす callback を渡す
+ *
+ * vals = {
+ *  onDisplay,
+ *  oHidden,
+ *  targets,
+ *  opts
+ * }
+ */
+const aniObserver = (vals) => {
+  const observerCallback = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        vals.onDisplay(entry)
+        observer.unobserve(entry.target)
+      } else {
+        vals.onHidden(entry)
+      }
+    })
+  }
+  const observer = new IntersectionObserver(observerCallback, vals.opts)
+  vals.targets.forEach((elem) => {
+    observer.observe(elem)
   })
+}
+const addClass = (entry, className) => {
+  entry.target.classList.add(className)
+}
+const removeClass = (entry, className) => {
+  entry.target.classList.remove(className)
 }
 export default {
   mounted: () => {
-    const intersectionOptions = {
+    // border streaching animation
+    const titleBorders = document.getElementsByClassName('era-title-border')
+    const borderObserverOpts = {
       rootMargin: '100px',
       threshold: 1.0,
     }
-    // border animation
-    const borderAnimation = (entries) => {
-      animateOnDisplay(entries, borderObserver, 'era-title-border-animation')
-    }
-    const borderObserver = new IntersectionObserver(
-      borderAnimation,
-      intersectionOptions
-    )
-    const titleBorders = document.getElementsByClassName('era-title-border')
-    titleBorders.forEach((element) => {
-      borderObserver.observe(element)
+    const borderAniClassName = 'era-title-border-animation'
+    aniObserver({
+      onDisplay: (entry) => addClass(entry, borderAniClassName),
+      onHidden: (entry) => removeClass(entry, borderAniClassName),
+      targets: titleBorders,
+      opts: borderObserverOpts,
     })
     // fade-in animation
-    const fadeinAnimation = (entries) => {
-      animateOnDisplay(entries, fadeinObserver, 'fadein-animation')
+    const fadeinObserverOpts = {
+      rootMargin: '100px',
+      threshold: 0,
     }
-    const fadeinObserver = new IntersectionObserver(
-      fadeinAnimation,
-      intersectionOptions
-    )
-    const fadeinAnimateTags = ['h2', 'dd', 'dt']
-    const fadeinAnimateElements = fadeinAnimateTags.map(tagName => {
-      return document.querySelectorAll(tagName)
-    })
-    fadeinAnimateElements.forEach(elements => {
-      elements.forEach(element => {
-        fadeinObserver.observe(element)
-      })
+    const fadeinAniTags = ['h2', 'dd', 'dt']
+    const fadeinAniElems = document.querySelectorAll(fadeinAniTags)
+    const fadeinAniClassName = 'fadein-animation'
+    aniObserver({
+      onDisplay: (entry) => addClass(entry, fadeinAniClassName),
+      onHidden: (entry) => removeClass(entry, fadeinAniClassName),
+      targets: fadeinAniElems,
+      opts: fadeinObserverOpts,
     })
   },
 }
@@ -176,9 +193,7 @@ dl dt {
   }
 }
 
-/* ANIMATIONS */
-
-/* この部分は JS で呼び出す */
+/* アニメーション関連 この部分は JS で呼び出す */
 
 .era-title-border-animation {
   animation-name: era-title-border;
