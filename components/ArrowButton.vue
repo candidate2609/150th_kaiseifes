@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a id="link" :href="href" class="btnarrow4">{{ text }}</a>
+    <a id="link" :href="href" target="_blank" class="btnarrow4">{{ text }}</a>
   </div>
 </template>
 
