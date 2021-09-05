@@ -18,7 +18,7 @@ h2 {
 }
 
 .era-title-border {
-  margin-bottom: 9px;
+  margin-bottom: 14px;
   border-bottom: solid 2px #FAD576;
   width: 0px;
 }
