@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="loading" v-if="loading">
+    <div v-if="loading" id="loading">
       <v-progress-circular indeterminate />
     </div>
     <Navbar id="navbar" />

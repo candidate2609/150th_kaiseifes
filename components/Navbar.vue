@@ -29,8 +29,8 @@
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
       ></v-spacer>
       <v-app-bar-nav-icon
-        @click="drawer = true"
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
+        @click="drawer = true"
       />
       <!---
       <v-btn
