@@ -69,7 +69,6 @@
 </template>
 
 <script>
-/* eslint-disable */
 /**
  * observer で監視する要素と observer の option、intersectionRatio ごとに動かす callback を渡す
  *
@@ -80,7 +79,7 @@
  *  opts
  * }
  */
-const aniObserver = (vals) => {
+const aniObserver = async (vals) => {
   const observerCallback = (entries) => {
     entries.forEach((entry) => {
       if (entry.intersectionRatio > 0) {
