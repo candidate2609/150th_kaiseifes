@@ -181,7 +181,6 @@
  *  }
  */
 /* eslint-disable require-await */
-/* eslint-disable */
 const aniObserver = async (vals) => {
   const observerCallback = (entries) => {
     entries.forEach((entry) => {
@@ -210,7 +209,6 @@ const aniObserver = async (vals) => {
  */
 const switchImgs = async (vals) => {
   const backgroundDom = vals.target
-  const classList = backgroundDom.classList
   const observerCallback = (entries) => {
     entries.forEach((entry) => {
       const id = Number(entry.target.id)
@@ -219,18 +217,9 @@ const switchImgs = async (vals) => {
       const toBottom = positionY < 0
       const toTop = positionY < viewHeight / 2
       if (toBottom) {
-        console.log("toBottom")
         backgroundDom.style.backgroundImage = `url("../history/${vals.paths[id]}")`
-        classList.remove(vals.className)
-        console.log(vals.className)
-        classList.add(vals.className)
       } else if (toTop) {
-        console.log("toTop")
         backgroundDom.style.backgroundImage = `url("../history/${vals.paths[id - 1]}")`
-        classList.remove(vals.className)
-        classList.add(vals.className)
-      } else {
-        console.log("other")
       }
     })
   }
@@ -240,7 +229,7 @@ const switchImgs = async (vals) => {
   })
 }
 export default {
-  data: () => {
+  data() {
     const imgPaths = [
       'establish.jpg',
       'kyouryu.jpg',
@@ -249,10 +238,10 @@ export default {
       'future.jpg',
     ]
     return {
-      imgPaths: imgPaths,
+      imgPaths,
     }
   },
-  mounted: function () {
+  mounted() {
     const titleBorders = document.getElementsByClassName('era-title-border')
     // switch images
     const imgsObserverOpts = {
