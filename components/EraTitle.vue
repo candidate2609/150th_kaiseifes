@@ -24,7 +24,6 @@ h2 {
 }
 
 .era-title {
-  margin-top: 45px;
   margin-bottom: 28px;
 }
 </style>
