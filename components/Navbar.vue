@@ -24,7 +24,7 @@
         <v-btn text style="font-size: 15px" href="/#オンライン祭"
           >オンライン祭とは</v-btn
         >
-        <v-btn text style="font-size: 15px" href="history">開成の150年</v-btn>
+        <v-btn text style="font-size: 15px" href="/history">開成の150年</v-btn>
       </div>
       <v-spacer
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
@@ -72,7 +72,7 @@
             <v-list-item-title>オンライン祭について</v-list-item-title>
           </v-list-item>
 
-          <v-list-item href="history" @click="drawer = false">
+          <v-list-item href="/history" @click="drawer = false">
             <v-list-item-title>開成の150年</v-list-item-title>
           </v-list-item>
         </v-list-item-group>

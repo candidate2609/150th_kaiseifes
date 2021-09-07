@@ -15,7 +15,7 @@
           <v-btn text style="font-size: 15px" href="#オンライン祭"
             >オンライン祭とは</v-btn
           >
-          <v-btn text style="font-size: 15px" href="history">開成の150年</v-btn>
+          <v-btn text style="font-size: 15px" href="/history">開成の150年</v-btn>
         </div>
         <v-spacer></v-spacer>
 
