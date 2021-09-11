@@ -121,24 +121,14 @@
       </div>
       <div style="text-align: center">
         <div
-          style="
-            display: inline-block;
-            margin-left: 1rem;
-            margin-right: 1rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-            padding: 1rem;
+          style="display: inline-block;margin-left: 1rem;margin-right: 1rem;margin-bottom: 2rem;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);padding: 1rem;
           "
         >
           <p
             style="line-height: 1.5em; display: inline-block; text-align: left"
           >
             <span
-              style="
-                border-bottom: 1px solid rgb(42, 64, 115);
-                font-size: 2rem;
-                line-height: 1.5em;
-                margin-bottom: 1rem;
+              style="border-bottom: 2px solid rgb(42, 64, 115);font-size: 2rem;line-height: 1.5em;margin-bottom: 1rem;
               "
               >オンライン文化祭に関して</span
             ><br /><br />
