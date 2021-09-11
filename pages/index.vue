@@ -102,7 +102,7 @@
         title_en="Kaisei Festival Online"
         background_color="#f6f6f6"
       />
-      <div style="position: relative; margin-bottom: 6rem">
+      <div style="position: relative; margin-bottom: 3rem">
         <img
           src="landing/online.png"
           alt=""
@@ -116,6 +116,39 @@
           <h3>どこでも開成祭。</h3>
           <p>
             さまざまな制約が課される中、文化祭のあり方を模索続けた結果です。ぜひご自宅からも開成祭をお楽しみください。
+          </p>
+        </div>
+      </div>
+      <div style="text-align: center">
+        <div
+          style="
+            display: inline-block;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+          "
+        >
+          <p
+            style="line-height: 1.5em; display: inline-block; text-align: left"
+          >
+            <span
+              style="
+                border-bottom: 1px solid rgb(42, 64, 115);
+                font-size: 2rem;
+                line-height: 1.5em;
+                margin-bottom: 1rem;
+              "
+              >オンライン文化祭に関して</span
+            ><br /><br />
+            オンライン文化祭の開催形態です。<br /><br />
+            １.当日各企画の動画がYouTube上に上がります。<br />
+            ２.開成祭当日の様子をYouTubeでのライブ配信でお届けします。<br />
+            ３.当日の様子を動画にてYoutubenにて後日公開します。<br />
+            ４.HP上で様々な企画を更新します。<br /><br />
+            これらのコンテンツはライブ配信含めて10月いっぱいまで視聴可能です。<br />
+            詳細や配信のタイムスケジュールは9月15日（水曜日）に掲載いたします。
           </p>
         </div>
       </div>
