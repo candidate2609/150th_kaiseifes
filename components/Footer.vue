@@ -10,9 +10,9 @@
 
         <v-spacer></v-spacer>
         <div v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)">
-          <v-btn text style="font-size: 15px" href="#お知らせ">お知らせ</v-btn>
-          <v-btn text style="font-size: 15px" href="#開成祭">開成祭とは</v-btn>
-          <v-btn text style="font-size: 15px" href="#オンライン祭"
+          <v-btn text style="font-size: 15px" href="/#お知らせ">お知らせ</v-btn>
+          <v-btn text style="font-size: 15px" href="/#開成祭">開成祭とは</v-btn>
+          <v-btn text style="font-size: 15px" href="/#オンライン祭"
             >オンライン祭とは</v-btn
           >
         </div>
@@ -20,16 +20,29 @@
 
         <div v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)">
           <v-btn
-            v-for="icon in icons"
-            :key="icon"
+            v-for="icon1 in icons1"
+            :key="icon1"
             class="mx-4"
             dark
             icon
-            href="https://twitter.com/kaisei_festival?s=20"
+            href="https://www.youtube.com/channel/UCd4nufEmpABSr1hdLWqWj6g"
             target="_blank"
           >
             <v-icon size="24px">
-              {{ icon }}
+              {{ icon1 }}
+            </v-icon>
+          </v-btn>
+          <v-btn
+            v-for="icon2 in icons2"
+            :key="icon2"
+            class="mx-4"
+            dark
+            icon
+            href="https://twitter.com/kaisei_festival"
+            target="_blank"
+          >
+            <v-icon size="24px">
+              {{ icon2 }}
             </v-icon>
           </v-btn>
         </div>
@@ -38,9 +51,9 @@
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
         style="display: flex; flex-direction: column"
       >
-        <v-btn text style="font-size: 15px" href="#お知らせ">お知らせ</v-btn>
-        <v-btn text style="font-size: 15px" href="#開成祭">開成祭とは</v-btn>
-        <v-btn text style="font-size: 15px" href="#オンライン祭"
+        <v-btn text style="font-size: 15px" href="/#お知らせ">お知らせ</v-btn>
+        <v-btn text style="font-size: 15px" href="/#開成祭">開成祭とは</v-btn>
+        <v-btn text style="font-size: 15px" href="/#オンライン祭"
           >オンライン祭とは</v-btn
         ></v-card-text
       >
@@ -50,23 +63,36 @@
           style="text-align: center"
         >
           <v-btn
-            v-for="icon in icons"
-            :key="icon"
+            v-for="icon1 in icons1"
+            :key="icon1"
             class="mx-4"
             dark
             icon
-            href="https://twitter.com/kaisei_festival?s=20"
+            href="https://www.youtube.com/channel/UCd4nufEmpABSr1hdLWqWj6g"
             target="_blank"
           >
             <v-icon size="24px">
-              {{ icon }}
+              {{ icon1 }}
+            </v-icon>
+          </v-btn>
+          <v-btn
+            v-for="icon2 in icons2"
+            :key="icon2"
+            class="mx-4"
+            dark
+            icon
+            href="https://twitter.com/kaisei_festival"
+            target="_blank"
+          >
+            <v-icon size="24px">
+              {{ icon2 }}
             </v-icon>
           </v-btn>
         </div>
       </v-card-text>
       <v-card-text>
         <div style="text-align: center">
-          <img src="icon.png" alt="" style="width: 70px" />
+          <img src="/icon.svg" alt="" style="width: 70px" />
         </div>
       </v-card-text>
       <v-card-text class="py-2 white--text text-center">
@@ -79,7 +105,8 @@
 <script>
 export default {
   data: () => ({
-    icons: ['mdi-youtube', 'mdi-twitter'],
+    icons1: ['mdi-youtube'],
+    icons2: ['mdi-twitter'],
   }),
 }
 </script>

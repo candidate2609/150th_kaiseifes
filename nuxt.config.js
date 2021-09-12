@@ -6,7 +6,7 @@ export default {
       { charset: 'utf-8' },
       { hid: 'description', name: 'description', content: '150th開成祭の公式ホームページです。' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.svg' },
     { href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css", rel: "stylesheet" }],
 
   },
@@ -58,4 +58,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  watchers: {
+    webpack: {
+      poll: true
+    }
+  }
 }

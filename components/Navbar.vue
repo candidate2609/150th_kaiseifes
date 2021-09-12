@@ -6,15 +6,22 @@
       flat
       style="background-color: rgba(246, 246, 246, 1); z-index: 1500"
     >
-      <v-img class="mr-3" src="icon.png" max-height="40" max-width="40"></v-img>
+      <v-img
+        class="mr-3"
+        src="/icon.svg"
+        max-height="40"
+        max-width="40"
+      ></v-img>
       <v-toolbar-title style="font-weight: 400; letter-spacing: 2px"
-        >開成祭</v-toolbar-title
+        ><a href="/" style="text-decoration: none; color: black"
+          >開成祭</a
+        ></v-toolbar-title
       >
 
       <div v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)">
-        <v-btn text style="font-size: 15px" href="#お知らせ">お知らせ</v-btn>
-        <v-btn text style="font-size: 15px" href="#開成祭">開成祭とは</v-btn>
-        <v-btn text style="font-size: 15px" href="#オンライン祭"
+        <v-btn text style="font-size: 15px" href="/#お知らせ">お知らせ</v-btn>
+        <v-btn text style="font-size: 15px" href="/#開成祭">開成祭とは</v-btn>
+        <v-btn text style="font-size: 15px" href="/#オンライン祭"
           >オンライン祭とは</v-btn
         >
       </div>
@@ -22,8 +29,8 @@
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
       ></v-spacer>
       <v-app-bar-nav-icon
-        @click="drawer = true"
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
+        @click="drawer = true"
       />
       <!---
       <v-btn
@@ -52,15 +59,15 @@
       <v-divider></v-divider>
       <v-list nav dense>
         <v-list-item-group active-class="deep-purple--text text--accent-4">
-          <v-list-item href="#お知らせ" @click="drawer = false">
+          <v-list-item href="/#お知らせ" @click="drawer = false">
             <v-list-item-title>お知らせ</v-list-item-title>
           </v-list-item>
 
-          <v-list-item href="#開成祭" @click="drawer = false">
+          <v-list-item href="/#開成祭" @click="drawer = false">
             <v-list-item-title>開成祭について</v-list-item-title>
           </v-list-item>
 
-          <v-list-item href="#オンライン祭" @click="drawer = false">
+          <v-list-item href="/#オンライン祭" @click="drawer = false">
             <v-list-item-title>オンライン祭について</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
