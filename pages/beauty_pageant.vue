@@ -42,3 +42,9 @@
   letter-spacing: 1px;
 }
 </style>
+
+<script>
+export default {
+  layout: 'default',
+}
+</script>
