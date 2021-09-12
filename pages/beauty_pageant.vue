@@ -24,6 +24,10 @@
         </p>
       </div>
     </div>
+    <div>
+      <img src="/beauty_pageant/Mr.svg" alt="" />
+      <h2>Mr. 開成 出場者紹介</h2>
+    </div>
   </div>
 </template>
 
@@ -42,9 +46,3 @@
   letter-spacing: 1px;
 }
 </style>
-
-<script>
-export default {
-  layout: 'default',
-}
-</script>
