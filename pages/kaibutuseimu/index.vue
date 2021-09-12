@@ -29,7 +29,7 @@ if(!isset($_SESSION['seikai']))
 <script>
 export default {
   created() {
-    if (this.$cookies.get('kaibutuseimu'))
+    if (String(this.$cookies.get('kaibutuseimu')).length!=12)
       this.$cookies.set('kaibutuseimu', '000000000000', {
         maxAge: 60 * 60 * 24 * 7,
       })
