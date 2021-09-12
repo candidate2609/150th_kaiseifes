@@ -1,7 +1,11 @@
 <template>
   <main>
     <!-- 背景 -->
-    <div id="background"></div>
+    <img class="background" src="/history/establish.jpg" style="display: block;">
+    <img class="background" src="/history/kyouryu.jpg">
+    <img class="background" src="/history/100th.jpg">
+    <img class="background" src="/history/latest.jpg">
+    <img class="background" src="/history/future.jpg">
     <!-- タイトル -->
     <div id="title">
       <div class="container">
@@ -87,25 +91,27 @@ const aniOnLoaded = async (vals) => {
 /**
  *  vals = {
  *    paths,
- *    className,
- *    target,
+ *    targets,
  *    observerTargets,
  *    opts
  *  }
  */
 const switchImgs = async (vals) => {
-  const backgroundDom = vals.target
   const observerCallback = (entries) => {
     entries.forEach((entry) => {
       const id = Number(entry.target.id)
+      const currentDomStyle = vals.targets[id].style
+      const beforeDomStyle = vals.targets[id - 1].style
       const positionY = entry.target.getBoundingClientRect().y
       const viewHeight = document.documentElement.clientHeight
       const toBottom = positionY < 0
       const toTop = positionY < viewHeight / 2
       if (toBottom) {
-        backgroundDom.style.backgroundImage = `url("../history/${vals.paths[id]}")`
+        currentDomStyle.display = 'block'
+        beforeDomStyle.display = 'none'
       } else if (toTop) {
-        backgroundDom.style.backgroundImage = `url("../history/${vals.paths[id - 1]}")`
+        currentDomStyle.display = 'none'
+        beforeDomStyle.display = 'block'
       }
     })
   }
@@ -115,18 +121,6 @@ const switchImgs = async (vals) => {
   })
 }
 export default {
-  data() {
-    const imgPaths = [
-      'establish.jpg',
-      'kyouryu.jpg',
-      '100th.jpg',
-      'latest.jpg',
-      'future.jpg',
-    ]
-    return {
-      imgPaths,
-    }
-  },
   mounted() {
     const titleBorders = document.getElementsByClassName('era-title-border')
     // switch images
@@ -134,12 +128,10 @@ export default {
       rootMargin: '0px',
       threshold: 0,
     }
-    const backgroundDom = document.getElementById('background')
-    const switchImgAniClassName = 'switch-img-animation'
+    const backgroundImgDoms = document.querySelectorAll('.background')
     switchImgs({
       paths: this.$data.imgPaths,
-      className: switchImgAniClassName,
-      target: backgroundDom,
+      targets: backgroundImgDoms,
       observeTargets: titleBorders,
       opts: imgsObserverOpts,
     })
@@ -194,6 +186,21 @@ section {
 
 .container p {
   max-width: 666px;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.background {
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0px;
+  z-index: -1;
+  /* JS で変更される */
+  display: none;
 }
 
 #title {
@@ -224,18 +231,6 @@ section {
   font-size: 45px;
   font-weight: 700;
   letter-spacing: -0.025em;
-}
-
-#background {
-  margin: 0px;
-  padding: 0px;
-  width: 100vw;
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  position: fixed;
-  top: 0px;
-  z-index: -1;
 }
 
 .era-title-border-animation {
