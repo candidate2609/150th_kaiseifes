@@ -18,27 +18,23 @@ export default {
 </script>
 
 <style>
+#content p {
+  margin-left: 10vw;
+  margin-top: 2vh;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid #f6f6f6;
+}
+
 @media screen and (min-width: 600px) {
   #content p {
     margin-left: 30vw;
-    margin-top: 2vh;
-    padding-bottom: 2vh;
-    border-bottom: 1px solid #f6f6f6;
   }
 }
-@media screen and (max-width: 600px) {
-  #content p {
-    margin-left: 10vw;
-    margin-top: 2vh;
-    padding-bottom: 2vh;
-    border-bottom: 1px solid #f6f6f6;
-  }
-}
+
 #tag {
+  padding: 4px;
+  margin: 0 1vw;
   background-color: #bf9547;
   color: white;
-  padding: 4px;
-  margin-left: 1vw;
-  margin-right: 1vw;
 }
 </style>
