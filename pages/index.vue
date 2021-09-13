@@ -159,7 +159,7 @@
         text="今年7月に完成した新校舎。今明かされる全貌。バーチャルでご案内。"
         picture_name="landing/online/3.png"
         picture_alt="clusterで新校舎を再現！(後日公開予定)"
-        imgLocation="order-md-2"
+        img-location="order-md-2"
       />
 
       <!-- この間 -->

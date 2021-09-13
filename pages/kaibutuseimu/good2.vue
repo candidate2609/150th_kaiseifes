@@ -15,7 +15,7 @@
 			<a href="questionindex">謎の選択に戻る</a>
 		</div>	
 		<div class="button" style="text-align: center;">
-			<a v-bind:href="[tassei === '1' ? './good3' : './q3']">次の問題へ</a>
+			<a :href="[tassei === '1' ? './good3' : './q3']">次の問題へ</a>
 		</div>
 		
 	</div>
