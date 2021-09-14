@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 style="text-align: center">謎2</h1>
+    <h1 style="text-align: center" class="kbsmh1">謎2</h1>
     <img src="odoriba.gif" width="80%" style="display: block; margin: auto" />
     <div style="text-align: center; margin-top: 1em">
       <form @submit.prevent>
