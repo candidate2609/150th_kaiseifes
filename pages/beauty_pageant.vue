@@ -38,7 +38,11 @@
 
         <section v-for="(item, i) in items_mr" :key="i">
           <h3 class="section-title" style="border-bottom: 3px solid #9a0100">
-            <span style="color: #bf9457">No.{{ i + 1 }} </span>{{ item.name }}
+            <img src="/beauty_pageant/rose.svg" alt="" style="height: 2rem" />
+            <span class="section-title-num" style="color: #bf9457"
+              >No.{{ i + 1 }}
+            </span>
+            <span v-html="item.name"></span>
           </h3>
           <p v-html="item.description"></p>
           <p class="self-intro">{{ item.self_intro }}</p>
@@ -56,7 +60,14 @@
         </v-row>
         <section v-for="(item, i) in items_ms" :key="i">
           <h3 class="section-title" style="border-bottom: 3px solid #bf9457">
-            <span style="color: #9a0100">No.{{ i + 1 }} </span>{{ item.name }}
+            <img
+              src="/beauty_pageant/rose_yellow.svg"
+              alt=""
+              style="height: 2rem"
+            />
+            <span class="section-title-num" style="color: #9a0100"
+              >No.{{ i + 1 }} </span
+            ><span v-html="item.name"></span>
           </h3>
           <p v-html="item.description"></p>
           <p class="self-intro">{{ item.self_intro }}</p>
@@ -73,7 +84,7 @@ export default {
     return {
       items_mr: [
         {
-          name: '中井 円大',
+          name: '<ruby>中井<rt>なかい</rt></ruby>&nbsp;<ruby>円大<rt>えんぞう</rt></ruby>',
           description:
             '老若男女の心を鷲掴み<br />甘いマスクに熱いハート、勇往邁進とはまさに彼のこと<br />時には、真面目すぎるが故に抜けたところがあるのもまたキュート💕<br />そんな開成のシンバに釘付けになること間違いなし！',
           self_intro: '持ち前の体力で頑張ります！',
@@ -93,7 +104,7 @@ export default {
           ],
         },
         {
-          name: '庄司 眞紘',
+          name: '<ruby>庄司<rt>しょうじ</rt></ruby>&nbsp;<ruby>眞紘<rt>まひろ</rt></ruby>',
           description:
             '開成が誇る最強の男が満を辞して登場！！博学多才で容姿端麗、弓道部と野球部の二足の草鞋を履きこなす彼は多くの人のハートを"射抜き"、"打ち抜いて"きた。そんな彼の勇姿を是非ご覧あれ！',
           self_intro:
@@ -114,7 +125,7 @@ export default {
           ],
         },
         {
-          name: '岡部 哲平',
+          name: '<ruby>岡部<rt>おかべ</rt></ruby>&nbsp;<ruby>哲平<rt>てっぺい</rt></ruby>',
           description:
             '開成の誇るモテ男がMr.開成に登場だ！スケボーを乗りこなすイマドキ男子な一面もある一方で剣道の腕前も抜群！',
           self_intro:
@@ -135,7 +146,7 @@ export default {
           ],
         },
         {
-          name: '小花 栄貴',
+          name: '<ruby>小花<rt>おばな</rt></ruby>&nbsp;<ruby>栄貴<rt>たかき</rt></ruby>',
           description:
             '開成が誇るMr.パーフェクト<br>彼に当てはまる四字熟語は数知れず！<br>文武両道、眉目秀麗、唯一無二、質実剛健、開物成務、才色兼備、率先垂範、唯我独尊…ん？(？)<br>もとい、とにかく彼のカリスマ性は見るものを魅了して止まない<br>溢れ出る色気に心がビッタビタになるだろう',
           self_intro:
@@ -156,7 +167,7 @@ export default {
           ],
         },
         {
-          name: '小西 悠太',
+          name: '<ruby>小西<rt>こにし</rt></ruby>&nbsp;<ruby>悠太<rt>ゆうた</rt></ruby>',
           description:
             '開成からギャップの王様登場！ダンスもやってて第一印象はクールなのにしゃべってみたらちょーーユーモアだったり、実は天然でめちゃめちゃ優しかったり、。可愛いおちゃめな一面も。☺️',
           self_intro:
@@ -179,7 +190,7 @@ export default {
       ],
       items_ms: [
         {
-          name: '中井 円大',
+          name: '<ruby>小西<rt>こにし</rt></ruby>&nbsp;<ruby>悠太<rt>ゆうた</rt></ruby>',
           description:
             '老若男女の心を鷲掴み<br />甘いマスクに熱いハート、勇往邁進とはまさに彼のこと<br />時には、真面目すぎるが故に抜けたところがあるのもまたキュート💕<br />そんな開成のシンバに釘付けになること間違いなし！',
           self_intro: '持ち前の体力で頑張ります！',
@@ -222,7 +233,7 @@ export default {
 
 .self-intro {
   position: relative;
-  padding: 1.5rem 2rem;
+  padding: 0.7rem 1rem;
   border: 1px solid #d8d8d8;
   border-radius: 10px;
 }
@@ -252,7 +263,7 @@ export default {
 }
 
 section {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .container-m {
@@ -267,7 +278,7 @@ section {
 .section-title {
 }
 
-.section-title span {
+.section-title-num {
   font-family: 'Allison';
   font-size: 4rem;
 }
