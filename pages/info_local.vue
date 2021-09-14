@@ -38,7 +38,7 @@
                         item.last_updated
                       }}）
                     </p>
-                    <p>{{ item.room }}</p>
+                    <p>場所：{{ item.room }}</p>
                   </div>
                 </div>
               </v-col>
@@ -67,7 +67,7 @@
                   <div>
                     <h3>{{ item.name }}</h3>
                     <p>{{ item.start }} 〜 {{ item.end }}</p>
-                    <p>{{ item.room }}</p>
+                    <p>場所：{{ item.room }}</p>
                   </div>
                 </div>
               </v-col>
@@ -152,7 +152,7 @@
 }
 .sandan h3::first-letter {
   color: #317a41;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 .sandan img {
   height: 70px;
