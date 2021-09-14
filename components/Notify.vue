@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #content p {
   margin-left: 10vw;
   margin-top: 2vh;
