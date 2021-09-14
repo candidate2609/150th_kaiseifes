@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1 style="text-align: center;">オープニング</h1>
+		<h1 style="text-align: center;" class="kbsmh1">オープニング</h1>
 		<article class="story">
 		    <p></p>
 			<p>カイセイの進入に成功した私はオペレーターに連絡する。</p>

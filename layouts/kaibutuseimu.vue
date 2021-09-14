@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style>
-h1{
+.kbsmh1{
   display: block;
     font-size: 2em;
     margin-block-start: 0.67em;
