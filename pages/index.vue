@@ -167,6 +167,31 @@
   </div>
 </template>
 
+<script>
+// fetching informations with axios
+export default {
+  async asyncData({ $axios }) {
+    const newsUrl = 'https://kaiseifes-150th-backend.herokuapp.com/api/news/'
+    const tagsUrl =
+      'https://kaiseifes-150th-backend.herokuapp.com/api/news/tags'
+    const news = await $axios.$get(newsUrl)
+    const tagsFetched = await $axios.$get(tagsUrl)
+
+    const tags = {}
+    for (let i = 0; i < tagsFetched.length; i++) {
+      tags[tagsFetched[i].id] = tagsFetched[i].name
+    }
+
+    return {
+      data: {
+        news,
+        tags,
+      },
+    }
+  },
+}
+</script>
+
 <style>
 .hero-description {
   position: absolute;
@@ -205,29 +230,3 @@
   }
 }
 </style>
-
-<script>
-// fetching informations with axios
-export default {
-  async asyncData({ $axios }) {
-    const newsUrl = 'https://kaiseifes-150th-backend.herokuapp.com/api/news/'
-    const tagsUrl =
-      'https://kaiseifes-150th-backend.herokuapp.com/api/news/tags'
-    const news = await $axios.$get(newsUrl)
-    const tagsFetched = await $axios.$get(tagsUrl)
-
-    // tags
-    const tags = {}
-    for (let i = 0; i < tagsFetched.length; i++) {
-      tags[tagsFetched[i].id] = tagsFetched[i].name
-    }
-
-    return {
-      data: {
-        news,
-        tags,
-      },
-    }
-  },
-}
-</script>
