@@ -2,9 +2,9 @@
   <main>
     <!-- 背景 -->
     <img class="background" src="/history/establish.jpg" style="display: block;">
-    <img class="background" src="/history/kyouryu.jpg">
-    <img class="background" src="/history/100th.jpg">
-    <img class="background" src="/history/latest.jpg">
+    <img class="background" src="/history/sports-fes.jpg">
+    <img class="background" src="/history/group-photo.jpg">
+    <img class="background" src="">
     <img class="background" src="/history/middle-school.jpg">
     <img class="background" src="/history/future.jpg">
     <!-- タイトル -->
@@ -55,7 +55,7 @@
     <section>
       <div class="container">
         <era-title id="4">質実剛健と自主尊重</era-title>
-        <p>昭和34年（1959）に中学高校舎落成がし、「カイセイ」の人文字を作った。そして、同年高校生徒会が誕生した。当時の生徒の間では、ボートレースや運動会の応援のあり方を考えるうえで、「質実剛健」と「自主尊重」という開成の二つの伝統を、どのように融和させるのかという問題意識が根底にあった。そして、直接的には運動会の棒倒しをどうするかを生徒自身で考えたいという願いが、生徒会誕生のきっかけになったと言われている。</p>
+        <p>昭和34年（1959）に中学校校舎が落成し、「カイセイ」の人文字を作った。そして、同年高校生徒会が誕生した。当時の生徒の間では、ボートレースや運動会の応援のあり方を考えるうえで、「質実剛健」と「自主尊重」という開成の二つの伝統を、どのように融和させるのかという問題意識が根底にあった。そして、直接的には運動会の棒倒しをどうするかを生徒自身で考えたいという願いが、生徒会誕生のきっかけになったと言われている。</p>
         <p>昭和35年（1960）に初めてスキー学校を実施。昭和37年（1962）から水泳学校が開始され、この年に運動会が7組対抗制となった。そして昭和46年（1971）に創立100周年を迎えた。記念事業として大体育館を建設し、そこで100周年記念式典を挙行した。</p>
         <p>1970年代、生徒の大学への進学状況は明治期の昔のように著しい進展があった。教員の熱意、生徒の努力、保護者・卒業生の後援などが渾然と一致して成果を上げたのである。</p>
       </div>
