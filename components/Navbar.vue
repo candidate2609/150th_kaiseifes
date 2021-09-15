@@ -27,6 +27,9 @@
         <v-btn text style="font-size: 15px" href="/info_local"
           >現地用サイト</v-btn
         >
+        <v-btn text style="font-size: 15px" href="/beauty_pageant"
+          >ミスコン</v-btn
+        >
       </div>
       <v-spacer
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
@@ -76,6 +79,10 @@
 
           <v-list-item href="/info_local" @click="drawer = false">
             <v-list-item-title>現地用サイト</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item href="/beauty_pageant" @click="drawer = false">
+            <v-list-item-title>ミスコン</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
