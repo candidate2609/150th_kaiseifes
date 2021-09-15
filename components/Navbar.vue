@@ -4,7 +4,6 @@
       color="accent-1"
       light
       flat
-      fixed
       style="background-color: rgba(246, 246, 246, 1); z-index: 1500"
     >
       <v-img

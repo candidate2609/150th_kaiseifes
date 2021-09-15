@@ -164,7 +164,7 @@
   line-height: 1px;
 }
 .title {
-  margin-top: 5rem;
+  margin-top: 2rem;
   font-size: 1.3rem;
   letter-spacing: 1px;
   text-align: center;

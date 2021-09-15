@@ -25,7 +25,7 @@
       </div>
     </div>
     <v-row>
-      <v-col cols="11" md="4" lg="8" class="container-m mx-auto">
+      <v-col cols="11" lg="8" class="container-m mx-auto">
         <v-row style="margin-bottom: 2rem">
           <img src="/beauty_pageant/Mr.svg" alt="" class="container-img" />
           <div>
@@ -49,7 +49,7 @@
           <slide-show :imgs="item.imgs" />
         </section>
 
-        <v-row style="margin-bottom: 2rem; margin-top: 5rem">
+        <v-row style="margin-bottom: 2rem; margin-top: 8rem">
           <img src="/beauty_pageant/Ms.svg" alt="" class="container-img" />
           <div>
             <h2>Ms. 開成 候補者紹介</h2>
@@ -145,7 +145,7 @@ export default {
       ],
       items_ms: [
         {
-          name: '<ruby>一条<rt>こにし</rt></ruby>&nbsp;ゆず',
+          name: '<ruby>一条<rt>いちじょう</rt></ruby>&nbsp;ゆず',
           description:
             '老若男女の心を鷲掴み<br />甘いマスクに熱いハート、勇往邁進とはまさに彼のこと<br />時には、真面目すぎるが故に抜けたところがあるのもまたキュート💕<br />そんな開成のシンバに釘付けになること間違いなし！',
           self_intro: '持ち前の体力で頑張ります！',
@@ -156,10 +156,10 @@ export default {
             }),
         },
         {
-          name: '<ruby>小西<rt>こにし</rt></ruby>&nbsp;<ruby>悠太<rt>ゆうた</rt></ruby>',
+          name: '<ruby>三栖<rt>みす</rt></ruby>&nbsp;<ruby>憂<rt>ゆう</rt></ruby>',
           description:
-            '老若男女の心を鷲掴み<br />甘いマスクに熱いハート、勇往邁進とはまさに彼のこと<br />時には、真面目すぎるが故に抜けたところがあるのもまたキュート💕<br />そんな開成のシンバに釘付けになること間違いなし！',
-          self_intro: '持ち前の体力で頑張ります！',
+            '山梨と栃木のハーフがミス開成に登場！彼女に魅了された男はもう抜け出せないとか...麗しい笑顔のその裏には？',
+          self_intro: 'どうせ私よりあの子が好きなんでしょ？',
           imgs: [...Array(4)]
             .map((_, i) => i + 1)
             .map((d) => {
@@ -167,10 +167,11 @@ export default {
             }),
         },
         {
-          name: '<ruby>小西<rt>こにし</rt></ruby>&nbsp;<ruby>悠太<rt>ゆうた</rt></ruby>',
+          name: '<ruby>五十嵐<rt>いがらし</rt></ruby>&nbsp;<ruby>咲羅<rt>さくら</rt></ruby>',
           description:
-            '老若男女の心を鷲掴み<br />甘いマスクに熱いハート、勇往邁進とはまさに彼のこと<br />時には、真面目すぎるが故に抜けたところがあるのもまたキュート💕<br />そんな開成のシンバに釘付けになること間違いなし！',
-          self_intro: '持ち前の体力で頑張ります！',
+            'Ms.開成三番目はクール系女子！灰色の世界を覗くかの様な表情の彼女にも、時々花が開く様な笑顔が咲くんだとか。教室の窓から桜花を見る少女は何を考えているのか。いや、案外何も考えてなかったり…？',
+          self_intro:
+            '150周年という節目にこうしてMsに出場できたことを光栄に思います。精一杯頑張るので応援よろしくお願いします！',
           imgs: [...Array(4)]
             .map((_, i) => i + 1)
             .map((d) => {
@@ -178,10 +179,10 @@ export default {
             }),
         },
         {
-          name: '<ruby>小西<rt>こにし</rt></ruby>&nbsp;<ruby>悠太<rt>ゆうた</rt></ruby>',
+          name: '<ruby>木南<rt>きなみ</rt></ruby>&nbsp;ハルカ',
           description:
-            '老若男女の心を鷲掴み<br />甘いマスクに熱いハート、勇往邁進とはまさに彼のこと<br />時には、真面目すぎるが故に抜けたところがあるのもまたキュート💕<br />そんな開成のシンバに釘付けになること間違いなし！',
-          self_intro: '持ち前の体力で頑張ります！',
+            'いつも笑顔溢れる女の子、木南ハルカがMs.開成に！その笑顔に周りも思わずニコニコしてしまう！',
+          self_intro: 'Ms.開成よろしくお願いします！咲羅ちゃん可愛い…',
           imgs: [...Array(5)]
             .map((_, i) => i + 1)
             .map((d) => {
