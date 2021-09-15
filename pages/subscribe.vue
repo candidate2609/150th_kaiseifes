@@ -53,6 +53,11 @@
             </v-container>
             <v-btn @click="register">登録</v-btn>
           </v-form>
+          <p>
+            <br /><span style="color: #b3424a; font-weight: 600">⚠︎ご注意</span
+            ><br />
+            登録後、登録確認メールが届きます。<br />届かない場合、ご登録いただいたメールアドレスが間違っている可能性がございます。<br />今一度お確かめになった上で、再度ご登録をお願いいたします。
+          </p>
         </div>
         <div class="form">
           <h2>メルマガ解除</h2>

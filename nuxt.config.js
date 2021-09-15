@@ -1,14 +1,14 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: '150th開成祭',
-    meta: [
-      { charset: 'utf-8' },
-      { hid: 'description', name: 'description', content: '150th開成祭の公式ホームページです。' },
-    ],
+    title: '150th 開成祭',
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.svg' },
     { href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css", rel: "stylesheet" }],
-
+    meta: [
+      { charset: 'utf-8' },
+      { hid: 'description', name: 'description', content: '2021年9月18日（土）・19日（日）に開催される創立150周年記念開成祭公式のホームページです。（運営：150th開成学園文化祭準備委員会広報係）' },
+      { name: "google-site-verification", content: "xptuoTgRysjAyENPya31PfgTQiGoX7A_-srp99OAemI" }
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -43,6 +43,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     'bootstrap-vue/nuxt',
+    'cookie-universal-nuxt',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -57,4 +58,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  watchers: {
+    webpack: {
+      poll: true
+    }
+  }
 }
