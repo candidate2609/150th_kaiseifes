@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<h1 style="text-align: center;">謎1</h1>
-		<h1 style="text-align: center; color: #000A47">正解！</h1>
+		<h1 style="text-align: center;" class="kbsmh1">謎1</h1>
+		<h1 style="text-align: center; color: #000A47" class="kbsmh1">正解！</h1>
 		<article class="story">
 			<p></p>
 			<p>け、剣？しかもナイフのような短剣ではなく、立派な長剣である。一体以前の部隊は長剣を使って何をしていたのだろうか？</p>
@@ -32,5 +32,10 @@ export default {
 			tassei:String(this.$cookies.get('kaibutuseimu')).charAt(1)
 		}
 	},
+	created(){
+		if(String(this.$cookies.get('kaibutuseimu').charAt(0))==='0'){
+			this.$router.push({ path: 'q1' });
+		}
+	}
 }
 </script>
