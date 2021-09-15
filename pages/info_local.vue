@@ -4,15 +4,17 @@
     <p style="text-align: center; font-size: 13px">
       各参団の待ち時間、開催状況を随時更新します。
     </p>
-    <v-tabs
-      v-model="tab0"
-      class="tabbar"
-      style="border-bottom: 1px solid #f0f0f3"
-    >
-      <v-tab v-model="tab0" v-for="item in tabs0" :key="item">
-        {{ item }}
-      </v-tab>
-    </v-tabs>
+    <div style="display: flex; justify-content: center">
+      <v-tabs
+        v-model="tab0"
+        class="tabbar"
+        style="border-bottom: 1px solid #f0f0f3"
+      >
+        <v-tab v-model="tab0" v-for="item in tabs0" :key="item">
+          {{ item }}
+        </v-tab>
+      </v-tabs>
+    </div>
 
     <v-tabs-items v-model="tab0">
       <v-tab-item>
@@ -75,6 +77,18 @@
             </v-row>
           </v-tab-item>
         </v-tabs-items>
+      </v-tab-item>
+
+      <v-tab-item>
+        <v-row>
+          <v-spacer />
+          <v-col cols="11" md="4" lg="8" class="mx-auto">
+            <p>
+              模擬店係・喫茶係では、感染症対策として当日生徒の手により調理したものの提供が中止となりました。その影響で今年は既製品を限定商品として販売します。
+            </p>
+          </v-col>
+          <v-spacer />
+        </v-row>
       </v-tab-item>
 
       <v-tab-item>
@@ -213,7 +227,7 @@ export default {
   },
   data() {
     return {
-      tabs0: ['通常参団', '実演参団', 'ご注意'],
+      tabs0: ['通常参団', '実演参団', '模擬店', 'ご注意'],
       tabs1: ['すぐ入れる', '少し並ぶ', '長く並ぶ'],
       tabs2: ['開催中', 'この後開催'],
       tab0: null,

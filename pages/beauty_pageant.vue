@@ -149,7 +149,7 @@ export default {
           description:
             '気分屋でいつも慌ただしいパワーガール、気分でMsに参戦！気まぐれで思わせぶりな彼女の仕草に開成ボーイはタジタジ！',
           self_intro: '助けてください',
-          imgs: [...Array(8)]
+          imgs: [...Array(7)]
             .map((_, i) => i + 1)
             .map((d) => {
               return { src: '/beauty_pageant/松浦/' + d + '.JPG' }
