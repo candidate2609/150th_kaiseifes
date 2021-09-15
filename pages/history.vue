@@ -186,6 +186,7 @@ section {
   padding: 5em 0;
   margin-bottom: 100vh;
   background-color: black;
+  min-height: 100vh;
 }
 
 .container {
