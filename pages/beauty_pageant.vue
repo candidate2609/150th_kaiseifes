@@ -258,7 +258,7 @@ section {
 }
 
 .section-title-num {
-  font-family: 'Allison';
+  font-family: 'Allison', cursive;
   font-size: 4rem;
 }
 </style>
