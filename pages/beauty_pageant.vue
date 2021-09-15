@@ -196,7 +196,6 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
 .hero-description {
   position: absolute;
   bottom: 1rem;
