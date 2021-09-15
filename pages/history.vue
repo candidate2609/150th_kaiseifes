@@ -4,7 +4,7 @@
     <img class="background" src="/history/establish.jpg" style="display: block;">
     <img class="background" src="/history/sports-fes.jpg">
     <img class="background" src="/history/group-photo.jpg">
-    <img class="background" src="">
+    <img class="background" src="/history/world-war.jpg">
     <img class="background" src="/history/middle-school.jpg">
     <img class="background" src="/history/future.jpg">
     <!-- タイトル -->
