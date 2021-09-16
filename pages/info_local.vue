@@ -68,7 +68,9 @@
                   <img :src="item.icon" alt="" />
                   <div>
                     <h3>{{ item.name }}</h3>
-                    <p>{{ item.start }} 〜 {{ item.end }}</p>
+                    <p>
+                      {{ date2time(item.start) }} 〜 {{ date2time(item.end) }}
+                    </p>
                     <p>場所：{{ item.room }}</p>
                   </div>
                 </div>
@@ -98,7 +100,7 @@
           <v-col cols="11" md="4" lg="8" class="mx-auto">
             <div
               v-if="
-                (calc_hours() >= 9) & (calc_hours() <= 15) & is_production()
+                (calc_hours() >= 9) & (calc_hours() <= 14) & is_production()
               "
             >
               <h3 style="margin-bottom: 1rem; font-size: 1.4rem">
@@ -125,9 +127,7 @@
               <li>
                 校内各所に必要な距離を保つために目印を設置しておりますので、お客様同士のソーシャルディスタンスの確保にご協力をお願いします。
               </li>
-              <li>
-                校内での飲食は、文準模擬店係と喫茶係が提供する一部を除き、全面禁止にさせていただいております。
-              </li>
+              <li>校内での食事は、全面禁止にさせていただいております。</li>
               <li>
                 会場にて万が一体調が悪くなったり気分が優れなくなったりした場合は、ご無理なさらず速やかにお近くの学園教職員、あるいは生徒までお申し出ください。
               </li>
@@ -239,7 +239,7 @@ export default {
   methods: {
     calc_hours() {
       const datetime = new Date()
-      return datetime.getHours() - 2
+      return datetime.getHours() - 3
     },
     is_production() {
       const datetime = new Date()
@@ -247,6 +247,10 @@ export default {
         (datetime.getMonth() === 9) &
           (datetime.getDate() === 18 || datetime.getDate() === 19)
       )
+    },
+    date2time(date) {
+      const time = new Date(date)
+      return time.getHours() + '時' + time.getMinutes() + '分'
     },
   },
 }
