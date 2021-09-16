@@ -45,6 +45,19 @@
               {{ icon2 }}
             </v-icon>
           </v-btn>
+          <v-btn
+            v-for="icon3 in icons3"
+            :key="icon3"
+            class="mx-4"
+            dark
+            icon
+            href="https://www.instagram.com/kaisei_festival/"
+            target="_blank"
+          >
+            <v-icon size="24px">
+              {{ icon3 }}
+            </v-icon>
+          </v-btn>
         </div>
       </v-card-title>
       <v-card-text
@@ -88,6 +101,19 @@
               {{ icon2 }}
             </v-icon>
           </v-btn>
+          <v-btn
+            v-for="icon3 in icons3"
+            :key="icon3"
+            class="mx-4"
+            dark
+            icon
+            href="https://www.instagram.com/kaisei_festival/"
+            target="_blank"
+          >
+            <v-icon size="24px">
+              {{ icon3 }}
+            </v-icon>
+          </v-btn>
         </div>
       </v-card-text>
       <v-card-text>
@@ -107,6 +133,7 @@ export default {
   data: () => ({
     icons1: ['mdi-youtube'],
     icons2: ['mdi-twitter'],
+    icons3: ['mdi-instagram'],
   }),
 }
 </script>
