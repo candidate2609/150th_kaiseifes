@@ -103,7 +103,7 @@
             >
               <h3 style="margin-bottom: 1rem; font-size: 1.4rem">
                 <span
-                  style="font-size: 3rem; color: #317a41"
+                  style="font-size: 3rem; color: #335719"
                   v-text="calc_hours()"
                 ></span>
                 時の部でご入場された方は、ご退校をお願いいたします。
@@ -163,10 +163,10 @@
 }
 .sandan h3 {
   font-size: 1.1rem;
-  /*border-bottom: 2px solid #317a41;*/
+  /*border-bottom: 2px solid #335719;*/
 }
 .sandan h3::first-letter {
-  color: #317a41;
+  color: #335719;
   font-size: 1.4rem;
 }
 .sandan img {
