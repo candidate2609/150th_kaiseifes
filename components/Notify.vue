@@ -1,11 +1,13 @@
 <template>
   <div class="notify">
     <div id="title">
-      <landing-title
-        title_ja="お知らせ"
-        title_en="News"
-        background_color="#f6f6f6"
-      />
+      <div>
+        <landing-title
+          title_ja="お知らせ"
+          title_en="News"
+          background_color="#f6f6f6"
+        />
+      </div>
     </div>
     <div id="contents">
       <div v-if="data.sandansInProgress.length > 0" class="cards">
@@ -86,10 +88,6 @@ p {
   }
 }
 
-.title {
-  position: static;
-}
-
 /* new content */
 
 .card-info {
@@ -120,5 +118,9 @@ p {
   #contents {
     margin-top: 0px;
   }
+}
+
+#title div {
+  position: static;
 }
 </style>
