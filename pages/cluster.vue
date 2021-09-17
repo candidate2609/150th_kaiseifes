@@ -86,17 +86,17 @@ export default {
           name: '新校舎写真展',
           src: '/landing/Kaisei.png',
           href: 'https://cluster.mu/w/82a5fda2-b4f6-49d1-8b1f-8695b83aac0c/entry',
-          description: ''
+          description: '新校舎のちょっとした写真を展示しています'
         },
         {
           name: '折り紙研究部',
-          src: '/landing/Kaisei.png',
+          src: '/landing/Oriken.png',
           href: 'https://cluster.mu/w/b0da2465-4093-4586-ba99-0cd037cec1f8/entry',
           description: '日本の伝統文化である折り紙は、今もなおさらに高度な芸術作品へと進化しています。折り研も、昨年度からさらに進化した展示でお客様をお待ちしております。',
         },
         {
           name: '写真部',
-          src: '/landing/Kaisei.png',
+          src: '/landing/Syashinbu.jpg',
           href: '',
           description: '前回の文化祭では、学校校舎での実施が叶わず、また「開成写真館」はオンライン文化祭への参加もしていなかったため、写真部員たちの作品を皆様に見て頂く機会がございませんでした。２年間お務めになられた部長が引退し、新たな執行部で手探りな部分も多かったですが、対面文化祭とオンライン文化祭の両方に参加できることを非常に嬉しく思います。２年越しの展示をお楽しみください。',
         },
