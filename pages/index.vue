@@ -121,13 +121,25 @@
       </div>
       <div style="text-align: center">
         <div
-          style="display: inline-block;margin-left: 1rem;margin-right: 1rem;margin-bottom: 2rem;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);padding: 1rem;"
+          style="
+            display: inline-block;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+          "
         >
           <p
             style="line-height: 1.5em; display: inline-block; text-align: left"
           >
             <span
-              style="border-bottom: 2px solid rgb(42, 64, 115);font-size: 2rem;line-height: 1.5em;margin-bottom: 1rem;"
+              style="
+                border-bottom: 2px solid rgb(42, 64, 115);
+                font-size: 2rem;
+                line-height: 1.5em;
+                margin-bottom: 1rem;
+              "
               >オンライン文化祭に関して</span
             ><br /><br />
             オンライン文化祭の開催形態です。<br /><br />
@@ -152,6 +164,8 @@
         text="伝統深き開成。その150年の営みをオンラインで表現する。そんな僕たちの情熱あふれた舞台。"
         picture_name="landing/online/2.png"
         img-location="order-md-0"
+        link_to="https://150th-kaiseifes.vercel.app/online"
+        picture_alt="オンライン企画一覧(後日公開予定含む)"
       />
       <short-introduction
         title="新たなる開成。"
