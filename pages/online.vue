@@ -201,7 +201,7 @@ export default {
           .map((d) => {
             return { src: '/online/帰ってきた生物部/' + d + '.png' }
           }),
-        弁論文春: [...Array(3)]
+        弁論文春: [...Array(5)]
           .map((_, i) => i + 1)
           .map((d) => {
             return { src: '/online/弁論文春/' + d + '.png' }
@@ -221,22 +221,22 @@ export default {
           .map((d) => {
             return { src: '/online/美術部/' + d + '.png' }
           }),
-        襷のつなぎ方次第: [...Array(1)]
+        襷のつなぎ方次第: [...Array(4)]
           .map((_, i) => i + 1)
           .map((d) => {
             return { src: '/online/襷のつなぎ方次第/' + d + '.png' }
           }),
-        画龍玉睛Phytagoraswitch: [...Array(1)]
+        画龍玉睛Phytagoraswitch: [...Array(3)]
           .map((_, i) => i + 1)
           .map((d) => {
             return { src: '/online/画龍玉睛Phytagoraswitch/' + d + '.png' }
           }),
-        浮: [...Array(1)]
+        浮: [...Array(4)]
           .map((_, i) => i + 1)
           .map((d) => {
             return { src: '/online/浮/' + d + '.png' }
           }),
-        物理部: [...Array(1)]
+        物理部: [...Array(4)]
           .map((_, i) => i + 1)
           .map((d) => {
             return { src: '/online/物理部/' + d + '.png' }
@@ -245,6 +245,11 @@ export default {
           .map((_, i) => i + 1)
           .map((d) => {
             return { src: '/online/バランスアクション!VR/' + d + '.png' }
+          }),
+        開成ピアノの会定期演奏会: [...Array(1)]
+          .map((_, i) => i + 1)
+          .map((d) => {
+            return { src: '/online/開成ピアノの会定期演奏会/' + d + '.png' }
           }),
       },
     }
