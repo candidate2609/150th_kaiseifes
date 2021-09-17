@@ -1,21 +1,14 @@
 <template>
   <ul>
     <li v-for="(item, index) in data" :key="index">
-      <div>
-        <p class="card-title">{{ item.name }}</p>
-        <!-- <p class="card-group">{{ item.group }}</p> -->
-      </div>
+      <span class="card-icon material-icons-outlined">play_circle</span>
       <div class="card-info">
-        <p>
-          <span class="material-icons-outlined">schedule</span>
-          {{ item.date_str }}
-        </p>
-        <p>
-          <a :href="item.url">
-            <span class="material-icons-outlined">play_circle</span>
-            Youtube で観る
+        <p class="card-info-title">
+          <a :href="item.url" target="_blank">
+            {{ item.name }}
           </a>
         </p>
+        <p class="card-info-date">{{ item.date_str }}</p>
       </div>
     </li>
   </ul>
@@ -29,20 +22,19 @@ export default {
 
 <style scoped>
 ul {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   row-gap: 16px;
   column-gap: 16px;
 }
 
 li {
-  width: 250px;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  border: 1px solid #999999;
   font-weight: 800;
+  min-height: 120px;
+  padding: 15px;
+  border: 1px solid #999999;
+  display: flex;
+  flex-direction: row;
 }
 
 p {
@@ -57,16 +49,27 @@ a {
   color: inherit;
 }
 
-.card-title {
-  margin-bottom: 1em;
+.card-icon {
+  margin-top: 0.05em;
+  margin-right: 0.5em;
+  font-size: 1.5em;
 }
 
 .card-info {
-  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-info-title {
+  margin-bottom: 1em;
+}
+
+.card-info-date {
+  color: #707070;
 }
 
 .material-icons-outlined {
-  font-size: 1.2em;
-  vertical-align: -4px;
+  vertical-align: -0.21em;
 }
 </style>

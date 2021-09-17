@@ -186,7 +186,7 @@ export default {
     const newsUrl = apiBaseUrl + 'news/'
     const newsAll = await $axios.$get(newsUrl)
     const newsOfContentsAll = newsAll.filter((obj) => obj.tag[0] === 1)
-    const newsOfContents = newsOfContentsAll.slice(0,9)
+    const newsOfContents = newsOfContentsAll.slice(0, 9)
     // const tagsUrl = apiBaseUrl + 'news/tags'
     // const tagsFetched = await $axios.$get(tagsUrl)
     // const tags = {}
