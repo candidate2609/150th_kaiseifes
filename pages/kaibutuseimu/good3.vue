@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<h1 style="text-align: center;">謎3</h1>
-		<h1 style="text-align: center; color: #000A47">正解！</h1>
+		<h1 style="text-align: center;" class="kbsmh1">謎3</h1>
+		<h1 style="text-align: center; color: #000A47" class="kbsmh1">正解！</h1>
 		<article class="story">
 			<p></p>
 			<p>また行先の指定だ。なんで色々な場所を経由させるのだろうか。こんなことをせずに直接目的地まで連れて行ってくれた方が良いのだが……。</p>
@@ -30,5 +30,10 @@ export default {
 			tassei:String(this.$cookies.get('kaibutuseimu')).charAt(3)
 		}
 	},
+	created(){
+		if(String(this.$cookies.get('kaibutuseimu').charAt(2))==='0'){
+			this.$router.push({ path: 'q3' });
+		}
+	}
 }
 </script>

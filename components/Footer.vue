@@ -1,5 +1,5 @@
 <template>
-  <v-footer padless dark style="margin-top: 10rem">
+  <v-footer padless dark>
     <v-card class="flex" flat tile>
       <v-card-title class="teal">
         <span class="subheading" style="letter-spacing: 3px"
@@ -15,6 +15,7 @@
           <v-btn text style="font-size: 15px" href="/#オンライン祭"
             >オンライン祭とは</v-btn
           >
+          <v-btn text style="font-size: 15px" href="/history">開成の150年</v-btn>
         </div>
         <v-spacer></v-spacer>
 
@@ -45,6 +46,19 @@
               {{ icon2 }}
             </v-icon>
           </v-btn>
+          <v-btn
+            v-for="icon3 in icons3"
+            :key="icon3"
+            class="mx-4"
+            dark
+            icon
+            href="https://www.instagram.com/kaisei_festival/"
+            target="_blank"
+          >
+            <v-icon size="24px">
+              {{ icon3 }}
+            </v-icon>
+          </v-btn>
         </div>
       </v-card-title>
       <v-card-text
@@ -55,8 +69,9 @@
         <v-btn text style="font-size: 15px" href="/#開成祭">開成祭とは</v-btn>
         <v-btn text style="font-size: 15px" href="/#オンライン祭"
           >オンライン祭とは</v-btn
-        ></v-card-text
-      >
+        >
+        <v-btn text style="font-size: 15px" href="/history">開成の150年</v-btn>
+      </v-card-text>
       <v-card-text>
         <div
           v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
@@ -88,6 +103,19 @@
               {{ icon2 }}
             </v-icon>
           </v-btn>
+          <v-btn
+            v-for="icon3 in icons3"
+            :key="icon3"
+            class="mx-4"
+            dark
+            icon
+            href="https://www.instagram.com/kaisei_festival/"
+            target="_blank"
+          >
+            <v-icon size="24px">
+              {{ icon3 }}
+            </v-icon>
+          </v-btn>
         </div>
       </v-card-text>
       <v-card-text>
@@ -107,6 +135,7 @@ export default {
   data: () => ({
     icons1: ['mdi-youtube'],
     icons2: ['mdi-twitter'],
+    icons3: ['mdi-instagram'],
   }),
 }
 </script>

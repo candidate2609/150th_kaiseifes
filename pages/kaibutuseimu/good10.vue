@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<h1 style="text-align: center;">謎10</h1>
-		<h1 style="text-align: center; color: #000DFF">ゲームクリア</h1>
+		<h1 style="text-align: center;" class="kbsmh1">謎10</h1>
+		<h1 style="text-align: center; color: #000DFF" class="kbsmh1">ゲームクリア</h1>
 		<article class="story">
 			<p></p>
 			<p>すでに体がかなり重い。この霧の毒は体に回るのがかなり早いようだ。もうだめかと思った時、持っている剣がまばゆく光る。</p>
@@ -38,5 +38,10 @@
 <script>
 export default {
 	layout:'kaibutuseimu',
+	created(){
+		if(String(this.$cookies.get('kaibutuseimu').charAt(9))==='0'){
+			this.$router.push({ path: 'q10' });
+		}
+	}
 }
 </script>

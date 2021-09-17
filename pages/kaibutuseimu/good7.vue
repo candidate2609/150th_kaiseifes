@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<h1 style="text-align: center;">謎7</h1>
-		<h1 style="text-align: center; color: #000A47">正解！</h1>
+		<h1 style="text-align: center;" class="kbsmh1">謎7</h1>
+		<h1 style="text-align: center; color: #000A47" class="kbsmh1">正解！</h1>
 		<article class="story">
 			  <p></p>
 			<p>今回の映像は、少し様子がおかしかった。</p>
@@ -34,5 +34,10 @@ export default {
 			tassei:String(this.$cookies.get('kaibutuseimu')).charAt(7)
 		}
 	},
+	created(){
+		if(String(this.$cookies.get('kaibutuseimu').charAt(6))==='0'){
+			this.$router.push({ path: 'q7' });
+		}
+	}
 }
 </script>

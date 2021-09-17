@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<h1 style="text-align: center;">謎5</h1>
-		<h1 style="text-align: center; color: #000A47">正解！</h1>
+		<h1 style="text-align: center;" class="kbsmh1">謎5</h1>
+		<h1 style="text-align: center; color: #000A47" class="kbsmh1">正解！</h1>
 		<article class="story">
 			  <p></p>
 			<p>うっ......まただ。また、頭の中に映像が流れてくる。今度は......建物の中だろうか。いや、この場所、見覚えがある。ここはカイセイの内部だ。やっているのは、壁に問題を浮かび上がらせる作業。......そして、私が持っているこの剣を箱にしまう様子。</p>
@@ -28,5 +28,10 @@ export default {
 			tassei:String(this.$cookies.get('kaibutuseimu')).charAt(5)
 		}
 	},
+	created(){
+		if(String(this.$cookies.get('kaibutuseimu').charAt(4))==='0'){
+			this.$router.push({ path: 'q5' });
+		}
+	}
 }
 </script>

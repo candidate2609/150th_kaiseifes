@@ -22,8 +22,8 @@ export default {
 }
 </script>
 
-<style scoped>
-h1 {
+<style>
+.kbsmh1 {
   display: block;
   font-size: 2em;
   margin-block-start: 0.67em;

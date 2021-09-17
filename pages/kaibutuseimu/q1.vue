@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 style="text-align: center">謎1</h1>
+    <h1 style="text-align: center" class="kbsmh1">謎1</h1>
     <img src="navigate.gif" width="80%" style="display: block; margin: auto" />
     <div style="text-align: center; margin-top: 1em">
       <form @submit.prevent>

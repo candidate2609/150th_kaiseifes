@@ -4,7 +4,6 @@
       color="accent-1"
       light
       flat
-      fixed
       style="background-color: rgba(246, 246, 246, 1); z-index: 1500"
     >
       <v-img
@@ -25,8 +24,12 @@
         <v-btn text style="font-size: 15px" href="/#オンライン祭"
           >オンライン祭とは</v-btn
         >
+        <v-btn text style="font-size: 15px" href="/history">開成の150年</v-btn>
         <v-btn text style="font-size: 15px" href="/info_local"
           >現地用サイト</v-btn
+        >
+        <v-btn text style="font-size: 15px" href="/beauty_pageant"
+          >ミスコン</v-btn
         >
       </div>
       <v-spacer
@@ -75,8 +78,16 @@
             <v-list-item-title>オンライン祭について</v-list-item-title>
           </v-list-item>
 
+          <v-list-item href="/history" @click="drawer = false">
+            <v-list-item-title>開成の150年</v-list-item-title>
+          </v-list-item>
+
           <v-list-item href="/info_local" @click="drawer = false">
             <v-list-item-title>現地用サイト</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item href="/beauty_pageant" @click="drawer = false">
+            <v-list-item-title>ミスコン</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
