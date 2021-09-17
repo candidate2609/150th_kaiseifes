@@ -4,7 +4,7 @@
     <img src="question6.gif" width="80%" style="display: block; margin: auto" />
     <div style="text-align: center; margin-top: 1em">
       <form @submit.prevent>
-        <input v-model="answer" type="text" class="inputfield" name="answer" />
+        <input type="text" class="inputfield" name="answer" v-model="answer" />
         <div class="button">
           <button @click="submit">解答する</button>
         </div>

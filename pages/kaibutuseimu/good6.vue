@@ -20,7 +20,7 @@
 			<a href="questionindex">謎の選択に戻る</a>
 		</div>	
 		<div class="button" style="text-align: center;">
-			<a :href="[tassei === '1' ? './good7' : './q7']">次の問題へ</a>
+			<a v-bind:href="[tassei === '1' ? './good7' : './q7']">次の問題へ</a>
 		</div>
 		
 	</div>
