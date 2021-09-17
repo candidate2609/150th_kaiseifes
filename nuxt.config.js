@@ -29,7 +29,8 @@ export default {
       {
         families: {
           'Shippori+Mincho': [400, 500, 600, 700, 800],
-          'Noto+Serif+JP': true
+          'Noto+Serif+JP': true,
+          'Material+Icons+Outlined': true,
         },
         display: "swap"
       }

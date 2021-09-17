@@ -10,7 +10,7 @@
         class="tabbar"
         style="border-bottom: 1px solid #f0f0f3"
       >
-        <v-tab v-model="tab0" v-for="item in tabs0" :key="item">
+        <v-tab v-for="item in tabs0" :key="item" v-model="tab0">
           {{ item }}
         </v-tab>
       </v-tabs>
@@ -19,7 +19,7 @@
     <v-tabs-items v-model="tab0">
       <v-tab-item>
         <v-tabs v-model="tab1" class="tabbar">
-          <v-tab v-model="tab1" v-for="item in tabs1" :key="item">
+          <v-tab v-for="item in tabs1" :key="item" v-model="tab1">
             {{ item }}
           </v-tab>
         </v-tabs>
@@ -52,7 +52,7 @@
 
       <v-tab-item>
         <v-tabs v-model="tab2" class="tabbar">
-          <v-tab v-model="tab2" v-for="item in tabs2" :key="item">
+          <v-tab v-for="item in tabs2" :key="item" v-model="tab2">
             {{ item }}
           </v-tab>
         </v-tabs>
