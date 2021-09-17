@@ -181,7 +181,7 @@ export default {
           .map((d) => {
             return { src: '/online/コンピューター部大爆発/' + d + '.png' }
           }),
-        サラブレッド研究同好会: [...Array(3)]
+        サラブレッド研究同好会: [...Array(3)]
           .map((_, i) => i + 1)
           .map((d) => {
             return { src: '/online/サラブレッド研究同好会/' + d + '.png' }
