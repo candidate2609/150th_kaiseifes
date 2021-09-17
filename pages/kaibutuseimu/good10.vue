@@ -39,7 +39,7 @@
 export default {
 	layout:'kaibutuseimu',
 	created(){
-		if(String(this.$cookies.get('kaibutuseimu').charAt(9))==='0'){
+		if(String(this.$cookies.get('kaibutuseimu')).charAt(9)==='0'){
 			this.$router.push({ path: 'q10' });
 		}
 	}
