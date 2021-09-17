@@ -4,13 +4,13 @@
     <carousel style="border-bottom: 1px solid #a28756" />
     <arrow-button
       v-if="$vuetify.breakpoint.sm"
-      text="当日のタイムテーブルはこちら"
+      text="実演イベントの時間割はこちら"
       href="/time_table_lg.pdf"
       style="text-align: right; margin: 30px; margin-right: 30px"
     />
     <arrow-button
       v-if="!$vuetify.breakpoint.sm"
-      text="当日のタイムテーブルはこちら"
+      text="実演イベントの時間割はこちら"
       href="/time_table.pdf"
       target="_blank"
       style="text-align: right; margin: 30px; margin-right: 30px"

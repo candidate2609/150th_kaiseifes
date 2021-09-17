@@ -1,17 +1,24 @@
 <template>
   <div class="notify">
     <div id="title">
-      <div>
+      <div v-if="!$vuetify.breakpoint.xs">
         <landing-title
           title_ja="お知らせ"
           title_en="News"
           background_color="#f6f6f6"
         />
       </div>
+      <div v-if="$vuetify.breakpoint.xs">
+        <h2
+          style="background-color: #f6f6f6;padding: 1rem;font-size: 2rem;margin: 1rem;"
+        >
+          お知らせ
+        </h2>
+      </div>
     </div>
     <div id="contents">
       <div v-if="data.sandansInProgress.length > 0" class="cards">
-        <h2 style="margin-top: 16px;">現在開催中のイベント</h2>
+        <h2 style="margin-top: 16px">現在開催中のイベント</h2>
         <event-card :data="data.sandansInProgress" />
       </div>
       <div v-if="data.sandansScheduled.length > 0" class="cards">
@@ -21,7 +28,11 @@
       <div class="cards">
         <h2>新しいコンテンツ</h2>
         <ul>
-          <li class="card-info" v-for="(item, index) in data.newsOfContents" :key="index">
+          <li
+            class="card-info"
+            v-for="(item, index) in data.newsOfContents"
+            :key="index"
+          >
             <span class="card-icon material-icons-outlined">notes</span>
             <p class="card-title">{{ item.title }}</p>
           </li>
@@ -115,7 +126,7 @@ p {
 }
 
 #contents {
-  margin-top: 35px;
+  margin-top: 0;
   flex: 2;
 }
 
