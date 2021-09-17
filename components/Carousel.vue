@@ -167,7 +167,7 @@ export default {
           src: 'landing/carousel/2.JPG',
         },
         {
-          src: 'landing/carousel/3.JPG',
+          src: 'landing/carousel/3.jpg',
         },
       ],
     }
