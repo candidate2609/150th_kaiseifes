@@ -176,7 +176,7 @@ export default {
           .map((d) => {
             return { src: '/online/カードゲーム同好会/' + d + '.png' }
           }),
-        コンピューター部大爆発: [...Array(3)]
+        コンピューター部大爆発: [...Array(4)]
           .map((_, i) => i + 1)
           .map((d) => {
             return { src: '/online/コンピューター部大爆発/' + d + '.png' }
