@@ -50,6 +50,17 @@
           </p>
         </div>
       </div>
+      <div style="text-align: center">
+        <div class="notice">
+          <p>
+            <span>パンフレットに関して</span><br /><br />
+            パンフレットのオンライン配布について2点ご連絡です。<br /><br />
+            ・明日以降誤植箇所の訂正表を本HPに掲載いたします。<br />
+            ・明日以降訂正済みのパンフレットのPDFデータを本HPに掲載いたします。<br /><br />
+            掲載の正確な日時は未定です。ご了承ください。
+          </p>
+        </div>
+      </div>
       <!-- 開成祭の実装は -->
       <short-introduction
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
@@ -105,28 +116,9 @@
         </div>
       </div>
       <div style="text-align: center">
-        <div
-          style="
-            display: inline-block;
-            margin-left: 1rem;
-            margin-right: 1rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-            padding: 1rem;
-          "
-        >
-          <p
-            style="line-height: 1.5em; display: inline-block; text-align: left"
-          >
-            <span
-              style="
-                border-bottom: 2px solid rgb(42, 64, 115);
-                font-size: 2rem;
-                line-height: 1.5em;
-                margin-bottom: 1rem;
-              "
-              >オンライン文化祭に関して</span
-            ><br /><br />
+        <div class="notice">
+          <p>
+            <span>オンライン文化祭に関して</span><br /><br />
             オンライン文化祭の開催形態です。<br /><br />
             1. 当日各企画の動画がYouTube上に上がります。<br />
             2. 開成祭当日の様子をYouTubeでのライブ配信でお届けします。<br />
@@ -235,6 +227,26 @@ export default {
 </script>
 
 <style>
+.notice {
+  display: inline-block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+.notice p {
+  line-height: 1.5em;
+  display: inline-block;
+  text-align: left;
+}
+.notice span {
+  border-bottom: 2px solid rgb(42, 64, 115);
+  font-size: 2rem;
+  line-height: 1.5em;
+  margin-bottom: 1rem;
+}
+
 .hero-description {
   position: absolute;
   bottom: 0;
