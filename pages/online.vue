@@ -246,10 +246,15 @@ export default {
           .map((d) => {
             return { src: '/online/バランスアクション!VR/' + d + '.png' }
           }),
-        開成ピアノの会定期演奏会: [...Array(1)]
+        開成ピアノの会定期演奏会: [...Array(2)]
           .map((_, i) => i + 1)
           .map((d) => {
             return { src: '/online/開成ピアノの会定期演奏会/' + d + '.png' }
+          }),
+        開成書道展: [...Array(3)]
+          .map((_, i) => i + 1)
+          .map((d) => {
+            return { src: '/online/開成書道展/' + d + '.png' }
           }),
       },
     }
