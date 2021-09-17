@@ -78,14 +78,19 @@ p {
 }
 
 .cards {
-  margin-left: 40px;
-  margin-right: 18px;
+  margin: 0 18px;
 }
 
 @media screen and (min-width: 960px) {
   .cards {
+    margin-left: 40px;
     margin-right: 32px;
   }
+}
+
+.title {
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 /* new content */
@@ -118,9 +123,5 @@ p {
   #contents {
     margin-top: 0px;
   }
-}
-
-#title div {
-  position: static;
 }
 </style>
