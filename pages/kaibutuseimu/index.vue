@@ -42,7 +42,7 @@ article::before {
 <script>
 export default {
   created() {
-    if (String(this.$cookies.get('kaibutuseimu'))==="undifined")
+    if (String(this.$cookies.get('kaibutuseimu')).length!=12)
       this.$cookies.set('kaibutuseimu', '000000000000', {
         maxAge: 60 * 60 * 24 * 7,
       })
