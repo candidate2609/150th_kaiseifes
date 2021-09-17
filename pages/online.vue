@@ -28,7 +28,12 @@
     <v-row>
       <v-spacer />
       <v-col cols="11" lg="10">
-        <v-row class="online_card" v-for="(sandan, i) in sandans" :key="sandan">
+        <v-row
+          class="online_card"
+          v-for="(sandan, i) in sandans"
+          :key="sandan"
+          style="margin-top: 7rem; margin-bottom: 7rem"
+        >
           <h2 class="online_card-num">{{ digital(i + 1) }}</h2>
           <v-col cols="12" md="6" class="online_card-description">
             <div class="card-title">
