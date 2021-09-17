@@ -184,7 +184,7 @@ export default {
         サラブレッド研究同好会: [...Array(3)]
           .map((_, i) => i + 1)
           .map((d) => {
-            return { src: '/online/サラブレッド研究同好会/' + d + '.png' }
+            return { src: '/online/サラブレッド研究同好会/' + d + '.png' }
           }),
         動画研究会: [...Array(3)]
           .map((_, i) => i + 1)
