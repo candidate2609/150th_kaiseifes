@@ -341,6 +341,19 @@
           </v-tabs-items>
           <div class="timetable" style="margin-top: 4rem">
             <h2 id="timetable">タイムテーブル</h2>
+            <v-data-table
+              :headers="header"
+              :items="output"
+              hide-default-footer
+              :items-per-page="100"
+              :sort-by="['start']"
+              :sort-desc="[false]"
+              class="elevation-1"
+            >
+              <template v-slot:[`item.name`]="{ item }">
+                <a :href="item.url"> {{ item.name }}</a>
+              </template>
+            </v-data-table>
           </div>
         </v-col>
         <v-spacer></v-spacer>
@@ -438,12 +451,44 @@ export default {
       }
       return 0
     })
+    const output = list
+    for (let i = 0; i < list.length; i++) {
+      output[i].start =
+        output[i].start.slice(5, 7) +
+        '/' +
+        output[i].start.slice(8, 10) +
+        ' ' +
+        output[i].start.slice(11, 16)
+      output[i].end =
+        output[i].end.slice(5, 7) +
+        '/' +
+        output[i].end.slice(8, 10) +
+        ' ' +
+        output[i].end.slice(11, 16)
+      if (output[i].start.slice(3, 5) === '18') {
+        output[i].day = "Day1"
+      } else {
+        output[i].day = "Day2"
+      }
+      output[i].url = output[i].url.replace('www.youtube.com/embed', 'youtu.be')
+    }
+    output.sort(function (a, b) {
+      if (a[1] > b[1]) {
+        return 1
+      }
+      if (a[1] < b[1]) {
+        return -1
+      }
+      return 0
+    })
     return {
       onair,
       soon,
       scheduled: [scheduled1, scheduled2],
       finished: [finished1, finished2],
       now,
+      list,
+      output,
     }
   },
   data() {
@@ -454,6 +499,18 @@ export default {
       tabs1: ['1日目', '2日目'],
       tab0: null,
       tab1: null,
+      header: [
+        {
+          text: '',
+          align: 'start',
+          sortable: false,
+          value: '',
+        },
+        { text: 'タイトル', value: 'name' },
+        { text: 'Day1/Day2', value: 'day' },
+        { text: '開始時間', value: 'start' },
+        { text: '終了時間', value: 'end' },
+      ],
     }
   },
   methods: {
@@ -485,12 +542,9 @@ export default {
   justify-content: space-between;
   margin: 0 auto;
 }
-.timetable {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
+.timetable table {
   margin: 0 auto;
+  text-align: center;
 }
 .video {
   position: relative;
