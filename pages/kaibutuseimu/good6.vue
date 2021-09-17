@@ -35,7 +35,7 @@ export default {
 		}
 	},
 	created(){
-		if(String(this.$cookies.get('kaibutuseimu').charAt(5))==='0'){
+		if(String(this.$cookies.get('kaibutuseimu')).charAt(5)==='0'){
 			this.$router.push({ path: 'q6' });
 		}
 	}
