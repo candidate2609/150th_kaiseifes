@@ -2,8 +2,10 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: '150th開成祭',
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.svg' },
-    { href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css", rel: "stylesheet" }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/icon.svg' },
+      { href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css", rel: "stylesheet" },
+    ],
     meta: [
       { charset: 'utf-8' },
       { hid: 'description', name: 'description', content: '150th開成祭の公式ホームページです。' },
@@ -29,7 +31,8 @@ export default {
       {
         families: {
           'Shippori+Mincho': true,
-          'Noto+Serif+JP': true
+          'Noto+Serif+JP': true,
+          'Material+Icons+Outlined': true,
         },
         display: "swap"
       }
