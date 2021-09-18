@@ -128,4 +128,15 @@ p {
     margin-top: 0px;
   }
 }
+
+@media screen and (min-width: 600px) and (max-width: 960px) {
+  #title {
+    width: 70px;
+  }
+}
+@media screen and (min-width: 960px) {
+  #title {
+    width: 164px;
+  }
+}
 </style>
