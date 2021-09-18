@@ -148,8 +148,9 @@
         title="新たなる開成。"
         text="今年7月に完成した新校舎。今明かされる全貌。バーチャルでご案内。"
         picture_name="landing/online/3.png"
-        picture_alt="clusterで新校舎を再現！(後日公開予定)"
-        img-location="order-md-2"
+        picture_alt="clusterで新校舎を再現！"
+        link_to="/cluster"
+        imgLocation="order-md-2"
       />
       <!-- この間 -->
     </section>
@@ -160,10 +161,10 @@
 const getDateStr = (startDate, endDate) => {
   // start date
   const startMinutes = addZero(String(startDate.getMinutes()))
-  const startDateStr = startDate.getHours() + ':' + startMinutes
+  const startDateStr = jstHourToUtc(startDate.getHours()) + ':' + startMinutes
   // end date
   const endMinuites = addZero(String(endDate.getMinutes()))
-  const endDateStr = endDate.getHours() + ':' + endMinuites
+  const endDateStr = jstHourToUtc(endDate.getHours()) + ':' + endMinuites
   return startDateStr + '-' + endDateStr
 }
 const addZero = (str) => {
@@ -171,6 +172,9 @@ const addZero = (str) => {
     return '0' + str
   }
   return str
+}
+const jstHourToUtc = (number) => {
+  return number + 9
 }
 // fetching informations with axios
 export default {
@@ -208,7 +212,8 @@ export default {
         sandansInProgress.push(obj)
       }
       // start - now =< 3600s -> まもなく開催
-      if (startSecTime - nowSecTime <= 3600000) {
+      const timeDiff = startSecTime - nowSecTime
+      if (timeDiff <= 3600000 && timeDiff > 0) {
         obj.date_str = dateStr
         sandansScheduled.push(obj)
       }
