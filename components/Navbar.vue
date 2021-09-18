@@ -41,6 +41,7 @@
         >
         <v-btn text style="font-size: 15px" href="/online">online企画</v-btn>
         <v-btn text style="font-size: 15px" href="/live">ライブ配信会場</v-btn>
+        <v-btn text style="font-size: 15px" href="/cluster">クラスター</v-btn>
       </div>
       <v-spacer
         v-if="
@@ -111,8 +112,13 @@
           <v-list-item href="/online" @click="drawer = false">
             <v-list-item-title>online企画</v-list-item-title>
           </v-list-item>
+
           <v-list-item href="/live" @click="drawer = false">
             <v-list-item-title>ライブ配信</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item href="/cluster" @click="drawer = false">
+            <v-list-item-title>クラスター</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
