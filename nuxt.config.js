@@ -3,7 +3,7 @@ export default {
   head: {
     title: '150th 開成祭',
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.svg' },
-    { href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css", rel: "stylesheet" }],
+    ],
     meta: [
       { charset: 'utf-8' },
       { hid: 'description', name: 'description', content: '2021年9月18日（土）・19日（日）に開催される創立150周年記念開成祭公式のホームページです。（運営：150th開成学園文化祭準備委員会広報係）' },
