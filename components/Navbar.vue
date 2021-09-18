@@ -18,20 +18,7 @@
         ></v-toolbar-title
       >
 
-      <div
-        v-if="
-          !(
-            $vuetify.breakpoint.xs ||
-            $vuetify.breakpoint.sm ||
-            $vuetify.breakpoint.md
-          )
-        "
-      >
-        <v-btn text style="font-size: 15px" href="/#お知らせ">お知らせ</v-btn>
-        <v-btn text style="font-size: 15px" href="/#開成祭">開成祭とは</v-btn>
-        <v-btn text style="font-size: 15px" href="/#オンライン祭"
-          >オンライン祭とは</v-btn
-        >
+      <div v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)">
         <v-btn text style="font-size: 15px" href="/history">開成の150年</v-btn>
         <v-btn text style="font-size: 15px" href="/info_local"
           >現地用サイト</v-btn
@@ -43,18 +30,10 @@
         <v-btn text style="font-size: 15px" href="/live">ライブ配信会場</v-btn>
       </div>
       <v-spacer
-        v-if="
-          $vuetify.breakpoint.xs ||
-          $vuetify.breakpoint.sm ||
-          $vuetify.breakpoint.md
-        "
+        v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
       ></v-spacer>
       <v-app-bar-nav-icon
-        v-if="
-          $vuetify.breakpoint.xs ||
-          $vuetify.breakpoint.sm ||
-          $vuetify.breakpoint.md
-        "
+        v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
         @click="drawer = true"
       />
       <!---
@@ -83,19 +62,7 @@
 
       <v-divider></v-divider>
       <v-list nav dense>
-        <v-list-item-group active-class="deep-purple--text text--accent-4">
-          <v-list-item href="/#お知らせ" @click="drawer = false">
-            <v-list-item-title>お知らせ</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item href="/#開成祭" @click="drawer = false">
-            <v-list-item-title>開成祭について</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item href="/#オンライン祭" @click="drawer = false">
-            <v-list-item-title>オンライン祭について</v-list-item-title>
-          </v-list-item>
-
+        <v-list-item-group active-class="text--accent-4">
           <v-list-item href="/history" @click="drawer = false">
             <v-list-item-title>開成の150年</v-list-item-title>
           </v-list-item>
