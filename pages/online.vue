@@ -241,7 +241,7 @@ export default {
           .map((d) => {
             return { src: '/online/物理部/' + d + '.png' }
           }),
-        'バランスアクション!VR': [...Array(1)]
+        'バランスアクション!VR': [...Array(3)]
           .map((_, i) => i + 1)
           .map((d) => {
             return { src: '/online/バランスアクション!VR/' + d + '.png' }
