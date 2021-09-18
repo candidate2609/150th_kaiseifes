@@ -11,7 +11,7 @@
     </div>
     <div id="contents">
       <div v-if="data.sandansInProgress.length > 0" class="cards">
-        <h2 style="margin-top: 16px;">現在開催中のイベント</h2>
+        <h2 style="margin-top: 16px">現在開催中のイベント</h2>
         <event-card :data="data.sandansInProgress" />
       </div>
       <div v-if="data.sandansScheduled.length > 0" class="cards">
@@ -21,7 +21,11 @@
       <div class="cards">
         <h2>新しいコンテンツ</h2>
         <ul>
-          <li class="card-info" v-for="(item, index) in data.newsOfContents" :key="index">
+          <li
+            class="card-info"
+            v-for="(item, index) in data.newsOfContents"
+            :key="index"
+          >
             <span class="card-icon material-icons-outlined">notes</span>
             <p class="card-title">{{ item.title }}</p>
           </li>
@@ -31,7 +35,7 @@
   </div>
 </template>
 
-<script scoped>
+<script>
 export default {
   props: ['data'],
 }
