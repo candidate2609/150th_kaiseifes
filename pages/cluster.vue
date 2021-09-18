@@ -40,7 +40,7 @@
               <div v-for="(item,i) in items_world" :key="i" class="col-md-6 landflame order-md-1">
                 <h2>{{ item.name }}</h2>
                 <a :href=item.href target="_blank">
-                  <img :src=item.src style="width: 100%; height: auto;"/>
+                  <img :src=item.src :alt=item.name style="width: 100%; height: auto;"/>
                 </a>
                 <p>{{ item.description }}</p>
               </div>
@@ -48,8 +48,8 @@
             <div v-if="($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)" class="worlds">
               <div v-for="(item,i) in items_world" :key="i" class="col-md-6 landflame order-md-1">
                 <h2>{{ item.name }}</h2>
-                <a :href=item.href target="_blank">
-                  <img :src=item.src style="width: 100%; height: auto;"/>
+                <a :href=item.href :alt=item.name target="_blank">
+                  <img :src=item.src :alt=item.name style="width: 100%; height: auto;"/>
                 </a>
                 <p>{{ item.description }}</p>
               </div>
