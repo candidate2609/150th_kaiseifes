@@ -91,6 +91,8 @@ h2 {
   margin: 30px 0 20px 0;
 }
 
+/* for news section */
+
 ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -99,6 +101,7 @@ ul {
 }
 
 li {
+  height: min-content;
   padding: 15px;
   display: block;
   border: 1px solid #999999;
