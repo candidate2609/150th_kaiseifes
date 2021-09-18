@@ -248,7 +248,7 @@ export default {
     is_production() {
       const datetime = new Date()
       return Boolean(
-        (datetime.getMonth() === 9) &
+        (datetime.getMonth() === 8) &
           (datetime.getDate() === 18 || datetime.getDate() === 19)
       )
     },
