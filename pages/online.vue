@@ -256,6 +256,11 @@ export default {
           .map((d) => {
             return { src: '/online/開成書道展/' + d + '.png' }
           }),
+        暗染地帯: [...Array(2)]
+          .map((_, i) => i + 1)
+          .map((d) => {
+            return { src: '/online/暗染地帯/' + d + '.png' }
+          }),
       },
     }
   },
