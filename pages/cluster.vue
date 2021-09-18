@@ -90,13 +90,13 @@ export default {
         },
         {
           name: '折り紙研究部',
-          src: '/landing/Oriken.png',
+          src: '/cluster/oriken.png',
           href: 'https://cluster.mu/w/b0da2465-4093-4586-ba99-0cd037cec1f8/',
           description: '日本の伝統文化である折り紙は、今もなおさらに高度な芸術作品へと進化しています。折り研も、昨年度からさらに進化した展示でお客様をお待ちしております。',
         },
         {
           name: '写真部',
-          src: '/landing/Syashinbu.jpg',
+          src: '/cluster/syasinbu.png',
           href: 'https://cluster.mu/w/19a2abdc-294e-405d-9b19-e6e34fc99a1e',
           description: '前回の文化祭では、学校校舎での実施が叶わず、また「開成写真館」はオンライン文化祭への参加もしていなかったため、写真部員たちの作品を皆様に見て頂く機会がございませんでした。２年間お務めになられた部長が引退し、新たな執行部で手探りな部分も多かったですが、対面文化祭とオンライン文化祭の両方に参加できることを非常に嬉しく思います。２年越しの展示をお楽しみください。',
         },
