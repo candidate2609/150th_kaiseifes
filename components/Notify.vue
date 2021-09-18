@@ -22,12 +22,21 @@
         <h2>新しいコンテンツ</h2>
         <ul>
           <li
-            class="card-info"
+            class="card"
             v-for="(item, index) in data.newsOfContents"
             :key="index"
           >
             <span class="card-icon material-icons-outlined">notes</span>
-            <p class="card-title">{{ item.title }}</p>
+            <div class="card-info">
+              <p class="card-info-title" @click="item.display = !item.display">
+                {{ item.title }}
+              </p>
+              <div
+                class="card-info-details"
+                v-if="item.display"
+                v-html="item.text"
+              ></div>
+            </div>
           </li>
         </ul>
       </div>
@@ -36,8 +45,32 @@
 </template>
 
 <script>
+/* eslint-disable */
 export default {
   props: ['data'],
+  created() {
+    const news = this.data.newsOfContents
+    news.forEach((obj) => {
+      // escape html styles and tagas
+      const htmlStyled = obj.text
+      console.log(htmlStyled)
+      const styleAttrRegex = /style=".+"/
+      const emptyTagRegex = /<p>(<br>|)<\/p>/
+      const h1TagRegex = /<h1>.+<\/h1>/
+      const htmlPlain = htmlStyled
+        .split(styleAttrRegex)
+        .join('')
+        .split(emptyTagRegex)
+        .join('')
+        .split('<br>')
+        .join('')
+        .split(h1TagRegex)
+        .join('')
+      obj.text = htmlPlain
+      // set display property
+      obj.display = false
+    })
+  },
 }
 </script>
 
@@ -99,9 +132,10 @@ p {
 
 /* new content */
 
-.card-info {
+.card {
   display: flex;
   flex-direction: row;
+  border-radius: 0px;
 }
 
 .card-icon {
@@ -110,8 +144,29 @@ p {
   font-size: 1.5em;
 }
 
-.card-title {
+.card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-info-title {
   font-weight: 800;
+}
+
+.card-info-title:hover {
+  text-decoration: underline;
+}
+
+.card-info-details {
+  margin-top: 1em;
+}
+
+.card-info-details p {
+  margin: 0px;
+}
+
+.card-info-details a {
+  color: inherit;
 }
 
 .material-icons-outlined {
