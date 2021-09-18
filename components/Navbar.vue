@@ -125,7 +125,6 @@ export default {
   data() {
     return {
       drawer: false,
-      Items: ['アクセス', '現地企画', 'お食事処', 'オンライン企画', 'お知らせ'],
     }
   },
   watch: {
