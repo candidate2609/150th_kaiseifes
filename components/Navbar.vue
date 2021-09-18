@@ -32,6 +32,7 @@
           >ミスコン</v-btn
         >
         <v-btn text style="font-size: 15px" href="/online">online企画</v-btn>
+        <v-btn text style="font-size: 15px" href="/live">ライブ配信開場</v-btn>
       </div>
       <v-spacer
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
@@ -93,6 +94,9 @@
 
           <v-list-item href="/online" @click="drawer = false">
             <v-list-item-title>online企画</v-list-item-title>
+          </v-list-item>
+          <v-list-item href="/live" @click="drawer = false">
+            <v-list-item-title>ライブ配信開場</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
