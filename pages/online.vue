@@ -171,10 +171,10 @@ export default {
           .map((d) => {
             return { src: '/online/アクアロワイヤル/' + d + '.png' }
           }),
-        最後の切り札: [...Array(4)]
+        カードゲームの夜: [...Array(4)]
           .map((_, i) => i + 1)
           .map((d) => {
-            return { src: '/online/カードゲーム同好会/' + d + '.png' }
+            return { src: '/online/カードゲームの夜/' + d + '.png' }
           }),
         コンピューター部大爆発: [...Array(4)]
           .map((_, i) => i + 1)
