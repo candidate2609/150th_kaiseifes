@@ -54,9 +54,11 @@ export default {
       // escape html styles and tagas
       const htmlStyled = obj.text
       console.log(htmlStyled)
-      const styleAttrRegex = /style=".+"/
+      const styleAttrRegex = /style=".+?"/
       const emptyTagRegex = /<p>(<br>|)<\/p>/
-      const h1TagRegex = /<h1>.+<\/h1>/
+      const h1TagRegex = /<h1>.+?<\/h1>/
+      const h2TagRegex = /<h2>.+?<\/h2>/
+      const authorRegex = /---.+?担当/
       const htmlPlain = htmlStyled
         .split(styleAttrRegex)
         .join('')
@@ -65,6 +67,10 @@ export default {
         .split('<br>')
         .join('')
         .split(h1TagRegex)
+        .join('')
+        .split(h2TagRegex)
+        .join('')
+        .split(authorRegex)
         .join('')
       obj.text = htmlPlain
       // set display property
