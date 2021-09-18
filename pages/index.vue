@@ -20,12 +20,27 @@
       class="animated-section"
       style="background-color: #ffffff"
     >
-      <notify :data="data" />
+      <landing-title
+        v-if="!$vuetify.breakpoint.xs"
+        title_ja="お知らせ"
+        title_en="News"
+        background_color="#f6f6f6"
+      />
+      <landing-title
+        v-if="$vuetify.breakpoint.xs"
+        title_ja="お知らせ"
+        title_en="News"
+        background_color="#f6f6f6"
+        style="position: static"
+      />
+      <!-- お知らせの実装は -->
+      <notify :data="data" style="padding-top: 2em" />
       <arrow-button
         text="メルマガ登録・解除はこちら"
         href="subscribe"
         style="text-align: right; margin-top: 30px; margin-right: 30px"
       />
+      <!-- この間 -->
     </section>
     <section
       id="開成祭"
@@ -106,33 +121,24 @@
       </div>
       <div style="text-align: center">
         <div
-          style="
-            display: inline-block;
-            margin-left: 1rem;
-            margin-right: 1rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-            padding: 1rem;
+          style="display: inline-block;margin-left: 1rem;margin-right: 1rem;margin-bottom: 2rem;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);padding: 1rem;
           "
         >
           <p
             style="line-height: 1.5em; display: inline-block; text-align: left"
           >
             <span
-              style="
-                border-bottom: 2px solid rgb(42, 64, 115);
-                font-size: 2rem;
-                line-height: 1.5em;
-                margin-bottom: 1rem;
+              style="border-bottom: 2px solid rgb(42, 64, 115);font-size: 2rem;line-height: 1.5em;margin-bottom: 1rem;
               "
               >オンライン文化祭に関して</span
             ><br /><br />
             オンライン文化祭の開催形態です。<br /><br />
-            1. 当日各企画の動画がYouTube上に上がります。<br />
-            2. 開成祭当日の様子をYouTubeでのライブ配信でお届けします。<br />
-            3. 当日の様子を動画にてYoutubeにて後日公開します。<br />
-            4. HP上で様々な企画を更新します。<br /><br />
-            これらのコンテンツはライブ配信含めて10月いっぱいまで視聴可能です。
+            １.当日各企画の動画がYouTube上に上がります。<br />
+            ２.開成祭当日の様子をYouTubeでのライブ配信でお届けします。<br />
+            ３.当日の様子を動画にてYoutubenにて後日公開します。<br />
+            ４.HP上で様々な企画を更新します。<br /><br />
+            これらのコンテンツはライブ配信含めて10月いっぱいまで視聴可能です。<br />
+            詳細や配信のタイムスケジュールは9月15日（水曜日）に掲載いたします。
           </p>
         </div>
       </div>
@@ -154,9 +160,11 @@
         title="新たなる開成。"
         text="今年7月に完成した新校舎。今明かされる全貌。バーチャルでご案内。"
         picture_name="landing/online/3.png"
-        picture_alt="clusterで新校舎を再現！(後日公開予定)"
-        img-location="order-md-2"
+        picture_alt="clusterで新校舎を再現！"
+        link_to="/cluster"
+        imgLocation="order-md-2"
       />
+
       <!-- この間 -->
     </section>
   </div>
@@ -271,3 +279,29 @@ export default {
   }
 }
 </style>
+
+<script>
+// fetching informations with axios
+export default {
+  async asyncData({ $axios }) {
+    const newsUrl = 'https://kaiseifes-150th-backend.herokuapp.com/api/news/'
+    const tagsUrl =
+      'https://kaiseifes-150th-backend.herokuapp.com/api/news/tags'
+    const news = await $axios.$get(newsUrl)
+    const tagsFetched = await $axios.$get(tagsUrl)
+
+    // tags
+    const tags = {}
+    for (let i = 0; i < tagsFetched.length; i++) {
+      tags[tagsFetched[i].id] = tagsFetched[i].name
+    }
+
+    return {
+      data: {
+        news,
+        tags,
+      },
+    }
+  },
+}
+</script>
