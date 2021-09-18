@@ -208,14 +208,14 @@ export default {
       const endSecTime = endDate.getTime()
       // 開始時刻と終了時刻の表示用文字列を作成
       const dateStr = getDateStr(startDate, endDate)
-      // start =< now =< end -> 開催中
-      const timeDiff = startSecTime - nowSecTime
-      if (timeDiff <= 3600000 && timeDiff > 0) {
+　　　　// start =< now =< end -> 開催中
+      if (nowSecTime >= startSecTime && nowSecTime <= endSecTime) {
         obj.date_str = dateStr
         sandansInProgress.push(obj)
       }
       // start - now =< 3600s -> まもなく開催
-      if (startSecTime - nowSecTime <= 3600000) {
+      const timeDiff = startSecTime - nowSecTime
+      if (timeDiff <= 3600000 && timeDiff > 0) {
         obj.date_str = dateStr
         sandansScheduled.push(obj)
       }
