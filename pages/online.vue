@@ -32,6 +32,7 @@
           class="online_card"
           v-for="(sandan, i) in sandans"
           :key="sandan"
+          :id="sandan.name"
           style="margin-top: 7rem; margin-bottom: 7rem"
         >
           <h2 class="online_card-num">{{ digital(i + 1) }}</h2>
@@ -155,7 +156,6 @@ export default {
       .then((res) => {
         return res
       })
-    console.log(onlineSandans)
     return { sandans: onlineSandans }
   },
   data() {
@@ -260,6 +260,11 @@ export default {
           .map((_, i) => i + 1)
           .map((d) => {
             return { src: '/online/暗染地帯/' + d + '.png' }
+          }),
+        鉄研の車窓から2021: [...Array(5)]
+          .map((_, i) => i + 1)
+          .map((d) => {
+            return { src: '/online/鉄研の車窓から2021/' + d + '.png' }
           }),
       },
     }

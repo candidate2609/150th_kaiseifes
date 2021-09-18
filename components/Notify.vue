@@ -60,7 +60,6 @@ export default {
     news.forEach((obj) => {
       // escape html styles and tagas
       const htmlStyled = obj.text
-      console.log(htmlStyled)
       const styleAttrRegex = /style=".+?"/
       const emptyTagRegex = /<p>(<br>|)<\/p>/
       const h1TagRegex = /<h1>.+?<\/h1>/
