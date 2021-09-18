@@ -166,10 +166,10 @@
 const getDateStr = (startDate, endDate) => {
   // start date
   const startMinutes = addZero(String(startDate.getMinutes()))
-  const startDateStr = startDate.getHours() + ':' + startMinutes
+  const startDateStr = jstHourToUtc(startDate.getHours()) + ':' + startMinutes
   // end date
   const endMinuites = addZero(String(endDate.getMinutes()))
-  const endDateStr = endDate.getHours() + ':' + endMinuites
+  const endDateStr = jstHourToUtc(endDate.getHours()) + ':' + endMinuites
   return startDateStr + '-' + endDateStr
 }
 const addZero = (str) => {
@@ -177,6 +177,9 @@ const addZero = (str) => {
     return '0' + str
   }
   return str
+}
+const jstHourToUtc = (number) => {
+  return number + 9
 }
 // fetching informations with axios
 export default {
