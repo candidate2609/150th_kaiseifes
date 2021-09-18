@@ -40,7 +40,7 @@
               <div v-for="(item,i) in items_world" :key="i" class="col-md-6 landflame order-md-1">
                 <h2>{{ item.name }}</h2>
                 <a :href=item.href target="_blank">
-                  <img :src=item.src style="width: 100%; height: auto;"/>
+                  <img :src=item.src :alt=item.name style="width: 100%; height: auto;"/>
                 </a>
                 <p>{{ item.description }}</p>
               </div>
@@ -48,8 +48,8 @@
             <div v-if="($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)" class="worlds">
               <div v-for="(item,i) in items_world" :key="i" class="col-md-6 landflame order-md-1">
                 <h2>{{ item.name }}</h2>
-                <a :href=item.href target="_blank">
-                  <img :src=item.src style="width: 100%; height: auto;"/>
+                <a :href=item.href :alt=item.name target="_blank">
+                  <img :src=item.src :alt=item.name style="width: 100%; height: auto;"/>
                 </a>
                 <p>{{ item.description }}</p>
               </div>
@@ -84,26 +84,26 @@ export default {
       items_world: [
         {
           name: '新校舎写真展',
-          src: '/landing/Kaisei.png',
-          href: 'https://cluster.mu/w/82a5fda2-b4f6-49d1-8b1f-8695b83aac0c/entry',
-          description: ''
+          src: '/cluster/kaisei.png',
+          href: 'https://cluster.mu/w/82a5fda2-b4f6-49d1-8b1f-8695b83aac0c/',
+          description: '新校舎のちょっとした写真を展示しています。'
         },
         {
           name: '折り紙研究部',
-          src: '/landing/Kaisei.png',
-          href: 'https://cluster.mu/w/b0da2465-4093-4586-ba99-0cd037cec1f8/entry',
+          src: '/cluster/oriken.png',
+          href: 'https://cluster.mu/w/b0da2465-4093-4586-ba99-0cd037cec1f8/',
           description: '日本の伝統文化である折り紙は、今もなおさらに高度な芸術作品へと進化しています。折り研も、昨年度からさらに進化した展示でお客様をお待ちしております。',
         },
         {
           name: '写真部',
-          src: '/landing/Kaisei.png',
-          href: '',
+          src: '/cluster/syasinbu.png',
+          href: 'https://cluster.mu/w/19a2abdc-294e-405d-9b19-e6e34fc99a1e',
           description: '前回の文化祭では、学校校舎での実施が叶わず、また「開成写真館」はオンライン文化祭への参加もしていなかったため、写真部員たちの作品を皆様に見て頂く機会がございませんでした。２年間お務めになられた部長が引退し、新たな執行部で手探りな部分も多かったですが、対面文化祭とオンライン文化祭の両方に参加できることを非常に嬉しく思います。２年越しの展示をお楽しみください。',
         },
         {
           name: '脱走中',
           src: '/cluster/dassochu.png',
-          href: 'https://cluster.mu/w/22db6c58-0a99-45e0-9710-f8a3927b28ed/entry',
+          href: 'https://cluster.mu/w/22db6c58-0a99-45e0-9710-f8a3927b28ed/',
           description: '対面で開催された開成祭の企画『脱走中』の世界観をベースとしたゲームをclusterで作成しました。実際に企画内で使用された罠や仕掛けも再現されていて、それなりに楽しんでプレイできるようになっております。やりこみ要素は少ないですが、友達とクリアタイムを競ったりして遊ぶのもいいかもしれません。',
         },
       ],
