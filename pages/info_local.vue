@@ -147,8 +147,6 @@
     </v-tabs-items>
   </div>
 </template>
-  </div>
-</template>
 
 <style>
 .tabbar {
