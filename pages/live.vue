@@ -284,7 +284,7 @@
                           <p
                             id="timezone"
                             v-text="get_timezone(item.start, item.end)"
-                          ></p>{{ item.start }}
+                          ></p>
                           <div class="video">
                             <iframe
                               width="560"
@@ -333,6 +333,14 @@
           </v-tabs-items>
           <div class="timetable" style="margin-top: 4rem">
             <h2 id="timetable">タイムテーブル</h2>
+            <v-col cols="12" lg="12" class="container-m mx-auto align-items-center">
+              <v-row>
+                <div class="streaming" style="margin-bottom: 1rem">
+                  <img src="/live/timetable1.jpeg" class="col-md-6 landflame order-md-1">
+                  <img src="/live/timetable2.jpeg" class="col-md-6 landflame order-md-1">
+                </div>
+              </v-row>
+            </v-col>
             <v-data-table
               :headers="header"
               :items="output"
@@ -343,7 +351,7 @@
               class="elevation-1"
             >
               <template v-slot:[`item.name`]="{ item }">
-                <a :href="get_embed(item.url)" id="table_href"> {{ item.name }}</a>
+                <a :href="item.url" target="_blank" id="table_href"> {{ item.name }}</a>
               </template>
             </v-data-table>
           </div>
