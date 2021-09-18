@@ -208,7 +208,7 @@ export default {
       const endSecTime = endDate.getTime()
       // 開始時刻と終了時刻の表示用文字列を作成
       const dateStr = getDateStr(startDate, endDate)
-　　　　// start =< now =< end -> 開催中
+      // start =< now =< end -> 開催中
       if (nowSecTime >= startSecTime && nowSecTime <= endSecTime) {
         obj.date_str = dateStr
         sandansInProgress.push(obj)
