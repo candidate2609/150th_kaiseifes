@@ -98,7 +98,7 @@
                         <iframe
                           width="560"
                           height="315"
-                          :src="item.url"
+                          :src="get_embed(item.url)"
                           title="YouTube video player"
                           frameborder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -120,7 +120,7 @@
                         <iframe
                           width="560"
                           height="315"
-                          :src="item.url"
+                          :src="get_embed(item.url)"
                           title="YouTube video player"
                           frameborder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -145,7 +145,7 @@
                         <iframe
                           width="560"
                           min-height="315"
-                          :src="item.url"
+                          :src="get_embed(item.url)"
                           title="YouTube video player"
                           frameborder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -167,7 +167,7 @@
                         <iframe
                           width="560"
                           min-height="315"
-                          :src="item.url"
+                          :src="get_embed(item.url)"
                           title="YouTube video player"
                           frameborder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -218,7 +218,7 @@
                             <iframe
                               width="560"
                               height="315"
-                              :src="item.url"
+                              :src="get_embed(item.url)"
                               title="YouTube video player"
                               frameborder="0"
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -244,7 +244,7 @@
                             <iframe
                               width="560"
                               min-height="315"
-                              :src="item.url"
+                              :src="get_embed(item.url)"
                               title="YouTube video player"
                               frameborder="0"
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -292,12 +292,12 @@
                           <p
                             id="timezone"
                             v-text="get_timezone(item.start, item.end)"
-                          ></p>
+                          ></p>{{ item.start }}
                           <div class="video">
                             <iframe
                               width="560"
                               height="315"
-                              :src="item.url"
+                              :src="get_embed(item.url)"
                               title="YouTube video player"
                               frameborder="0"
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -323,7 +323,7 @@
                             <iframe
                               width="560"
                               min-height="315"
-                              :src="item.url"
+                              :src="get_embed(item.url)"
                               title="YouTube video player"
                               frameborder="0"
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -351,7 +351,7 @@
               class="elevation-1"
             >
               <template v-slot:[`item.name`]="{ item }">
-                <a :href="item.url"> {{ item.name }}</a>
+                <a :href="get_embed(item.url)" id="table_href"> {{ item.name }}</a>
               </template>
             </v-data-table>
           </div>
@@ -515,18 +515,22 @@ export default {
   },
   methods: {
     get_timezone(start, end) {
-      const date = start.slice(6, 7) + '/' + start.slice(8, 10)
-      const time = start.slice(11, 16) + ' ~ ' + end.slice(11, 16)
+      const date = start.slice(1, 5)
+      const starttime = start.slice(6, 11)
+      const endtime = end.slice(6, 11)
       let daynum = 0
       if (date === '9/18') {
         daynum = 1
       } else {
         daynum = 2
       }
-      const text = date + ' (Day' + daynum + ') ' + time
+      const text = date + ' (Day' + daynum + ') ' + starttime + ' ~ ' + endtime 
       return text
     },
-  },
+    get_embed(url) {
+      return url.replace('youtu.be','www.youtube.com/embed')
+    }
+},
 }
 </script>
 
@@ -575,6 +579,9 @@ h4 {
 #timezone {
   padding-left: 1rem;
   font-size: 14pt;
+}
+#table_href {
+  color: #2a7348;
 }
 .hero-description {
   position: absolute;
