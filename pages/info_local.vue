@@ -10,7 +10,7 @@
         class="tabbar"
         style="border-bottom: 1px solid #f0f0f3"
       >
-        <v-tab v-model="tab0" v-for="item in tabs0" :key="item">
+        <v-tab v-for="item in tabs0" :key="item" v-model="tab0">
           {{ item }}
         </v-tab>
       </v-tabs>
@@ -19,7 +19,7 @@
     <v-tabs-items v-model="tab0">
       <v-tab-item>
         <v-tabs v-model="tab1" class="tabbar">
-          <v-tab v-model="tab1" v-for="item in tabs1" :key="item">
+          <v-tab v-for="item in tabs1" :key="item" v-model="tab1">
             {{ item }}
           </v-tab>
         </v-tabs>
@@ -52,7 +52,7 @@
 
       <v-tab-item>
         <v-tabs v-model="tab2" class="tabbar">
-          <v-tab v-model="tab2" v-for="item in tabs2" :key="item">
+          <v-tab v-for="item in tabs2" :key="item" v-model="tab2">
             {{ item }}
           </v-tab>
         </v-tabs>
@@ -68,7 +68,9 @@
                   <img :src="item.icon" alt="" />
                   <div>
                     <h3>{{ item.name }}</h3>
-                    <p>{{ item.start }} 〜 {{ item.end }}</p>
+                    <p>
+                      {{ date2time(item.start) }} 〜 {{ date2time(item.end) }}
+                    </p>
                     <p>場所：{{ item.room }}</p>
                   </div>
                 </div>
@@ -98,12 +100,12 @@
           <v-col cols="11" md="4" lg="8" class="mx-auto">
             <div
               v-if="
-                (calc_hours() >= 9) & (calc_hours() <= 15) & is_production()
+                (calc_hours() >= 9) & (calc_hours() <= 14) & is_production()
               "
             >
               <h3 style="margin-bottom: 1rem; font-size: 1.4rem">
                 <span
-                  style="font-size: 3rem; color: #317a41"
+                  style="font-size: 3rem; color: #335719"
                   v-text="calc_hours()"
                 ></span>
                 時の部でご入場された方は、ご退校をお願いいたします。
@@ -114,6 +116,10 @@
               </p>
             </div>
             <ul>
+              <li style="color: #ea0032">
+                1日目の入場方法が変更となっております。詳しくは9/17 16時にFair
+                Castにて送信された「台風接近に伴う、文化祭1日目の入場方法等変更のお知らせ」をご覧ください。
+              </li>
               <li>校内では必ずマスクを着用してください。</li>
               <li>入場に使用したチケットの退校時間をお守りください。</li>
               <li>
@@ -125,9 +131,7 @@
               <li>
                 校内各所に必要な距離を保つために目印を設置しておりますので、お客様同士のソーシャルディスタンスの確保にご協力をお願いします。
               </li>
-              <li>
-                校内での飲食は、文準模擬店係と喫茶係が提供する一部を除き、全面禁止にさせていただいております。
-              </li>
+              <li>校内での食事は、全面禁止にさせていただいております。</li>
               <li>
                 会場にて万が一体調が悪くなったり気分が優れなくなったりした場合は、ご無理なさらず速やかにお近くの学園教職員、あるいは生徒までお申し出ください。
               </li>
@@ -163,10 +167,10 @@
 }
 .sandan h3 {
   font-size: 1.1rem;
-  /*border-bottom: 2px solid #317a41;*/
+  /*border-bottom: 2px solid #335719;*/
 }
 .sandan h3::first-letter {
-  color: #317a41;
+  color: #335719;
   font-size: 1.4rem;
 }
 .sandan img {
@@ -239,14 +243,18 @@ export default {
   methods: {
     calc_hours() {
       const datetime = new Date()
-      return datetime.getHours() - 2
+      return datetime.getHours() - 3
     },
     is_production() {
       const datetime = new Date()
       return Boolean(
-        (datetime.getMonth() === 9) &
+        (datetime.getMonth() === 8) &
           (datetime.getDate() === 18 || datetime.getDate() === 19)
       )
+    },
+    date2time(date) {
+      const time = new Date(date)
+      return time.getHours() + '時' + time.getMinutes() + '分'
     },
   },
 }

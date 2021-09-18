@@ -4,13 +4,13 @@
     <carousel style="border-bottom: 1px solid #a28756" />
     <arrow-button
       v-if="$vuetify.breakpoint.sm"
-      text="当日のタイムテーブルはこちら"
+      text="実演イベントの時間割はこちら"
       href="/time_table_lg.pdf"
       style="text-align: right; margin: 30px; margin-right: 30px"
     />
     <arrow-button
       v-if="!$vuetify.breakpoint.sm"
-      text="当日のタイムテーブルはこちら"
+      text="実演イベントの時間割はこちら"
       href="/time_table.pdf"
       target="_blank"
       style="text-align: right; margin: 30px; margin-right: 30px"
@@ -20,27 +20,12 @@
       class="animated-section"
       style="background-color: #ffffff"
     >
-      <landing-title
-        v-if="!$vuetify.breakpoint.xs"
-        title_ja="お知らせ"
-        title_en="News"
-        background_color="#f6f6f6"
-      />
-      <landing-title
-        v-if="$vuetify.breakpoint.xs"
-        title_ja="お知らせ"
-        title_en="News"
-        background_color="#f6f6f6"
-        style="position: static"
-      />
-      <!-- お知らせの実装は -->
-      <notify :data="data" style="padding-top: 2em" />
+      <notify :data="data" />
       <arrow-button
         text="メルマガ登録・解除はこちら"
         href="subscribe"
         style="text-align: right; margin-top: 30px; margin-right: 30px"
       />
-      <!-- この間 -->
     </section>
     <section
       id="開成祭"
@@ -62,6 +47,17 @@
           <h3>夢、刻む</h3>
           <p>
             150年の歴史を積み重ねし開成。その流れゆく時の中で、一人一人の生徒が、胸に描く想いを表現する。そんな僕らの夢の詰まった舞台。
+          </p>
+        </div>
+      </div>
+      <div style="text-align: center">
+        <div class="notice">
+          <p>
+            <span>パンフレットに関して</span><br /><br />
+            パンフレットのオンライン配布について2点ご連絡です。<br /><br />
+            ・明日以降誤植箇所の訂正表を本HPに掲載いたします。<br />
+            ・明日以降訂正済みのパンフレットのPDFデータを本HPに掲載いたします。<br /><br />
+            掲載の正確な日時は未定です。ご了承ください。
           </p>
         </div>
       </div>
@@ -120,23 +116,15 @@
         </div>
       </div>
       <div style="text-align: center">
-        <div
-          style="display: inline-block;margin-left: 1rem;margin-right: 1rem;margin-bottom: 2rem;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);padding: 1rem;"
-        >
-          <p
-            style="line-height: 1.5em; display: inline-block; text-align: left"
-          >
-            <span
-              style="border-bottom: 2px solid rgb(42, 64, 115);font-size: 2rem;line-height: 1.5em;margin-bottom: 1rem;"
-              >オンライン文化祭に関して</span
-            ><br /><br />
+        <div class="notice">
+          <p>
+            <span>オンライン文化祭に関して</span><br /><br />
             オンライン文化祭の開催形態です。<br /><br />
             1. 当日各企画の動画がYouTube上に上がります。<br />
             2. 開成祭当日の様子をYouTubeでのライブ配信でお届けします。<br />
-            3. 当日の様子を動画にてYoutubenにて後日公開します。<br />
+            3. 当日の様子を動画にてYoutubeにて後日公開します。<br />
             4. HP上で様々な企画を更新します。<br /><br />
-            これらのコンテンツはライブ配信含めて10月いっぱいまで視聴可能です。<br />
-            詳細や配信のタイムスケジュールは9月15日（水曜日）に掲載いたします。
+            これらのコンテンツはライブ配信含めて10月いっぱいまで視聴可能です。
           </p>
         </div>
       </div>
@@ -153,6 +141,8 @@
         text="伝統深き開成。その150年の営みをオンラインで表現する。そんな僕たちの情熱あふれた舞台。"
         picture_name="landing/online/2.png"
         img-location="order-md-0"
+        link_to="https://150th-kaiseifes.vercel.app/online"
+        picture_alt="オンライン企画一覧(後日公開予定含む)"
       />
       <short-introduction
         title="新たなる開成。"
@@ -162,13 +152,106 @@
         link_to="/cluster"
         imgLocation="order-md-2"
       />
-
       <!-- この間 -->
     </section>
   </div>
 </template>
 
+<script>
+const getDateStr = (startDate, endDate) => {
+  // start date
+  const startMinutes = addZero(String(startDate.getMinutes()))
+  const startDateStr = jstHourToUtc(startDate.getHours()) + ':' + startMinutes
+  // end date
+  const endMinuites = addZero(String(endDate.getMinutes()))
+  const endDateStr = jstHourToUtc(endDate.getHours()) + ':' + endMinuites
+  return startDateStr + '-' + endDateStr
+}
+const addZero = (str) => {
+  if (str.length < 2) {
+    return '0' + str
+  }
+  return str
+}
+const jstHourToUtc = (number) => {
+  return number + 9
+}
+// fetching informations with axios
+export default {
+  async asyncData({ $axios }) {
+    const apiBaseUrl = 'https://kaiseifes-150th-backend.herokuapp.com/api/'
+    // news
+    const newsUrl = apiBaseUrl + 'news/'
+    const newsAll = await $axios.$get(newsUrl)
+    const newsOfContentsAll = newsAll.filter((obj) => obj.tag[0] === 1)
+    const newsOfContents = newsOfContentsAll.slice(0, 9)
+    // const tagsUrl = apiBaseUrl + 'news/tags'
+    // const tagsFetched = await $axios.$get(tagsUrl)
+    // const tags = {}
+    // for (let i = 0; i < tagsFetched.length; i++) {
+    //   tags[tagsFetched[i].id] = tagsFetched[i].name
+    // }
+    // demo sandans
+    const sandansUrl = apiBaseUrl + 'live_sandans'
+    const sandansData = await $axios.$get(sandansUrl)
+    // get progress and scheduled sandans
+    const sandansInProgress = []
+    const sandansScheduled = []
+    sandansData.forEach((obj) => {
+      const nowDate = new Date()
+      const nowSecTime = nowDate.getTime()
+      const startDate = new Date(obj.start)
+      const startSecTime = startDate.getTime()
+      const endDate = new Date(obj.end)
+      const endSecTime = endDate.getTime()
+      // 開始時刻と終了時刻の表示用文字列を作成
+      const dateStr = getDateStr(startDate, endDate)
+      // start =< now =< end -> 開催中
+      if (nowSecTime >= startSecTime && nowSecTime <= endSecTime) {
+        obj.date_str = dateStr
+        sandansInProgress.push(obj)
+      }
+      // start - now =< 3600s -> まもなく開催
+      const timeDiff = startSecTime - nowSecTime
+      if (timeDiff <= 3600000 && timeDiff > 0) {
+        obj.date_str = dateStr
+        sandansScheduled.push(obj)
+      }
+    })
+
+    return {
+      data: {
+        newsOfContents,
+        // tags,
+        sandansInProgress,
+        sandansScheduled,
+      },
+    }
+  },
+}
+</script>
+
 <style>
+.notice {
+  display: inline-block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+.notice p {
+  line-height: 1.5em;
+  display: inline-block;
+  text-align: left;
+}
+.notice span {
+  border-bottom: 2px solid rgb(42, 64, 115);
+  font-size: 2rem;
+  line-height: 1.5em;
+  margin-bottom: 1rem;
+}
+
 .hero-description {
   position: absolute;
   bottom: 0;
@@ -206,29 +289,3 @@
   }
 }
 </style>
-
-<script>
-// fetching informations with axios
-export default {
-  async asyncData({ $axios }) {
-    const newsUrl = 'https://kaiseifes-150th-backend.herokuapp.com/api/news/'
-    const tagsUrl =
-      'https://kaiseifes-150th-backend.herokuapp.com/api/news/tags'
-    const news = await $axios.$get(newsUrl)
-    const tagsFetched = await $axios.$get(tagsUrl)
-
-    // tags
-    const tags = {}
-    for (let i = 0; i < tagsFetched.length; i++) {
-      tags[tagsFetched[i].id] = tagsFetched[i].name
-    }
-
-    return {
-      data: {
-        news,
-        tags,
-      },
-    }
-  },
-}
-</script>

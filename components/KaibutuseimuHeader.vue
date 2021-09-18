@@ -11,12 +11,12 @@
 	body
 	{
 		margin: 0;
-		background-color: #D1F3FF;
+		background-color:#f6f6f6
 	}
 	.kai_title
 	{
 		height: 3em;
-		background: #8EC0FA;
+		background: #bf9547;
 		display: flex;
 		justify-content: center; 
 		
@@ -28,8 +28,7 @@
 		margin-top: auto;
 		margin-bottom: auto;
 		text-align: center;
-		text-shadow: 0.04em 0.04em 0em #000000, -0.04em -0.04em 0em #000000, -0.04em 0.04em 0em #000000,0.04em -0.04em 0em #000000,0em 0.04em 0em #000000,0em -0.04em 0em #000000,0.04em 0em 0em #000000,-0.04em 0em 0em #000000;
-		color: white;
+		color: black;
 	}
 	.kai_title img
 	{
@@ -46,14 +45,13 @@
 			
 	.button a
 	{
-		text-shadow: 0.04em 0.04em 0em #000000, -0.04em -0.04em 0em #000000, -0.04em 0.04em 0em #000000,0.04em -0.04em 0em #000000,0em 0.04em 0em #000000,0em -0.04em 0em #000000,0.04em 0em 0em #000000,-0.04em 0em 0em #000000;
         position: relative;
         display: inline-block;
         padding: 0.25em 2em;
         text-decoration: none;
                 color: #FFF;
-                background: #62C1FA;/*背景色*/
-                border-bottom: solid 0.2em #4D82E3;/*少し濃い目の色に*/
+                background: #bf9547;/*背景色*/
+                border-bottom: solid 0.2em #8f6e31;/*少し濃い目の色に*/
                 border-radius: 0.4em;/*角の丸み*/
                 box-shadow: inset 0 0.2em 0 rgba(255,255,255,0.2), 0 0.2em 0.2em rgba(0, 0, 0, 0.19);
                 font-weight: bold;
@@ -61,7 +59,7 @@
 
             .button a:active 
 			{
-                border-bottom: solid 0.2em #fd9535;
+                border-bottom: solid 0.2em #cfb177;
                 box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.30);
 			}
 			.story
@@ -71,13 +69,13 @@
 				width: 80%;
                 padding: 0.5em;
                 border-radius: 1em;
-                border: dashed #688C9B;
-                box-shadow: 0 0 0 1em #D1F3FF;
+                border: dashed #3c2e15;
+                box-shadow: 0 0 0 1em #F6F6F6;
 				position: relative;
 			}
 	.story::before 
 	{
-		background-color: #D1F3FF;
+		background-color: #F6F6F6;
     content: "ストーリー";
     font-weight: bold;
     position: absolute;

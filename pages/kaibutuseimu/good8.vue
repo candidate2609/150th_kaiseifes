@@ -17,7 +17,7 @@
 			<a href="questionindex">謎の選択に戻る</a>
 		</div>	
 		<div class="button" style="text-align: center;">
-			<a v-bind:href="[tassei === '1' ? './good9' : './q9']">次の問題へ</a>
+			<a :href="[tassei === '1' ? './good9' : './q9']">次の問題へ</a>
 		</div>
 		
 	</div>
@@ -32,7 +32,7 @@ export default {
 		}
 	},
 	created(){
-		if(String(this.$cookies.get('kaibutuseimu').charAt(7))==='0'){
+		if(String(this.$cookies.get('kaibutuseimu')).charAt(7)==='0'){
 			this.$router.push({ path: 'q8' });
 		}
 	}
