@@ -18,7 +18,15 @@
         ></v-toolbar-title
       >
 
-      <div v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)">
+      <div
+        v-if="
+          !(
+            $vuetify.breakpoint.xs ||
+            $vuetify.breakpoint.sm ||
+            $vuetify.breakpoint.md
+          )
+        "
+      >
         <v-btn text style="font-size: 15px" href="/#お知らせ">お知らせ</v-btn>
         <v-btn text style="font-size: 15px" href="/#開成祭">開成祭とは</v-btn>
         <v-btn text style="font-size: 15px" href="/#オンライン祭"
@@ -32,13 +40,21 @@
           >ミスコン</v-btn
         >
         <v-btn text style="font-size: 15px" href="/online">online企画</v-btn>
-        <v-btn text style="font-size: 15px" href="/live">ライブ配信開場</v-btn>
+        <v-btn text style="font-size: 15px" href="/live">ライブ配信会場</v-btn>
       </div>
       <v-spacer
-        v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
+        v-if="
+          $vuetify.breakpoint.xs ||
+          $vuetify.breakpoint.sm ||
+          $vuetify.breakpoint.md
+        "
       ></v-spacer>
       <v-app-bar-nav-icon
-        v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
+        v-if="
+          $vuetify.breakpoint.xs ||
+          $vuetify.breakpoint.sm ||
+          $vuetify.breakpoint.md
+        "
         @click="drawer = true"
       />
       <!---
@@ -96,7 +112,7 @@
             <v-list-item-title>online企画</v-list-item-title>
           </v-list-item>
           <v-list-item href="/live" @click="drawer = false">
-            <v-list-item-title>ライブ配信開場</v-list-item-title>
+            <v-list-item-title>ライブ配信</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>

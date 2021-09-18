@@ -26,15 +26,7 @@
         <v-spacer></v-spacer>
         <v-col cols="11" lg="8" class="container-m mx-auto align-items-center">
           <div
-            style="
-              display: inline-block;
-              margin-left: 1rem;
-              margin-right: 1rem;
-              margin-bottom: 2rem;
-              box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-              padding: 1rem;
-              width: 95%;
-            "
+            style="display: inline-block;margin-left: 1rem;margin-right: 1rem;margin-bottom: 2rem;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);padding: 1rem;width: 95%;"
           >
             <p
               style="
