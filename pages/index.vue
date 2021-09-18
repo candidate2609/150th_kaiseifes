@@ -141,7 +141,7 @@
         text="伝統深き開成。その150年の営みをオンラインで表現する。そんな僕たちの情熱あふれた舞台。"
         picture_name="landing/online/2.png"
         img-location="order-md-0"
-        link_to="https://150th-kaiseifes.vercel.app/online"
+        link_to="/online"
         picture_alt="オンライン企画一覧(後日公開予定含む)"
       />
       <short-introduction
