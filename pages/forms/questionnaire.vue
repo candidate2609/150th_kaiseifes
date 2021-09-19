@@ -2,24 +2,28 @@
   <div>
     <h2 class="title">夢、刻む アンケート</h2>
     <p style="text-align: center; font-size: 13px">
-      ご来場ありがとうございます。アンケートへのご協力よろしくお願いします。
+      ご来場ありがとうございます。<br />アンケートへのご協力よろしくお願いします。
     </p>
-    <div style="display: flex; justify-content: center; height: 1200px">
+
+    <v-row>
+      <v-spacer />
       <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLSfInZbdD06Cu7AW1wyP0G3GTRh1baC26Nf1-oidPUosoHz9zA/viewform?embedded=true"
+        height="1000px"
         frameborder="0"
         marginheight="0"
         marginwidth="0"
+        style="width: 100%"
         >読み込んでいます…</iframe
       >
-    </div>
+      <v-spacer />
+    </v-row>
   </div>
 </template>
 
 <style>
 iframe {
-  min-width: 640px;
-  min-height: 938px;
+  margin: 1rem;
 }
 .title {
   margin-top: 2rem;
