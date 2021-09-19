@@ -28,7 +28,8 @@
         >
         <v-btn text style="font-size: 15px" href="/online">online企画</v-btn>
         <v-btn text style="font-size: 15px" href="/live">ライブ配信会場</v-btn>
-        <v-btn text style="font-size: 15px" href="/cluster">クラスター</v-btn>
+        <v-btn text style="font-size: 15px" href="/cluster">cluster</v-btn>
+        <v-btn text style="font-size: 15px" href="/lecture">講演会</v-btn>
       </div>
       <v-spacer
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
@@ -85,7 +86,11 @@
           </v-list-item>
 
           <v-list-item href="/cluster" @click="drawer = false">
-            <v-list-item-title>クラスター</v-list-item-title>
+            <v-list-item-title>cluster</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item href="/lecture" @click="drawer = false">
+            <v-list-item-title>講演会</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>

@@ -25,6 +25,29 @@
     </div>
 
     <!-- ここから内容 -->
+    <v-col cols="11" md="8" style="background-color:white" class="mx-auto">
+      <h3>もくじ</h3>
+      <v-row>
+        <v-col cols="11" md="5">
+          <p>
+            <ul style="list-style-type: none;">
+              <li v-for="(item,i) in sandans.slice(0,11)" :key="item">
+                {{i+1}}.&nbsp;<a :href="'#'+item.name">{{item.name}}</a>
+              </li>
+            </ul>
+          </p>
+        </v-col>
+        <v-col cols="11" md="5">
+          <p>
+            <ul style="list-style-type: none;">
+              <li v-for="(item,i) in sandans.slice(11)" :key="item">
+                {{i+11}}.&nbsp;<a :href="'#'+item.name">{{item.name}}</a>
+              </li>
+            </ul>
+          </p>
+        </v-col>
+      </v-row>
+    </v-col>
     <v-row>
       <v-spacer />
       <v-col cols="11" lg="10">
@@ -66,6 +89,9 @@
 </template>
 
 <style>
+.online_toc {
+}
+
 .online_card {
   position: relative;
   display: flex;

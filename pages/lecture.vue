@@ -35,7 +35,9 @@
       /></v-col>
       <v-col cols="11" md="5">
         <span style="letter-spacing: 1px">公益財団法人徳川記念財団理事長</span>
-        <h3 class="presenter_name">徳川宗家次期当主&nbsp;&nbsp;徳川家広氏</h3>
+        <h3 class="presenter_name">
+          <span style="font-size:1.5rem">徳川宗家次期当主</span><br />徳川家広&nbsp;氏
+        </h3>
         <p
           v-if="$vuetify.breakpoint.md || $vuetify.breakpoint.lg"
           style="line-height: 1.7rem"
@@ -55,6 +57,7 @@
     <v-row style="display: flex; justify-content: center">
       <v-col cols="11" md="5" class="card-col mx-3">
         <h3 style="margin-bottom: 1rem"><span>YouTube Live</span></h3>
+        <p>9月19日&nbsp;12:00〜14:00に配信いたします。</p>
         <iframe
           width="560"
           height="315"
@@ -71,7 +74,15 @@
         <p>
           ご質問・ご感想などございましたら、あらかじめ以下のフォームにご記入ください。徳川氏に講演会にてご回答いただきます。
         </p>
-        <iframe src="" frameborder="0"></iframe>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeQ-Q08Ph6RxyZKtcIid1EnSnVMkqD4aCcdUeJpTeixD9Wdow/viewform?embedded=true"
+          height="800"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          style="width: 100%"
+          >読み込んでいます…</iframe
+        >
       </v-col>
     </v-row>
   </div>
