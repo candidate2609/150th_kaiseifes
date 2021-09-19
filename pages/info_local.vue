@@ -95,54 +95,76 @@
       </v-tab-item>
 
       <v-tab-item>
-        <v-row>
-          <v-spacer />
-          <v-col cols="11" md="4" lg="8" class="mx-auto">
-            <div
-              v-if="
-                (calc_hours() >= 9) & (calc_hours() <= 14) & is_production()
-              "
-            >
-              <h3 style="margin-bottom: 1rem; font-size: 1.4rem">
-                <span
-                  style="font-size: 3rem; color: #335719"
-                  v-text="calc_hours()"
-                ></span>
-                時の部でご入場された方は、ご退校をお願いいたします。
-              </h3>
-              <p>150th 開成祭にご来場いただき、ありがとうございました。</p>
-              <p style="text-align: right; margin-bottom: 2rem">
-                文化祭準備委員会 一同
-              </p>
-            </div>
-            <ul>
-              <li style="color: #ea0032">
-                1日目の入場方法が変更となっております。詳しくは9/17 16時にFair
-                Castにて送信された「台風接近に伴う、文化祭1日目の入場方法等変更のお知らせ」をご覧ください。
-              </li>
-              <li>校内では必ずマスクを着用してください。</li>
-              <li>入場に使用したチケットの退校時間をお守りください。</li>
-              <li>
-                入り口にて体温測定を行います。基準（37.5℃）以上の場合は入校いただくことができません。
-              </li>
-              <li>
-                消毒液を入場口のほか、各教室出入り口などに設置しておりますので、手指消毒及びこまめな手洗いをお願いいたします。
-              </li>
-              <li>
-                校内各所に必要な距離を保つために目印を設置しておりますので、お客様同士のソーシャルディスタンスの確保にご協力をお願いします。
-              </li>
-              <li>校内での食事は、全面禁止にさせていただいております。</li>
-              <li>
-                会場にて万が一体調が悪くなったり気分が優れなくなったりした場合は、ご無理なさらず速やかにお近くの学園教職員、あるいは生徒までお申し出ください。
-              </li>
-              <li>換気のため、校舎内各所で窓を開放しております。</li>
-              <li>
-                政府及び東京都では、新型コロナウイルス接触確認アプリ（COCOA）のインストールを推奨しています。感染拡大防止にご協力お願いいたします。
-              </li>
-            </ul>
-          </v-col>
-          <v-spacer />
-        </v-row>
+        <v-tabs v-model="tab3" class="tabbar">
+          <v-tab v-for="item in tabs3" :key="item" v-model="tab3">
+            {{ item }}
+          </v-tab>
+        </v-tabs>
+        <v-tabs-items v-model="tab3">
+          <v-tab-item>
+            <v-row>
+              <v-spacer />
+              <v-col cols="11" md="4" lg="8" class="mx-auto">
+                <div
+                  v-if="
+                    (calc_hours() >= 9) & (calc_hours() <= 14) & is_production()
+                  "
+                >
+                  <h3 style="margin-bottom: 1rem; font-size: 1.4rem">
+                    <span
+                      style="font-size: 3rem; color: #335719"
+                      v-text="calc_hours()"
+                    ></span>
+                    時の部でご入場された方は、ご退校をお願いいたします。
+                  </h3>
+                  <p>150th 開成祭にご来場いただき、ありがとうございました。</p>
+                  <p style="text-align: right; margin-bottom: 2rem">
+                    文化祭準備委員会 一同
+                  </p>
+                </div>
+                <ul>
+                  <li style="color: #ea0032">
+                    1日目の入場方法が変更となっております。詳しくは9/17
+                    16時にFair
+                    Castにて送信された「台風接近に伴う、文化祭1日目の入場方法等変更のお知らせ」をご覧ください。
+                  </li>
+                  <li>校内では必ずマスクを着用してください。</li>
+                  <li>入場に使用したチケットの退校時間をお守りください。</li>
+                  <li>
+                    入り口にて体温測定を行います。基準（37.5℃）以上の場合は入校いただくことができません。
+                  </li>
+                  <li>
+                    消毒液を入場口のほか、各教室出入り口などに設置しておりますので、手指消毒及びこまめな手洗いをお願いいたします。
+                  </li>
+                  <li>
+                    校内各所に必要な距離を保つために目印を設置しておりますので、お客様同士のソーシャルディスタンスの確保にご協力をお願いします。
+                  </li>
+                  <li>校内での食事は、全面禁止にさせていただいております。</li>
+                  <li>
+                    会場にて万が一体調が悪くなったり気分が優れなくなったりした場合は、ご無理なさらず速やかにお近くの学園教職員、あるいは生徒までお申し出ください。
+                  </li>
+                  <li>換気のため、校舎内各所で窓を開放しております。</li>
+                  <li>
+                    政府及び東京都では、新型コロナウイルス接触確認アプリ（COCOA）のインストールを推奨しています。感染拡大防止にご協力お願いいたします。
+                  </li>
+                </ul>
+              </v-col>
+              <v-spacer />
+            </v-row>
+          </v-tab-item>
+          <v-tab-item>
+            <v-row>
+              <v-spacer />
+              <v-col cols="11" md="4" lg="8" class="mx-auto">
+                <p>
+                  お配りしたガイドブックに一部誤り・変更がございますので記載いたします。申し訳ございません。
+                </p>
+                <img src="/info_local/syuusei.svg" alt="" />
+              </v-col>
+              <v-spacer />
+            </v-row>
+          </v-tab-item>
+        </v-tabs-items>
       </v-tab-item>
     </v-tabs-items>
   </div>
@@ -233,9 +255,11 @@ export default {
       tabs0: ['通常参団', '実演参団', '模擬店', 'ご注意'],
       tabs1: ['すぐ入れる', '少し並ぶ', '長く並ぶ'],
       tabs2: ['開催中', 'この後開催'],
+      tabs3: ['一般', 'ガイドブック'],
       tab0: null,
       tab1: null,
       tab2: null,
+      tab3: null,
     }
   },
   methods: {
