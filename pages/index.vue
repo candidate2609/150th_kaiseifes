@@ -61,17 +61,6 @@
           </p>
         </div>
       </div>
-      <div style="text-align: center">
-        <div class="notice">
-          <p>
-            <span>パンフレットに関して</span><br /><br />
-            パンフレットのオンライン配布について2点ご連絡です。<br /><br />
-            ・明日以降誤植箇所の訂正表を本HPに掲載いたします。<br />
-            ・明日以降訂正済みのパンフレットのPDFデータを本HPに掲載いたします。<br /><br />
-            掲載の正確な日時は未定です。ご了承ください。
-          </p>
-        </div>
-      </div>
       <!-- 開成祭の実装は -->
       <short-introduction
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"

@@ -32,7 +32,11 @@
             夢、刻む
           </h3>
           <p style="font-size: 2vw; letter-spacing: 0.3vw; margin-top: 3rem">
-            9月18日・19日開催
+            終了いたしました<br /><a
+              href="/online"
+              style="color: black; border-bottom: 1px solid black"
+              >オンライン開成祭</a
+            >を引き続きお楽しみください
           </p>
         </div>
         <v-spacer></v-spacer>
@@ -76,7 +80,7 @@
             justify-content: center;
           "
         >
-          9月18日・19日開催
+          終了いたしました
         </p>
       </div>
     </v-carousel-item>
