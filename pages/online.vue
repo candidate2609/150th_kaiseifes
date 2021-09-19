@@ -25,31 +25,48 @@
     </div>
 
     <!-- ここから内容 -->
-    <!--
-    <v-col cols="11" md="8" style="background-color:white" class="mx-auto">
-      <h3>もくじ</h3>
-      <v-row>
-        <v-col cols="11" md="5">
-          <p>
-            <ul style="list-style-type: none;">
-              <li v-for="(item,i) in sandans.slice(0,11)" :key="item">
-                {{i+1}}.&nbsp;<a :href="'#'+item.name">{{item.name}}</a>
+    <v-col
+      cols="11"
+      md="6"
+      style="background-color: white; padding: 2rem"
+      class="mx-auto"
+    >
+      <h2 class="online_card-toc">目</h2>
+      <h3 style="margin-bottom: 1.5rem">
+        <span style="border-bottom: 4px dotted #335719; margin-left: 4rem"
+          >もくじ</span
+        >
+      </h3>
+      <div>
+        <v-row>
+          <v-spacer v-if="$vuetify.breakpoint.md"></v-spacer>
+          <v-col cols="11" md="5">
+            <ul style="list-style-type: none">
+              <li v-for="(item, i) in sandans.slice(0, 11)" :key="item">
+                {{ i + 1 }}.&nbsp;<a
+                  style="color: #335719; letter-spacing: 1px"
+                  :href="'#' + item.name"
+                  >{{ item.name }}</a
+                >
               </li>
             </ul>
-          </p>
-        </v-col>
-        <v-col cols="11" md="5">
-          <p>
-            <ul style="list-style-type: none;">
-              <li v-for="(item,i) in sandans.slice(11)" :key="item">
-                {{i+11}}.&nbsp;<a :href="'#'+item.name">{{item.name}}</a>
+          </v-col>
+          <v-col cols="11" md="5">
+            <ul style="list-style-type: none">
+              <li v-for="(item, i) in sandans.slice(11)" :key="item">
+                {{ i + 12 }}.&nbsp;<a
+                  style="color: #335719"
+                  :href="'#' + item.name"
+                  >{{ item.name }}</a
+                >
               </li>
             </ul>
-          </p>
-        </v-col>
-      </v-row>
+          </v-col>
+          <v-spacer v-if="$vuetify.breakpoint.md"></v-spacer>
+        </v-row>
+      </div>
     </v-col>
-    -->
+
     <v-row>
       <v-spacer />
       <v-col cols="11" lg="10">
@@ -90,9 +107,6 @@
 </template>
 
 <style>
-.online_toc {
-}
-
 .online_card {
   position: relative;
   display: flex;
@@ -107,6 +121,19 @@
   position: absolute;
   top: -12vh;
   left: 4vw;
+  font-size: 100px;
+  z-index: 100;
+  color: #335719;
+  letter-spacing: 0.5rem;
+  background-color: rgba(250, 213, 118, 0.2);
+  border-radius: 100px;
+  padding: 0.5rem;
+}
+
+.online_card-toc {
+  position: absolute;
+  top: -10vh;
+  left: -2vw;
   font-size: 100px;
   z-index: 100;
   color: #335719;
