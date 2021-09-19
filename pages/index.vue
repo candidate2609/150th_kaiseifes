@@ -20,6 +20,12 @@
       target="_blank"
       style="text-align: right; margin: 30px; margin-right: 30px"
     />
+    <arrow-button
+      text="開成祭アンケートはこちら"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSfInZbdD06Cu7AW1wyP0G3GTRh1baC26Nf1-oidPUosoHz9zA/viewform"
+      target="_blank"
+      style="text-align: right; margin: 30px; margin-right: 30px"
+    />
     <section
       id="お知らせ"
       class="animated-section"
