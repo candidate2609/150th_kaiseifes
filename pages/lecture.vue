@@ -35,16 +35,7 @@
       /></v-col>
       <v-col cols="11" md="5">
         <span style="letter-spacing: 1px">公益財団法人徳川記念財団理事長</span>
-        <h3
-          style="
-            font-weight: 600;
-            font-size: 2rem;
-            letter-spacing: 2px;
-            margin-bottom: 2rem;
-          "
-        >
-          徳川宗家次期当主&nbsp;&nbsp;徳川家広氏
-        </h3>
+        <h3 class="presenter_name">徳川宗家次期当主&nbsp;&nbsp;徳川家広氏</h3>
         <p
           v-if="$vuetify.breakpoint.md || $vuetify.breakpoint.lg"
           style="line-height: 1.7rem"
@@ -61,27 +52,33 @@
         </p>
       </v-col>
     </v-row>
-    <v-row style="display: flex; justify-content: center; align-items: center">
-      <v-col cols="11" md="5" class="card-youtube">
-        <h3><span>YouTube Live</span></h3>
+    <v-row style="display: flex; justify-content: center">
+      <v-col cols="11" md="5" class="card-col mx-3">
+        <h3 style="margin-bottom: 1rem"><span>YouTube Live</span></h3>
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/watch?v=ADOrDq4gRQo"
+          src="https://www.youtube.com/embed/ADOrDq4gRQo"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-          style="width:100%"
+          style="width: 100%"
         ></iframe>
       </v-col>
-      <v-col cols="11" md="5"></v-col>
+      <v-col cols="11" md="5" class="card-col mx-3">
+        <h3 style="margin-bottom: 1rem"><span>ご質問はこちら</span></h3>
+        <p>
+          ご質問・ご感想などございましたら、あらかじめ以下のフォームにご記入ください。徳川氏に講演会にてご回答いただきます。
+        </p>
+        <iframe src="" frameborder="0"></iframe>
+      </v-col>
     </v-row>
   </div>
 </template>
 
 <style>
-.card-youtube h3 span {
+.card-col h3 span {
   border-bottom: 4px dotted #b38f36;
 }
 .hero-description {
@@ -96,5 +93,13 @@
 }
 .hero-description p {
   letter-spacing: 1px;
+}
+.presenter_name {
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  border-left: 3px solid #b38f36;
+  padding-left: 1rem;
 }
 </style>
