@@ -25,6 +25,7 @@
     </div>
 
     <!-- ここから内容 -->
+    <!--
     <v-col cols="11" md="8" style="background-color:white" class="mx-auto">
       <h3>もくじ</h3>
       <v-row>
@@ -48,6 +49,7 @@
         </v-col>
       </v-row>
     </v-col>
+    -->
     <v-row>
       <v-spacer />
       <v-col cols="11" lg="10">
@@ -77,8 +79,7 @@
             </ul>
           </v-col>
 
-          <v-col cols="12" md="5" class="online_card-carousel"
-            ><!-- v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)" -->
+          <v-col cols="12" md="5" class="online_card-carousel">
             <slide-show :imgs="imgs[sandan.name]" />
           </v-col>
         </v-row>
