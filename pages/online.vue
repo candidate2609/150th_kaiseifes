@@ -293,6 +293,11 @@ export default {
           .map((d) => {
             return { src: '/online/鉄研の車窓から2021/' + d + '.png' }
           }),
+        開成鉱石化石館: [...Array(5)]
+          .map((_, i) => i + 1)
+          .map((d) => {
+            return { src: '/online/開成鉱石化石館/' + d + '.png' }
+          }),
       },
     }
   },
