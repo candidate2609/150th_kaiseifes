@@ -201,7 +201,7 @@ export default {
 <style>
 .win {
   position: absolute;
-  top: 2.6rem;
+  top: 1.3rem;
   right: -0.1rem;
   transform: rotate(20deg);
   font-size: 2rem;
