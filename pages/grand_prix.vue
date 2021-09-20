@@ -8,14 +8,10 @@
     />
     <div style="position: relative; margin-bottom: 2rem">
       <img
+        class="celeb-hero-img"
         src="/grand_prix/grand_prix.jpeg"
         alt=""
-        style="
-          min-width: 100%;
-          max-height: 40rem;
-          max-width: 80%;
-          object-fit: cover;
-        "
+        style=""
       />
       <div
         v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
@@ -249,6 +245,12 @@
 <style>
 body {
   background-color: #f6f6f6;
+}
+.celeb-hero-img {
+  min-width: 100%;
+  max-height: 40rem;
+  max-width: 80%;
+  object-fit: cover;
 }
 .celeb-card {
   position: relative;
