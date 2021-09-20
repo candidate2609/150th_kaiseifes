@@ -37,7 +37,10 @@
         </v-row>
 
         <section v-for="(item, i) in items_mr" :key="i">
-          <h3 class="section-title" style="border-bottom: 3px solid #9a0100">
+          <h3
+            class="section-title"
+            style="border-bottom: 3px solid #9a0100; position: relative"
+          >
             <img src="/beauty_pageant/rose.svg" alt="" style="height: 2rem" />
             <span class="section-title-num" style="color: #bf9457"
               >No.{{ i + 1 }}
@@ -84,7 +87,7 @@ export default {
     return {
       items_mr: [
         {
-          name: '<ruby>中井<rt>なかい</rt></ruby>&nbsp;<ruby>円大<rt>えんぞう</rt></ruby>',
+          name: '<ruby>中井<rt>なかい</rt></ruby>&nbsp;<ruby>円大<rt>えんぞう</rt></ruby><span class="win" style="padding: 0.5rem;">優勝</span>',
           description:
             '老若男女の心を鷲掴み<br />甘いマスクに熱いハート、勇往邁進とはまさに彼のこと<br />時には、真面目すぎるが故に抜けたところがあるのもまたキュート💕<br />そんな開成のシンバに釘付けになること間違いなし！',
           self_intro: '持ち前の体力で頑張ります！',
@@ -196,6 +199,16 @@ export default {
 </script>
 
 <style>
+.win {
+  position: absolute;
+  top: 2.6rem;
+  right: -0.1rem;
+  transform: rotate(20deg);
+  font-size: 2rem;
+  background-color: #9a0100;
+  color: white;
+}
+
 .hero-description {
   position: absolute;
   bottom: 1rem;
