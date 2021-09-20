@@ -158,10 +158,10 @@
             />
           </p>
           <h3 style="font-size: 1.5rem">物理部</h3>
-          <p>
-            ※部活参団とは、部活単位で活動の一環として出展している参団のことです。
-          </p>
         </div>
+        <p>
+          ※部活参団とは、部活単位で活動の一環として出展している参団のことです。
+        </p>
       </v-col>
       <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
         <img
