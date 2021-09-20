@@ -113,10 +113,10 @@
               style="width: 4rem; margin-right: 1rem"
             />
           </p>
-          <h3 style="font-size: 1.5rem">「VS快晴」高校1年6組</h3>
+          <h3 style="font-size: 1.5rem">VS快晴（高校1年6組）</h3>
         </div>
         <p>
-          ※HR(ホームルーム)参団とは、中学1年性と編入組の高校1年性がクラス単位で出展する参団のことです。
+          ※HR(ホームルーム)参団とは、中学1年生と編入組の高校1年生がクラス単位で出展する参団のことです。
         </p>
       </v-col>
       <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
