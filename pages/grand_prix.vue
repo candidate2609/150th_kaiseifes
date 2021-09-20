@@ -25,6 +25,8 @@
     </div>
     <div class="d-flex justify-content-around" style="flex-wrap: wrap">
       <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
+        <img src="/grand_prix/frame_right.png" alt="" style="position:absolute;top:0;right:0;width:6rem">
+        <img src="/grand_prix/frame_left.png" alt="" style="position:absolute;bottom:0;left:0;width:6rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>総合1位</span></h3>
         <div class="d-flex align-items-center">
@@ -39,6 +41,8 @@
         </div>
       </v-col>
       <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
+        <img src="/grand_prix/frame_right.png" alt="" style="position:absolute;top:0;right:0;width:6rem">
+        <img src="/grand_prix/frame_left.png" alt="" style="position:absolute;bottom:0;left:0;width:6rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>総合2位</span></h3>
         <div class="d-flex align-items-center">
@@ -53,6 +57,8 @@
         </div>
       </v-col>
       <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
+        <img src="/grand_prix/frame_right.png" alt="" style="position:absolute;top:0;right:0;width:6rem">
+        <img src="/grand_prix/frame_left.png" alt="" style="position:absolute;bottom:0;left:0;width:6rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>総合3位</span></h3>
         <div class="d-flex align-items-center">
@@ -67,6 +73,8 @@
         </div>
       </v-col>
       <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
+        <img src="/grand_prix/frame_right.png" alt="" style="position:absolute;top:0;right:0;width:6rem">
+        <img src="/grand_prix/frame_left.png" alt="" style="position:absolute;bottom:0;left:0;width:6rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>HR参団部門</span></h3>
         <div class="d-flex align-items-center">
@@ -84,6 +92,8 @@
         </p>
       </v-col>
       <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
+        <img src="/grand_prix/frame_right.png" alt="" style="position:absolute;top:0;right:0;width:6rem">
+        <img src="/grand_prix/frame_left.png" alt="" style="position:absolute;bottom:0;left:0;width:6rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>有志参団部門</span></h3>
         <div class="d-flex align-items-center">
@@ -101,6 +111,8 @@
         </p>
       </v-col>
       <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
+        <img src="/grand_prix/frame_right.png" alt="" style="position:absolute;top:0;right:0;width:6rem">
+        <img src="/grand_prix/frame_left.png" alt="" style="position:absolute;bottom:0;left:0;width:6rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>部活参団部門</span></h3>
         <div class="d-flex align-items-center">
@@ -118,6 +130,8 @@
         </div>
       </v-col>
       <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
+        <img src="/grand_prix/frame_right.png" alt="" style="position:absolute;top:0;right:0;width:6rem">
+        <img src="/grand_prix/frame_left.png" alt="" style="position:absolute;bottom:0;left:0;width:6rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>実演参団部門</span></h3>
         <div class="d-flex align-items-center">
@@ -135,6 +149,8 @@
         </p>
       </v-col>
       <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
+        <img src="/grand_prix/frame_right.png" alt="" style="position:absolute;top:0;right:0;width:6rem">
+        <img src="/grand_prix/frame_left.png" alt="" style="position:absolute;bottom:0;left:0;width:6rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>オンライン参団部門</span></h3>
         <div class="d-flex align-items-center">
@@ -161,6 +177,8 @@
         </p>
       </v-col>
       <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
+        <img src="/grand_prix/frame_right.png" alt="" style="position:absolute;top:0;right:0;width:6rem">
+        <img src="/grand_prix/frame_left.png" alt="" style="position:absolute;bottom:0;left:0;width:6rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>文準特別賞</span></h3>
         <p>
