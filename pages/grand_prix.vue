@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="d-flex justify-content-around" style="flex-wrap: wrap">
-      <v-col cols="11" md="5" class="celeb-card">
+      <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>総合1位</span></h3>
         <div class="d-flex align-items-center">
@@ -38,7 +38,7 @@
           <h3 style="font-size: 1.5rem">開成ピアノの会</h3>
         </div>
       </v-col>
-      <v-col cols="11" md="5" class="celeb-card">
+      <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>総合2位</span></h3>
         <div class="d-flex align-items-center">
@@ -52,7 +52,7 @@
           <h3 style="font-size: 1.5rem">物理部</h3>
         </div>
       </v-col>
-      <v-col cols="11" md="5" class="celeb-card">
+      <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>総合3位</span></h3>
         <div class="d-flex align-items-center">
@@ -66,7 +66,7 @@
           <h3 style="font-size: 1.5rem">折り紙研究部</h3>
         </div>
       </v-col>
-      <v-col cols="11" md="5" class="celeb-card">
+      <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>HR参団部門</span></h3>
         <p>
@@ -83,7 +83,7 @@
           <h3 style="font-size: 1.5rem">「VS快晴」高校1年6組</h3>
         </div>
       </v-col>
-      <v-col cols="11" md="5" class="celeb-card">
+      <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>有志参団部門</span></h3>
         <p>
@@ -100,7 +100,7 @@
           <h3 style="font-size: 1.5rem">バランスアクション！VR</h3>
         </div>
       </v-col>
-      <v-col cols="11" md="5" class="celeb-card">
+      <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>部活参団部門</span></h3>
         <p>
@@ -117,7 +117,7 @@
           <h3 style="font-size: 1.5rem">物理部</h3>
         </div>
       </v-col>
-      <v-col cols="11" md="5" class="celeb-card">
+      <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>実演参団部門</span></h3>
         <p>
@@ -134,7 +134,7 @@
           <h3 style="font-size: 1.5rem">開成ピアノの会定期演奏会</h3>
         </div>
       </v-col>
-      <v-col cols="11" md="5" class="celeb-card">
+      <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>オンライン参団部門</span></h3>
         <p>
@@ -160,7 +160,7 @@
           >からご覧いただけます。
         </p>
       </v-col>
-      <v-col cols="11" md="5" class="celeb-card">
+      <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>文準特別賞</span></h3>
         <p>

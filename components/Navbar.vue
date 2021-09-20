@@ -32,6 +32,9 @@
         <v-btn text style="font-size: 15px" href="/live">ライブ配信会場</v-btn>
         <v-btn text style="font-size: 15px" href="/cluster">cluster</v-btn>
         <v-btn text style="font-size: 15px" href="/lecture">講演会</v-btn>
+        <v-btn text style="font-size: 15px" href="/grand_prix"
+          >グランプリ結果</v-btn
+        >
       </div>
       <v-spacer
         v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
@@ -95,6 +98,10 @@
 
           <v-list-item href="/lecture" @click="drawer = false">
             <v-list-item-title>講演会</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item href="/grand_prix" @click="drawer = false">
+            <v-list-item-title>グランプリ結果</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
