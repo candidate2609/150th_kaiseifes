@@ -69,9 +69,6 @@
       <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>HR参団部門</span></h3>
-        <p>
-          ※HR(ホームルーム)参団とは、中学1年性と編入組の高校1年性がクラス単位で出展する参団のことです。
-        </p>
         <div class="d-flex align-items-center">
           <p>
             <img
@@ -82,13 +79,13 @@
           </p>
           <h3 style="font-size: 1.5rem">「VS快晴」高校1年6組</h3>
         </div>
+        <p>
+          ※HR(ホームルーム)参団とは、中学1年性と編入組の高校1年性がクラス単位で出展する参団のことです。
+        </p>
       </v-col>
       <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>有志参団部門</span></h3>
-        <p>
-          ※有志参団とは、部が出している参団でもHR参団でもない、やりたい人が集まって出展した参団です。
-        </p>
         <div class="d-flex align-items-center">
           <p>
             <img
@@ -99,13 +96,13 @@
           </p>
           <h3 style="font-size: 1.5rem">バランスアクション！VR</h3>
         </div>
+        <p>
+          ※有志参団とは、部が出している参団でもHR参団でもない、やりたい人が集まって出展した参団です。
+        </p>
       </v-col>
       <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>部活参団部門</span></h3>
-        <p>
-          ※部活参団とは、部活単位で活動の一環として出展している参団のことです。
-        </p>
         <div class="d-flex align-items-center">
           <p>
             <img
@@ -115,14 +112,14 @@
             />
           </p>
           <h3 style="font-size: 1.5rem">物理部</h3>
+          <p>
+            ※部活参団とは、部活単位で活動の一環として出展している参団のことです。
+          </p>
         </div>
       </v-col>
       <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>実演参団部門</span></h3>
-        <p>
-          ※実演参団とは、演奏や講演などをステージ上などで実際に行う参団です。
-        </p>
         <div class="d-flex align-items-center">
           <p>
             <img
@@ -133,16 +130,13 @@
           </p>
           <h3 style="font-size: 1.5rem">開成ピアノの会定期演奏会</h3>
         </div>
+        <p>
+          ※実演参団とは、演奏や講演などをステージ上などで実際に行う参団です。
+        </p>
       </v-col>
       <v-col cols="11" md="5" class="celeb-card" style="padding: 3rem">
         <img class="celeb-card-img" src="/grand_prix/rose.svg" alt="" />
         <h3 style="font-size: 2rem"><span>オンライン参団部門</span></h3>
-        <p>
-          ※オンライン参団とは、オンライン上にコンテンツを展示している参団です。<a
-            href="https://150th-kaiseifes.vercel.app/online"
-            >こちら</a
-          >からご覧いただけます。
-        </p>
         <div class="d-flex align-items-center">
           <p>
             <img
@@ -156,6 +150,12 @@
         <p>
           物理部のオンラインコンテンツは<a
             href="https://150th-kaiseifes.vercel.app/online#%E7%89%A9%E7%90%86%E9%83%A8"
+            >こちら</a
+          >からご覧いただけます。
+        </p>
+        <p>
+          ※オンライン参団とは、オンライン上にコンテンツを展示している参団です。<a
+            href="https://150th-kaiseifes.vercel.app/online"
             >こちら</a
           >からご覧いただけます。
         </p>
