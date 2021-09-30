@@ -72,7 +72,7 @@
       <short-introduction
         title="YouTube"
         text="総勢約2100人の開成生が作り上げた開成祭の見所を余すことなく詰め込んだ動画をぜひご覧ください。"
-        picture_name="landing/youtube.jpg"
+        picture_name="https://i.imgur.com/qKvTAI0.jpg"
         picture_alt="開成祭公式YouTubeチャンネル"
         link_to="https://www.youtube.com/channel/UCd4nufEmpABSr1hdLWqWj6g"
         img-location="order-md-0"

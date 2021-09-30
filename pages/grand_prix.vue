@@ -9,7 +9,7 @@
     <div style="position: relative; margin-bottom: 2rem">
       <img
         class="celeb-hero-img"
-        src="/grand_prix/grand_prix.jpeg"
+        src="https://i.imgur.com/JgKEP3K.png"
         alt=""
         style=""
       />

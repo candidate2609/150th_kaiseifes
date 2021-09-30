@@ -48,7 +48,7 @@ export default {
 @media screen and (max-width: 960px) {
   .title {
     background-color: var(--background-color);
-    padding: 1rem 0.5rem 2rem 0.5rem;
+    padding: 1rem 0.5rem 1rem 0.5rem;
     margin-left: 1rem;
     position: -webkit-sticky;
     position: absolute;
