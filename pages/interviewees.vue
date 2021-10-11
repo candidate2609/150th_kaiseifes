@@ -25,48 +25,11 @@
       </div>
     </div>
     <div>
-      <div
-        v-if="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
-        class="d-flex flex-wrap justify-content-around"
-      >
+      <div class="d-flex flex-wrap justify-content-around">
         <div
           v-for="person in people"
           :key="person"
-          class="person-card col-12 col-md-4"
-        >
-          <a target="_blank" :href="'/interviews/' + person.id"></a>
-          <v-col cols="5" style="margin-right: 1rem">
-            <img
-              :src="person.face"
-              alt=""
-              :style="
-                'filter: drop-shadow(0.5rem 0.5rem 0px #' +
-                person.color_code +
-                ');'
-              "
-            />
-          </v-col>
-          <div>
-            <h3>
-              <span :style="'border-bottom:3px solid #' + person.color_code"
-                >{{ person.last_name }}&nbsp;{{ person.first_name }}</span
-              >
-            </h3>
-            <p>{{ person.director }}</p>
-            <hr />
-            <p>{{ person.director_description }}</p>
-          </div>
-        </div>
-      </div>
-      <!-- break -->
-      <div
-        v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
-        class="d-flex flex-wrap justify-content-around"
-      >
-        <div
-          v-for="person in people"
-          :key="person"
-          class="person-card col-11 col-md-4"
+          class="person-card col-11 col-md-3 mb-5 mr-3 ml-3"
           style="display: block; position: relative"
         >
           <a target="_blank" :href="'/interviews/' + person.id"></a>
