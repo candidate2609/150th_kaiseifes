@@ -27,7 +27,7 @@
     <!-- ここから内容 -->
     <v-col
       cols="11"
-      md="6"
+      md="8"
       style="background-color: white; padding: 2rem"
       class="mx-auto"
     >
@@ -40,7 +40,7 @@
       <div>
         <v-row>
           <v-spacer v-if="$vuetify.breakpoint.md"></v-spacer>
-          <v-col cols="11" md="5">
+          <v-col cols="11" md="4">
             <ul style="list-style-type: none">
               <li v-for="(item, i) in sandans.slice(0, 11)" :key="item">
                 {{ i + 1 }}.&nbsp;<a
@@ -51,10 +51,22 @@
               </li>
             </ul>
           </v-col>
-          <v-col cols="11" md="5">
+          <v-col cols="11" md="4">
             <ul style="list-style-type: none">
-              <li v-for="(item, i) in sandans.slice(11)" :key="item">
+              <li v-for="(item, i) in sandans.slice(11, 22)" :key="item">
                 {{ i + 12 }}.&nbsp;<a
+                  style="color: #335719"
+                  :href="'#' + item.name"
+                  >{{ item.name }}</a
+                >
+              </li>
+            </ul>
+          </v-col>
+          <v-spacer v-if="$vuetify.breakpoint.md"></v-spacer>
+          <v-col cols="11" md="4">
+            <ul style="list-style-type: none">
+              <li v-for="(item, i) in sandans.slice(22)" :key="item">
+                {{ i + 23 }}.&nbsp;<a
                   style="color: #335719"
                   :href="'#' + item.name"
                   >{{ item.name }}</a
@@ -324,6 +336,16 @@ export default {
           .map((_, i) => i + 1)
           .map((d) => {
             return { src: '/online/開成鉱石化石館/' + d + '.png' }
+          }),
+        文芸部: [...Array(4)]
+          .map((_, i) => i + 1)
+          .map((d) => {
+            return { src: '/online/文芸部/' + d + '.png' }
+          }),
+        紫雁俳句会: [...Array(4)]
+          .map((_, i) => i + 1)
+          .map((d) => {
+            return { src: '/online/紫雁俳句会/' + d + '.png' }
           }),
       },
     }
