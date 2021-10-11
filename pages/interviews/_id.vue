@@ -81,7 +81,7 @@ body {
 }
 .question-card-question-id {
   position: absolute;
-  top: calc(-16vh + 3vw);
+  top: calc(-20vh + 3vw);
   left: 1vw;
   font-family: 'Josefin San', cursive;
   font-size: 6rem;
